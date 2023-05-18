@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -9,30 +10,92 @@ public class Player : MonoBehaviour
     public int speed = 5;
     GameObject clickedGameObject;//クリックされたゲームオブジェクトを代入する変数
 
+    Vector2 RL;
+    Vector2 UD;
+    bool First = true;
+    bool Second = true;
+    float CurrentY;
+    float CurrentX;
+
     // Start is called before the first frame update
+    public GameObject countText;
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetMouseButtonDown(0))  //左クリックでif分起動
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit2d = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
-            //Vector3 touchScreenPosition = Input.mousePosition;  //②マウスでタッチした座標をtouchScreenPositionに。
-            //touchScreenPosition.z = 5.0f;  //②奥行を手前に来るように5.0fを指定。
-            //Camera camera = Camera.main;  //②
-            //touchWorldPosition = camera.ScreenToWorldPoint(touchScreenPosition);  //②
             if (hit2d)
             {
+                CurrentY = player.transform.position.y;
+                CurrentX = player.transform.position.x;
                 clickedGameObject = hit2d.transform.gameObject;
                 Debug.Log(clickedGameObject);//ゲームオブジェクトの名前を出力
+                RL = new Vector2(clickedGameObject.transform.position.x, player.transform.position.y);
+             
+                First = Second = true;
             }
         }
         if(clickedGameObject)
-            player.transform.position = Vector2.MoveTowards(player.transform.position, clickedGameObject.transform.position, speed * Time.deltaTime); //playerオブジェクトが, 目的地に移動, 移動速度
+        {
+            if (clickedGameObject.transform.position.x != player.transform.position.x && First == true)
+            {
+                player.transform.position = Vector2.MoveTowards(player.transform.position, RL, speed * Time.deltaTime);
+                if(player.transform.position.x > CurrentX)
+                {
+                    if (Mathf.Abs(player.transform.position.x - CurrentX)/1 >= 1)
+                    {
+                        countText.GetComponent<Count>().score = countText.GetComponent<Count>().score + 1;
+                        CurrentX = Mathf.Floor(player.transform.position.x);
+                    }
+                }else if(player.transform.position.x < CurrentX)
+                {
+                    if (Mathf.Abs(CurrentX - player.transform.position.x)/1 >= 1)
+                    {
+                        countText.GetComponent<Count>().score = countText.GetComponent<Count>().score + 1;
+                        CurrentX = Mathf.Ceil(player.transform.position.x);
+                    }
+                }
+                if (clickedGameObject.transform.position.x == player.transform.position.x)
+                {
+                    First = false;
+                }
+            }else if(Second)
+            {
+                UD = new Vector2(player.transform.position.x, clickedGameObject.transform.position.y);
+                player.transform.position = Vector2.MoveTowards(player.transform.position, UD, speed * Time.deltaTime);
+                if (player.transform.position.y > CurrentY)
+                {
+                    if (Mathf.Abs(player.transform.position.y - CurrentY) / 1 >= 1)
+                    {
+                        countText.GetComponent<Count>().score = countText.GetComponent<Count>().score + 1;
+                        CurrentY = Mathf.Floor(player.transform.position.y);
+                    }
+                }
+                else if (player.transform.position.y < CurrentY)
+                {
+                    if (Mathf.Abs(CurrentY - player.transform.position.y) / 1 >= 1)
+                    {
+                        countText.GetComponent<Count>().score = countText.GetComponent<Count>().score + 1;
+                        CurrentY = Mathf.Ceil(player.transform.position.y);
+                    }
+                }
+
+                if (clickedGameObject.transform.position.y == player.transform.position.y)
+                {
+                    Second = false;
+                    if (CurrentY != player.transform.position.y)
+                    {
+                        clickedGameObject = null;
+                    }
+                }
+            }
+        }
     }
 }
