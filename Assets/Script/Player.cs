@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    //public Material MyColor;
     public GameObject player;   //①移動させたいオブジェクト
     public int speed = 5; //移動スピード
     GameObject clickedGameObject;//クリックされたゲームオブジェクトを代入する変数
@@ -25,13 +26,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (Input.GetMouseButtonDown(0) && Second==false)  //左クリックでif分起動
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             //RaycastHit2D hit2d = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
             RaycastHit2D hit2d = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
-            Debug.DrawRay(ray.origin, ray.direction * 30, Color.red, 20f);
+            //デバッグ用のレイの描画
+            //Debug.DrawRay(ray.origin, ray.direction * 30, Color.red, 20f);
             if (hit2d)
             {
                 Debug.Log(hit2d.transform.position);
@@ -48,7 +49,8 @@ public class Player : MonoBehaviour
                 }else
                 {
                     First = Second = true;
-                    clickedGameObject.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 255);
+                    //クリックしたオブジェクトの色を変更
+                    
                 }
             }
         }
@@ -101,8 +103,11 @@ public class Player : MonoBehaviour
                 if (clickedGameObject.transform.position.y == player.transform.position.y)
                 {
                     Second = false;
+                    //clickedGameObject.GetComponent<Renderer>().material = MyColor;
+
                     clickedGameObject = null;
                     Debug.Log("移動完了");
+                    
                 }
             }
         }
