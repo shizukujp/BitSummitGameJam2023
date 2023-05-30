@@ -7,15 +7,31 @@ public class Count : MonoBehaviour
 {
     private Text scoreText;
     public int score = 0;
-
+    string Myturn = "自分のターン";
+    string Eneturn = "相手のターン";
+    public bool IorEnemy = false;
     void Start()
     {
         scoreText = GetComponentInChildren<Text>();
-        scoreText.text = "0";
+        if (!IorEnemy)
+        {
+            scoreText.text = "0";
+        }
     }
 
     void Update()
     {
-        scoreText.text = score.ToString();
+        if(!IorEnemy)
+            scoreText.text = score.ToString();
+        if(IorEnemy)
+        {
+            if(Player.instance.isPlayerTurn)
+            {
+                scoreText.text = Myturn.ToString();
+            }else
+            {
+                scoreText.text = Eneturn.ToString();
+            }
+        }
     }
 }

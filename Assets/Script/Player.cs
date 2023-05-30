@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
     public Material MyColor;
     public Material MyColor2;
 
-    int turnpreb = 0;
+    //int turnpreb = 0;
 
     //ターン関連
     public bool isPlayerTurn;
@@ -43,16 +43,16 @@ public class Player : MonoBehaviour
     void Start()
     {
         isPlayerTurn = true;
+        TurnText.GetComponent<Count>().score += 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if(RoundController.instance.GetTurn() != turnpreb)
+        /*if(RoundController.instance.GetTurn() != turnpreb)
         {
             TurnText.GetComponent<Count>().score = RoundController.instance.GetTurn();
-        }
+        }*/
         //プレイヤーのターンじゃない場合は動かないようにする
         if (isPlayerTurn)
         {
@@ -145,9 +145,10 @@ public class Player : MonoBehaviour
                 {
                     Second = false;
                     //clickedGameObject.GetComponent<Renderer>().material = MyColor;
-                    TurnText.GetComponent<Count>().score = RoundController.instance.GetTurn();
+                    //TurnText.GetComponent<Count>().score = RoundController.instance.GetTurn();
                     RoundController.instance.SetTurn(RoundController.instance.GetTurn() + 1);
                     Debug.Log("移動完了");
+                    isPlayerTurn = false;
                     //移動が終わったら色を戻す
                     clickedGameObject.GetComponent<Renderer>().material = MyColor;
                     ismove = false;
