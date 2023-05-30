@@ -37,13 +37,25 @@ public class CanMoveMas : MonoBehaviour
             // 子オブジェクトに対する処理をここに書く
             if (Vector2.Distance(player.transform.position, child.transform.position) / 1f <= 2f)
             {
-                Debug.Log("移動可能です");
+                //Debug.Log("移動可能です");
                 child.GetComponent<Renderer>().material = MyColor2;
             }
             else
             {
                 child.GetComponent<Renderer>().material = MyColor;
             }
+        }
+    }
+
+    public void Moveoff()
+    {
+
+        Transform parentTransform = transform;
+
+        // 子オブジェクトを全て取得する
+        foreach (Transform child in parentTransform)
+        {
+            child.GetComponent<Renderer>().material = MyColor;
         }
     }
 }

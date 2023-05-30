@@ -35,47 +35,63 @@ public class Player : MonoBehaviour
     public Material MyColor;
     public Material MyColor2;
 
+    int turnpreb = 0;
+
+    //ターン関連
+    public bool isPlayerTurn;
+
     void Start()
     {
+        isPlayerTurn = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && Second==false)  //左クリックでif分起動
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //RaycastHit2D hit2d = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
-            RaycastHit2D hit2d = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
-            //デバッグ用のレイの描画
-            //Debug.DrawRay(ray.origin, ray.direction * 30, Color.red, 20f);
-            if (hit2d)
-            {
-                Debug.Log(hit2d.transform.position);
-                CurrentY = player.transform.position.y;
-                CurrentX = player.transform.position.x;
-                clickedGameObject = hit2d.transform.gameObject;
-                Debug.Log(clickedGameObject);//ゲームオブジェクトの名前を出力
-                RL = new Vector2(clickedGameObject.transform.position.x, player.transform.position.y);
 
-                if (clickedGameObject.transform.position==player.transform.position)
+        if(RoundController.instance.GetTurn() != turnpreb)
+        {
+            TurnText.GetComponent<Count>().score = RoundController.instance.GetTurn();
+        }
+        //プレイヤーのターンじゃない場合は動かないようにする
+        if (isPlayerTurn)
+        {
+            if (Input.GetMouseButtonDown(0) && Second == false)  //左クリックでif分起動
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                //RaycastHit2D hit2d = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
+                RaycastHit2D hit2d = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
+                //デバッグ用のレイの描画
+                //Debug.DrawRay(ray.origin, ray.direction * 30, Color.red, 20f);
+                if (hit2d)
                 {
-                    clickedGameObject = null;
-                    //First = Second = false;
-                }else if(Vector2.Distance(player.transform.position, clickedGameObject.transform.position) / 1f > 2f)
-                {
-                    Debug.Log("移動できません");
-                    clickedGameObject = null;
-                    //First = Second = false;
-                }
-                else
-                {
-                    First = Second = true;
-                    ismove = true;
-                    //移動する場所のマスを変更する
-                    clickedGameObject.GetComponent<Renderer>().material = MyColor2;
-                  
-                    
+                    Debug.Log(hit2d.transform.position);
+                    CurrentY = player.transform.position.y;
+                    CurrentX = player.transform.position.x;
+                    clickedGameObject = hit2d.transform.gameObject;
+                    Debug.Log(clickedGameObject);//ゲームオブジェクトの名前を出力
+                    RL = new Vector2(clickedGameObject.transform.position.x, player.transform.position.y);
+
+                    if (clickedGameObject.transform.position == player.transform.position)
+                    {
+                        clickedGameObject = null;
+                        //First = Second = false;
+                    }
+                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) / 1f > 2f)
+                    {
+                        Debug.Log("移動できません");
+                        clickedGameObject = null;
+                        //First = Second = false;
+                    }
+                    else
+                    {
+                        First = Second = true;
+                        ismove = true;
+                        //移動する場所のマスを変更する
+                        clickedGameObject.GetComponent<Renderer>().material = MyColor2;
+
+
+                    }
                 }
             }
         }
@@ -129,7 +145,8 @@ public class Player : MonoBehaviour
                 {
                     Second = false;
                     //clickedGameObject.GetComponent<Renderer>().material = MyColor;
-                    TurnText.GetComponent<Count>().score += 1;
+                    TurnText.GetComponent<Count>().score = RoundController.instance.GetTurn();
+                    RoundController.instance.SetTurn(RoundController.instance.GetTurn() + 1);
                     Debug.Log("移動完了");
                     //移動が終わったら色を戻す
                     clickedGameObject.GetComponent<Renderer>().material = MyColor;

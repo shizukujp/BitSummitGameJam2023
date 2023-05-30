@@ -34,7 +34,7 @@ public class ColorChange : MonoBehaviour
         //プレイヤーが動いていない間
         if(A && !Player.instance.ismove)
         {
-            Debug.Log("生成");
+            //Debug.Log("生成");
             CanPlayerMove();
         }
         /*if(!Player.instance.ismove )
@@ -79,7 +79,7 @@ public class ColorChange : MonoBehaviour
     {
         if (Vector2.Distance(player.transform.position, transform.position) / 1f <= 2f)
         {
-            Debug.Log("移動可能です");
+            //Debug.Log("移動可能です");
             GetComponent<Renderer>().material = MyColor2;
         }
         else
