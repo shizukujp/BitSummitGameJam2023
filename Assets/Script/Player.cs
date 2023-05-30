@@ -3,10 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static Unity.VisualScripting.Metadata;
 
 public class Player : MonoBehaviour
 {
-    //public Material MyColor;
+    //他のスクリプトから参照できるようにする
+    public static Player instance;
+
+    public void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
     public GameObject player;   //①移動させたいオブジェクト
     public int speed = 5; //移動スピード
     GameObject clickedGameObject;//クリックされたゲームオブジェクトを代入する変数
@@ -16,9 +27,14 @@ public class Player : MonoBehaviour
     bool Second = false;
     float CurrentY;//現在のプレイヤーのY座標
     float CurrentX;//現在のプレイヤーのX座標
-
-    // Start is called before the first frame update
+    public bool ismove = false;
     public GameObject countText;
+    public GameObject TurnText;
+    
+    //クリックした場所の色を変更する
+    public Material MyColor;
+    public Material MyColor2;
+
     void Start()
     {
     }
@@ -45,16 +61,25 @@ public class Player : MonoBehaviour
                 if (clickedGameObject.transform.position==player.transform.position)
                 {
                     clickedGameObject = null;
-                    First = Second = false;
-                }else
+                    //First = Second = false;
+                }else if(Vector2.Distance(player.transform.position, clickedGameObject.transform.position) / 1f > 2f)
+                {
+                    Debug.Log("移動できません");
+                    clickedGameObject = null;
+                    //First = Second = false;
+                }
+                else
                 {
                     First = Second = true;
-                    //クリックしたオブジェクトの色を変更
+                    ismove = true;
+                    //移動する場所のマスを変更する
+                    clickedGameObject.GetComponent<Renderer>().material = MyColor2;
+                  
                     
                 }
             }
         }
-      
+        //プレイヤーの移動＋歩数・ターンカウント
         if (clickedGameObject)
         {   
             if (clickedGameObject.transform.position.x != player.transform.position.x && First)
@@ -104,10 +129,13 @@ public class Player : MonoBehaviour
                 {
                     Second = false;
                     //clickedGameObject.GetComponent<Renderer>().material = MyColor;
-
-                    clickedGameObject = null;
+                    TurnText.GetComponent<Count>().score += 1;
                     Debug.Log("移動完了");
-                    
+                    //移動が終わったら色を戻す
+                    clickedGameObject.GetComponent<Renderer>().material = MyColor;
+                    ismove = false;
+                    CanMoveMas.instance.CanMove();
+                    clickedGameObject = null;
                 }
             }
         }
