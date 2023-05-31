@@ -37,6 +37,16 @@ public class ColorChange : MonoBehaviour
             //Debug.Log("生成");
             CanPlayerMove();
         }
+        if(Player.instance.ismove)
+        {
+            if (Vector2.Distance(player.transform.position, transform.position) < 0.5f)
+            {
+                GetComponent<Renderer>().material = MyColor3;
+            }else if (Vector2.Distance(Player.instance.currentPos, transform.position) <= 2f && Player.instance.clickPos != transform.position)
+            {
+                GetComponent<Renderer>().material = MyColor2;
+            }
+        }
         /*if(!Player.instance.ismove )
         {
             A = true;
@@ -65,7 +75,10 @@ public class ColorChange : MonoBehaviour
         if (!Player.instance.ismove)
         {
             //プレイヤーが移動可能な範囲のマスだったら
-            if (Vector2.Distance(player.transform.position, transform.position) / 1f <= 2f)
+            if(Vector2.Distance(player.transform.position, transform.position) == 0)
+            {
+                GetComponent<Renderer>().material = MyColor3;
+            }else if (Vector2.Distance(player.transform.position, transform.position) / 1f <= 2f)
             {
                 GetComponent<Renderer>().material = MyColor2;
             }else
@@ -77,7 +90,11 @@ public class ColorChange : MonoBehaviour
     //プレイヤーが移動可能なマスを表示する
     public void CanPlayerMove()
     {
-        if (Vector2.Distance(player.transform.position, transform.position) / 1f <= 2f)
+        if (Vector2.Distance(player.transform.position, transform.position) == 0)
+        {
+            GetComponent<Renderer>().material = MyColor3;
+        }
+        else if (Vector2.Distance(player.transform.position, transform.position) / 1f <= 2f)
         {
             //Debug.Log("移動可能です");
             GetComponent<Renderer>().material = MyColor2;

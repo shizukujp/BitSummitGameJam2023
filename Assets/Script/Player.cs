@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
     GameObject clickedGameObject;//クリックされたゲームオブジェクトを代入する変数
     Vector2 RL;//移動する場所のX座標
     Vector2 UD;//移動する場所のY座標
+    public Vector3 currentPos;
+    public Vector3 clickPos;
     bool First = false;
     bool Second = false;
     float CurrentY;//現在のプレイヤーのY座標
@@ -86,8 +88,10 @@ public class Player : MonoBehaviour
                     else
                     {
                         First = Second = true;
+                        currentPos = player.transform.position;
                         ismove = true;
                         //移動する場所のマスを変更する
+                        clickPos = clickedGameObject.transform.position;
                         clickedGameObject.GetComponent<Renderer>().material = MyColor2;
 
 
@@ -150,7 +154,7 @@ public class Player : MonoBehaviour
                     Debug.Log("移動完了");
                     isPlayerTurn = false;
                     //移動が終わったら色を戻す
-                    clickedGameObject.GetComponent<Renderer>().material = MyColor;
+                    //clickedGameObject.GetComponent<Renderer>().material = MyColor;
                     ismove = false;
                     CanMoveMas.instance.CanMove();
                     clickedGameObject = null;
