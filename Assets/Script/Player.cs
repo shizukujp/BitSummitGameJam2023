@@ -65,11 +65,11 @@ public class Player : MonoBehaviour
                 //Debug.DrawRay(ray.origin, ray.direction * 30, Color.red, 20f);
                 if (hit2d)
                 {
-                    Debug.Log(hit2d.transform.position);
+                    //Debug.Log(hit2d.transform.position);
                     CurrentY = player.transform.position.y;
                     CurrentX = player.transform.position.x;
                     clickedGameObject = hit2d.transform.gameObject;
-                    Debug.Log(clickedGameObject);//ゲームオブジェクトの名前を出力
+                    //Debug.Log(clickedGameObject);//ゲームオブジェクトの名前を出力
                     RL = new Vector2(clickedGameObject.transform.position.x, player.transform.position.y);
 
                     if (clickedGameObject.transform.position == player.transform.position)
