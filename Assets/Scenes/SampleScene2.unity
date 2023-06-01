@@ -149,6 +149,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &15279834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -161,6 +163,10 @@ PrefabInstance:
       value: gridtile2 (18)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -172,6 +178,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -244,6 +254,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &27967818 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -270,6 +282,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &34920914
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +426,10 @@ PrefabInstance:
       value: gridtile2 (64)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -423,6 +441,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 64
@@ -505,6 +527,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &64274126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -517,6 +541,10 @@ PrefabInstance:
       value: gridtile2 (54)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -528,6 +556,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 54
@@ -605,6 +637,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &69235335 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -631,6 +665,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &73222099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -643,6 +679,10 @@ PrefabInstance:
       value: gridtile2 (29)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -654,6 +694,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -717,6 +761,10 @@ PrefabInstance:
       value: gridtile2 (43)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -728,6 +776,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 43
@@ -878,6 +930,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &85466925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -890,6 +944,10 @@ PrefabInstance:
       value: gridtile2 (55)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -901,6 +959,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 55
@@ -964,6 +1026,10 @@ PrefabInstance:
       value: gridtile2 (98)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -975,6 +1041,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 98
@@ -1287,6 +1357,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &101562873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,6 +1571,10 @@ PrefabInstance:
       value: gridtile2 (63)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -1510,6 +1586,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 63
@@ -1699,6 +1779,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &158249677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1855,6 +1937,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &165708514 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -1881,6 +1965,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &172756754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1893,6 +1979,10 @@ PrefabInstance:
       value: gridtile2 (79)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -1904,6 +1994,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 79
@@ -1981,6 +2075,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &188009993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -2007,6 +2103,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &190834633 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -2033,6 +2131,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &192019318 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -2059,6 +2159,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &194123148 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -2085,6 +2187,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &198193427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2097,6 +2201,10 @@ PrefabInstance:
       value: gridtile2 (33)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -2108,6 +2216,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -2171,6 +2283,10 @@ PrefabInstance:
       value: gridtile2 (8)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -2182,6 +2298,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2405,6 +2525,10 @@ PrefabInstance:
       value: gridtile2 (82)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -2416,6 +2540,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 82
@@ -2609,6 +2737,10 @@ PrefabInstance:
       value: gridtile2 (27)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -2620,6 +2752,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -2683,6 +2819,10 @@ PrefabInstance:
       value: gridtile2 (30)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -2694,6 +2834,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 30
@@ -2757,6 +2901,10 @@ PrefabInstance:
       value: gridtile2 (92)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -2768,6 +2916,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 92
@@ -2845,6 +2997,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &254508284 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -2871,6 +3025,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &257244119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2992,6 +3148,10 @@ PrefabInstance:
       value: gridtile2 (36)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -3003,6 +3163,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 36
@@ -3066,6 +3230,10 @@ PrefabInstance:
       value: gridtile2 (14)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -3077,6 +3245,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -3283,6 +3455,10 @@ PrefabInstance:
       value: gridtile2 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -3294,6 +3470,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3366,6 +3546,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &284929042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3615,6 +3797,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &303557492 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -3641,6 +3825,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &306922406 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -3667,6 +3853,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &320712794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3679,6 +3867,10 @@ PrefabInstance:
       value: gridtile2 (99)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -3690,6 +3882,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 99
@@ -3840,6 +4036,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &322663066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3925,6 +4123,10 @@ PrefabInstance:
       value: gridtile2 (10)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -3936,6 +4138,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -4051,6 +4257,10 @@ PrefabInstance:
       value: gridtile2 (52)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -4062,6 +4272,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 52
@@ -4170,6 +4384,10 @@ PrefabInstance:
       value: gridtile2 (25)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -4181,6 +4399,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -4336,6 +4558,10 @@ PrefabInstance:
       value: gridtile2 (48)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -4347,6 +4573,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 48
@@ -4445,6 +4675,10 @@ PrefabInstance:
       value: gridtile2 (62)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -4456,6 +4690,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 62
@@ -4519,6 +4757,10 @@ PrefabInstance:
       value: gridtile2 (67)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -4530,6 +4772,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 67
@@ -4593,6 +4839,10 @@ PrefabInstance:
       value: gridtile2 (46)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -4604,6 +4854,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 46
@@ -4681,6 +4935,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &371419007 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -4707,6 +4963,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &379652552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4790,6 +5048,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &383944837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4875,6 +5135,10 @@ PrefabInstance:
       value: gridtile2 (87)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -4886,6 +5150,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 87
@@ -4949,6 +5217,10 @@ PrefabInstance:
       value: gridtile2 (24)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -4960,6 +5232,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -5018,6 +5294,10 @@ PrefabInstance:
       value: gridtile2 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -5029,6 +5309,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5092,6 +5376,10 @@ PrefabInstance:
       value: gridtile2 (96)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -5103,6 +5391,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 96
@@ -5361,6 +5653,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &415291515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -5387,6 +5681,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &415930311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5399,6 +5695,10 @@ PrefabInstance:
       value: gridtile2 (35)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -5410,6 +5710,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -5544,6 +5848,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &422342952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5627,6 +5933,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &424411183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -5653,6 +5961,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &439125450 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -5679,6 +5989,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &441903195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5691,6 +6003,10 @@ PrefabInstance:
       value: gridtile2 (56)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -5702,6 +6018,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 56
@@ -5765,6 +6085,10 @@ PrefabInstance:
       value: gridtile2 (7)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -5776,6 +6100,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -5848,6 +6176,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &445668621
 GameObject:
   m_ObjectHideFlags: 0
@@ -5947,6 +6277,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &457820612
 GameObject:
   m_ObjectHideFlags: 0
@@ -5999,6 +6331,10 @@ PrefabInstance:
       value: gridtile2 (85)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -6010,6 +6346,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 85
@@ -6073,6 +6413,10 @@ PrefabInstance:
       value: gridtile2 (38)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -6084,6 +6428,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 38
@@ -6161,6 +6509,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &466544724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6244,6 +6594,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &466867772 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -6270,6 +6622,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &468353868 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -6296,6 +6650,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &472691406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6511,6 +6867,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &502293594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6627,10 +6985,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 519420032}
+  - component: {fileID: 519420034}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6689,21 +7048,6 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!4 &519420032
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0.10322654, y: 0, z: 0, w: 0.99465793}
-  m_LocalPosition: {x: 3, y: 2.5, z: -6.67}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1532880960}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 11.85, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6726,6 +7070,34 @@ MonoBehaviour:
   MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
   MyColor2: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
   isPlayerTurn: 0
+--- !u!224 &519420034
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_LocalRotation: {x: 0.10322654, y: 0, z: 0, w: 0.99465793}
+  m_LocalPosition: {x: 0, y: 0, z: -6.67}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1532880960}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 11.85, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 3, y: 2.5}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &519420035
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_CullTransparentMesh: 1
 --- !u!1 &521186609 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -6752,6 +7124,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &525546283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6764,6 +7138,10 @@ PrefabInstance:
       value: gridtile2 (58)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -6775,6 +7153,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 58
@@ -6838,6 +7220,10 @@ PrefabInstance:
       value: gridtile2 (45)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -6849,6 +7235,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 45
@@ -7038,6 +7428,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &541118674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7107,6 +7499,10 @@ PrefabInstance:
       value: gridtile2 (17)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -7118,6 +7514,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -7176,6 +7576,10 @@ PrefabInstance:
       value: gridtile2 (81)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -7187,6 +7591,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 81
@@ -7250,6 +7658,10 @@ PrefabInstance:
       value: gridtile2 (76)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -7261,6 +7673,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 76
@@ -7400,6 +7816,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &557906823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7653,6 +8071,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &613146468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7738,6 +8158,10 @@ PrefabInstance:
       value: gridtile2 (47)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -7749,6 +8173,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 47
@@ -7826,6 +8254,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &626896099
 GameObject:
   m_ObjectHideFlags: 0
@@ -7892,6 +8322,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &631478487 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -7918,6 +8350,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &648506945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8487,6 +8921,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &679629193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8586,6 +9022,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &685354672 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -8612,6 +9050,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &686749647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8743,6 +9183,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &694134308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9141,6 +9583,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &737955482 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -9167,6 +9611,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &769221612 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -9193,6 +9639,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!4 &773926684 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -9210,6 +9658,10 @@ PrefabInstance:
       value: gridtile2 (32)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -9221,6 +9673,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 32
@@ -9284,6 +9740,10 @@ PrefabInstance:
       value: gridtile2 (6)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -9295,6 +9755,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -9353,6 +9817,10 @@ PrefabInstance:
       value: gridtile2 (39)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -9364,6 +9832,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 39
@@ -9408,6 +9880,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6768842667893864861, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adfed11546c3f429a964c176a8163350, type: 3}
 --- !u!4 &788993517 stripped
@@ -9533,6 +10009,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &827122470 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -9559,6 +10037,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &831998069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10036,6 +10516,10 @@ PrefabInstance:
       value: gridtile2 (83)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -10047,6 +10531,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 83
@@ -10124,6 +10612,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &868833170 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -10150,6 +10640,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &871984679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10528,6 +11020,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &897936996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10700,6 +11194,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &903258877
 GameObject:
   m_ObjectHideFlags: 0
@@ -11127,6 +11623,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &917834238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11424,6 +11922,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &924046817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11509,6 +12009,10 @@ PrefabInstance:
       value: gridtile2 (65)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -11520,6 +12024,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 65
@@ -11597,6 +12105,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &928025113 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -11623,6 +12133,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &936732032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11909,6 +12421,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &959145541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12190,6 +12704,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1000188666
 GameObject:
   m_ObjectHideFlags: 0
@@ -12324,6 +12840,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!4 &1007048689 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -12398,6 +12916,10 @@ PrefabInstance:
       value: gridtile2 (91)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -12409,6 +12931,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 91
@@ -12632,6 +13158,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1042920191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12644,6 +13172,10 @@ PrefabInstance:
       value: gridtile2 (4)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -12655,6 +13187,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -12762,6 +13298,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1049721532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12774,6 +13312,10 @@ PrefabInstance:
       value: gridtile2 (53)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -12785,6 +13327,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 53
@@ -13186,6 +13732,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1063460441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13269,6 +13817,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1067958056 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -13295,6 +13845,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!4 &1075204241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -13369,6 +13921,10 @@ PrefabInstance:
       value: gridtile2 (28)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -13380,6 +13936,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -13516,6 +14076,10 @@ PrefabInstance:
       value: gridtile2 (88)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -13527,6 +14091,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 88
@@ -13604,6 +14172,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1104365211 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -13630,6 +14200,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1106228459
 GameObject:
   m_ObjectHideFlags: 0
@@ -13750,6 +14322,10 @@ PrefabInstance:
       value: gridtile2 (72)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -13761,6 +14337,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 72
@@ -13838,6 +14418,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1134041249
 GameObject:
   m_ObjectHideFlags: 0
@@ -13899,6 +14481,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1145374821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13911,6 +14495,10 @@ PrefabInstance:
       value: gridtile2 (34)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -13922,6 +14510,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -13999,6 +14591,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1161839694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14068,6 +14662,10 @@ PrefabInstance:
       value: gridtile2 (49)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -14079,6 +14677,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 49
@@ -14156,6 +14758,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1169654561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14314,6 +14918,10 @@ PrefabInstance:
       value: gridtile2 (80)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -14325,6 +14933,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 80
@@ -14388,6 +15000,10 @@ PrefabInstance:
       value: gridtile2 (15)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -14399,6 +15015,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -14471,6 +15091,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1205170189 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -14497,6 +15119,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1222219773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14509,6 +15133,10 @@ PrefabInstance:
       value: gridtile2 (44)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -14520,6 +15148,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 44
@@ -14717,6 +15349,10 @@ PrefabInstance:
       value: gridtile2 (5)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -14728,6 +15364,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -14800,6 +15440,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1236030515
 GameObject:
   m_ObjectHideFlags: 0
@@ -14847,6 +15489,10 @@ PrefabInstance:
       value: gridtile2 (73)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -14858,6 +15504,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 73
@@ -14978,6 +15628,10 @@ PrefabInstance:
       value: gridtile2 (75)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -14989,6 +15643,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 75
@@ -15066,6 +15724,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1254413925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15313,6 +15973,10 @@ PrefabInstance:
       value: gridtile2 (20)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -15324,6 +15988,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -15396,6 +16064,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1281122005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15408,6 +16078,10 @@ PrefabInstance:
       value: gridtile2 (93)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -15419,6 +16093,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 93
@@ -15553,6 +16231,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1287398099
 GameObject:
   m_ObjectHideFlags: 0
@@ -15649,6 +16329,10 @@ PrefabInstance:
       value: gridtile2 (42)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -15660,6 +16344,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 42
@@ -15723,6 +16411,10 @@ PrefabInstance:
       value: gridtile2 (9)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -15734,6 +16426,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -15792,6 +16488,10 @@ PrefabInstance:
       value: gridtile2 (11)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -15803,6 +16503,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -15875,6 +16579,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1312616928 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -15901,6 +16607,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1313135431
 GameObject:
   m_ObjectHideFlags: 0
@@ -16023,6 +16731,11 @@ MonoBehaviour:
   isVertical: 1
   EnemyMovePos_y: 0
   EnemyMovePos_x: 0
+  isEneMove: 0
+  Up: 0
+  Down: 1
+  Right: 0
+  Left: 0
 --- !u!1001 &1313198425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16157,6 +16870,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1316506956 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -16183,6 +16898,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1317810786 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -16209,6 +16926,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1322582073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16221,6 +16940,10 @@ PrefabInstance:
       value: gridtile2 (22)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -16232,6 +16955,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -16418,6 +17145,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1342939610
 GameObject:
   m_ObjectHideFlags: 0
@@ -16528,6 +17257,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1356729320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16540,6 +17271,10 @@ PrefabInstance:
       value: gridtile2 (21)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -16551,6 +17286,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -16764,6 +17503,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!4 &1372209135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -16781,6 +17522,10 @@ PrefabInstance:
       value: gridtile2 (84)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -16792,6 +17537,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 84
@@ -16869,6 +17618,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!4 &1376957087 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -16900,6 +17651,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!4 &1384887679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -16931,6 +17684,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1387660838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17030,6 +17785,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1392206973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17222,6 +17979,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1404491045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17291,6 +18050,10 @@ PrefabInstance:
       value: gridtile2 (59)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -17302,6 +18065,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 59
@@ -17660,6 +18427,10 @@ PrefabInstance:
       value: gridtile2 (66)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -17671,6 +18442,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 66
@@ -17880,6 +18655,10 @@ PrefabInstance:
       value: gridtile2 (86)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -17891,6 +18670,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 86
@@ -17954,6 +18737,10 @@ PrefabInstance:
       value: gridtile2 (71)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -17965,6 +18752,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 71
@@ -18042,6 +18833,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1452068138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18054,6 +18847,10 @@ PrefabInstance:
       value: gridtile2 (51)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -18065,6 +18862,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 51
@@ -18108,6 +18909,18 @@ PrefabInstance:
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768842667893864861, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: m_Color.b
+      value: 0.94509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768842667893864861, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: m_Color.g
+      value: 0.94509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768842667893864861, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: m_Color.r
+      value: 0.94509804
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -18212,6 +19025,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!4 &1479330025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -18418,6 +19233,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1510007267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18600,7 +19417,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 519420032}
+  - {fileID: 519420034}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -45, y: 0, z: 0}
@@ -18630,6 +19447,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1537621576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18800,6 +19619,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1545074606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18921,6 +19742,10 @@ PrefabInstance:
       value: gridtile2 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -18932,6 +19757,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -19004,6 +19833,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1560124058
 GameObject:
   m_ObjectHideFlags: 0
@@ -19065,6 +19896,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1565673370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19148,6 +19981,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1573012245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19160,6 +19995,10 @@ PrefabInstance:
       value: gridtile2 (37)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -19171,6 +20010,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 37
@@ -19416,6 +20259,10 @@ PrefabInstance:
       value: gridtile2 (89)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -19427,6 +20274,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 89
@@ -19490,6 +20341,10 @@ PrefabInstance:
       value: gridtile2 (23)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -19501,6 +20356,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -19573,6 +20432,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1612975470 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -19599,6 +20460,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1613399521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19611,6 +20474,10 @@ PrefabInstance:
       value: gridtile2 (77)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -19622,6 +20489,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 77
@@ -19685,6 +20556,10 @@ PrefabInstance:
       value: gridtile2 (97)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -19696,6 +20571,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 97
@@ -19851,6 +20730,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1652993761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -19877,6 +20758,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1659215265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19889,6 +20772,10 @@ PrefabInstance:
       value: gridtile2 (31)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -19900,6 +20787,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -19963,6 +20854,10 @@ PrefabInstance:
       value: gridtile2 (40)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -19974,6 +20869,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 40
@@ -20227,6 +21126,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1684150885 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -20253,6 +21154,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1684551977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20265,6 +21168,10 @@ PrefabInstance:
       value: gridtile2
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -20276,6 +21183,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -20348,6 +21259,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1686677164 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -20374,6 +21287,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1686693804 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -20400,6 +21315,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1691182371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20483,6 +21400,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1705062047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20623,6 +21542,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1723791922 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -20649,6 +21570,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1725638384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20661,6 +21584,10 @@ PrefabInstance:
       value: gridtile2 (19)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -20672,6 +21599,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -20803,6 +21734,10 @@ PrefabInstance:
       value: gridtile2 (95)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -20814,6 +21749,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 95
@@ -21029,6 +21968,10 @@ PrefabInstance:
       value: gridtile2 (41)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -21040,6 +21983,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 41
@@ -21176,6 +22123,10 @@ PrefabInstance:
       value: gridtile2 (13)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -21187,6 +22138,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -21442,6 +22397,10 @@ PrefabInstance:
       value: gridtile2 (60)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -21453,6 +22412,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 60
@@ -21587,6 +22550,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1786606135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21743,6 +22708,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!4 &1795429422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -21857,6 +22824,10 @@ PrefabInstance:
       value: gridtile2 (12)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -21868,6 +22839,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -22199,6 +23174,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1860278793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22211,6 +23188,10 @@ PrefabInstance:
       value: gridtile2 (69)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -22222,6 +23203,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 69
@@ -22391,6 +23376,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1876173431
 GameObject:
   m_ObjectHideFlags: 0
@@ -22452,6 +23439,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1879289940 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -22478,6 +23467,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1879583739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22490,6 +23481,10 @@ PrefabInstance:
       value: gridtile2 (50)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -22501,6 +23496,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 50
@@ -22635,6 +23634,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1897382797 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -22661,6 +23662,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1897503796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22673,6 +23676,10 @@ PrefabInstance:
       value: gridtile2 (57)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -22684,6 +23691,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 57
@@ -22834,6 +23845,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1907758230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22846,6 +23859,10 @@ PrefabInstance:
       value: gridtile2 (90)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -22857,6 +23874,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 90
@@ -22934,6 +23955,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1919036763 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -22960,6 +23983,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1925436211
 GameObject:
   m_ObjectHideFlags: 0
@@ -23066,6 +24091,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1927084267 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -23092,6 +24119,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1933524195 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -23118,6 +24147,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1942711416 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -23144,6 +24175,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1948321378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -23170,6 +24203,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1950363285 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -23196,6 +24231,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1961297428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23208,6 +24245,10 @@ PrefabInstance:
       value: gridtile2 (94)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -23219,6 +24260,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 94
@@ -23296,6 +24341,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &1963792215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23370,6 +24417,10 @@ PrefabInstance:
       value: gridtile2 (61)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -23381,6 +24432,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 61
@@ -23617,6 +24672,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &1988088214
 GameObject:
   m_ObjectHideFlags: 0
@@ -23785,6 +24842,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &2001864982 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -23811,6 +24870,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!4 &2003341389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -23828,6 +24889,10 @@ PrefabInstance:
       value: gridtile2 (68)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -23839,6 +24904,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 68
@@ -24030,6 +25099,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1001 &2032757063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24099,6 +25170,10 @@ PrefabInstance:
       value: gridtile2 (16)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -24110,6 +25185,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -24168,6 +25247,10 @@ PrefabInstance:
       value: gridtile2 (78)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -24179,6 +25262,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 78
@@ -24364,6 +25451,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &2061801482
 GameObject:
   m_ObjectHideFlags: 0
@@ -24411,6 +25500,10 @@ PrefabInstance:
       value: gridtile2 (70)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -24422,6 +25515,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 70
@@ -24466,6 +25563,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6768842667893864861, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adfed11546c3f429a964c176a8163350, type: 3}
 --- !u!4 &2068268448 stripped
@@ -24499,6 +25600,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &2085161378
 GameObject:
   m_ObjectHideFlags: 0
@@ -24742,6 +25845,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &2099517903 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -24768,6 +25873,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &2100328971
 GameObject:
   m_ObjectHideFlags: 0
@@ -24815,6 +25922,10 @@ PrefabInstance:
       value: gridtile2 (74)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -24826,6 +25937,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 74
@@ -24889,6 +26004,10 @@ PrefabInstance:
       value: gridtile2 (26)
       objectReference: {fileID: 0}
     - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1313135431}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: MyColor
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -24900,6 +26019,10 @@ PrefabInstance:
       propertyPath: MyColor3
       value: 
       objectReference: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
+    - target: {fileID: 2768784419968380625, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: MyColor4
+      value: 
+      objectReference: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
     - target: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -25079,6 +26202,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &2121624956 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -25105,6 +26230,8 @@ MonoBehaviour:
   MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   MyColor3: {fileID: 0}
   A: 1
+  Enemy: {fileID: 0}
+  Arpha: 0
 --- !u!1 &2125375924
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
+    public static EnemyMove instance;
+
+    public void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
     Animator animator;
     public float speed = 1f;
     Vector2 vct1;
     Vector2 vct2;
     Vector2 vct3;
+    public GameObject Enem;
     //敵が次のターンに移動するポジション
     Vector2 MovePos;
     //敵がvct2.vct3まで向かっているか(falseの場合、元いた場所まで向かう)
@@ -20,7 +31,10 @@ public class EnemyMove : MonoBehaviour
     public int EnemyMovePos_y = 0;
     //敵が移動するポジションのx座標
     public int EnemyMovePos_x = 0;
-    // Start is called before the first frame update
+    //敵が移動しているかどうか
+    public bool isEneMove = false;
+    //敵が動いている方向
+    public bool Up,Down, Right, Left;
     void Start()
     {
         //初めの敵のポジション
@@ -30,6 +44,9 @@ public class EnemyMove : MonoBehaviour
         //敵が移動する最も遠いポジション(横方向)
         vct3 = new Vector2(EnemyMovePos_x, transform.position.y);
         animator = GetComponent<Animator>();
+        //Up = Down = Right = Left = false;
+        Enem = this.gameObject;
+
     }
 
     // Update is called once per frame
@@ -39,6 +56,7 @@ public class EnemyMove : MonoBehaviour
         {
             Move();
         }
+        
     }
 
     void Move()
@@ -49,12 +67,18 @@ public class EnemyMove : MonoBehaviour
             //縦方向への移動(vct2へ向かう)
             if(vct2.y < transform.position.y)
             {
+                //下方向
                 MovePos = new Vector2(transform.position.x, transform.position.y - 1f);
-            }else if(vct2.y > transform.position.y)
+                Down = true;
+            }
+            else if(vct2.y > transform.position.y)
             {
+                //上方向
                 MovePos = new Vector2(transform.position.x, transform.position.y + 1f);
+                Up = true;
             }
             One = false;
+            isEneMove = true; 
             animator.SetBool("IsMove", true);
         }
         else if(Go && One && !isVertical)
@@ -62,13 +86,18 @@ public class EnemyMove : MonoBehaviour
             //横方向への移動(vct3へ向かう)
             if (vct3.x < transform.position.x)
             {
+                //左方向
                 MovePos = new Vector2(transform.position.x - 1f, transform.position.y);
+                Right = true;
             }
             else if (vct3.x > transform.position.x)
             {
+                //右方向
                 MovePos = new Vector2(transform.position.x + 1f, transform.position.y);
+                Left = true;
             }
             One = false;
+            isEneMove = true;
             animator.SetBool("IsMove", true);
         }
         else if(!Go && One && isVertical)
@@ -77,12 +106,15 @@ public class EnemyMove : MonoBehaviour
             if (vct1.y < transform.position.y)
             {
                 MovePos = new Vector2(transform.position.x, transform.position.y - 1f);
+                Down = true;
             }
             else if (vct1.y > transform.position.y)
             {
                 MovePos = new Vector2(transform.position.x, transform.position.y + 1f);
+                Up = true;
             }
             One = false;
+            isEneMove = true;
             animator.SetBool("IsMove", true);
         } else if(!Go && One && !isVertical)
         {
@@ -90,12 +122,15 @@ public class EnemyMove : MonoBehaviour
             if (vct1.x < transform.position.x)
             {
                 MovePos = new Vector2(transform.position.x - 1f, transform.position.y);
+                Right = true;
             }
             else if (vct1.x > transform.position.x)
             {
                 MovePos = new Vector2(transform.position.x + 1f, transform.position.y);
+                Left = true;
             }
             One = false;
+            isEneMove = true;
             animator.SetBool("IsMove", true);
         }
 
@@ -107,6 +142,8 @@ public class EnemyMove : MonoBehaviour
             animator.SetBool("IsMove", false);
             Player.instance.isPlayerTurn = true;
             One = true;
+            isEneMove = false;
+            Up = Down = Right = Left = false;
         }
         //敵がvct2かvct3、または元いた場所に到達したかどうか
         if (isVertical)

@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
             instance = this;
         }
     }
+    Animator animator;
 
     public GameObject player;   //①移動させたいオブジェクト
     public int speed = 5; //移動スピード
@@ -46,16 +47,21 @@ public class Player : MonoBehaviour
     {
         isPlayerTurn = true;
         TurnText.GetComponent<Count>().score += 1;
+        animator = player.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(1))
+        {
+            Motion();
+        }
         /*if(RoundController.instance.GetTurn() != turnpreb)
         {
             TurnText.GetComponent<Count>().score = RoundController.instance.GetTurn();
         }*/
-        //プレイヤーのターンじゃない場合は動かないようにする
+            //プレイヤーのターンじゃない場合は動かないようにする
         if (isPlayerTurn)
         {
             if (Input.GetMouseButtonDown(0) && Second == false)  //左クリックでif分起動
@@ -161,5 +167,9 @@ public class Player : MonoBehaviour
                 }
             }
         }
+    }
+    void Motion()
+    {
+        animator.SetTrigger("IsMotion");
     }
 }
