@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
     public Material MyColor;
     public Material MyColor2;
 
-    //int turnpreb = 0;
+    int turnpreb = 0;
 
     //ターン関連
     public bool isPlayerTurn;
@@ -49,10 +49,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if(RoundController.instance.GetTurn() != turnpreb)
+        if (RoundController.instance.GetTurn() != turnpreb)
         {
             TurnText.GetComponent<Count>().score = RoundController.instance.GetTurn();
-        }*/
+        }
         //プレイヤーのターンじゃない場合は動かないようにする
         if (isPlayerTurn)
         {

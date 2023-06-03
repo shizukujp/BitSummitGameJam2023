@@ -44,13 +44,13 @@ public class RoundController : MonoBehaviour
             recordTurnPositon.SetTurnPosition(0);
         }
 
-        if (playerturn != playerturnpreb)
+        if (playerturn != playerturnpreb )
         {
             playerturnpreb = playerturn;
             Player.instance.isPlayerTurn = false;
         }
         //テスト用
-        if (Input.GetKey(KeyCode.Escape) && !Player.instance.isPlayerTurn) EnemyTurnEnd();
+        //if (Input.GetKey(KeyCode.Escape) && !Player.instance.isPlayerTurn) EnemyTurnEnd();
 
 
         //Debug.Log(enemyturn);
@@ -59,11 +59,15 @@ public class RoundController : MonoBehaviour
             recordTurnPositon.GetTurnPositionToScene(0);
 
             playerturn = 1;
-            enemyturn = 0;
+            playerturnpreb = 1;
+            enemyturn = 1;
 
             //色修正
             CanMoveMas.instance.Moveoff();
             CanMoveMas.instance.CanMove();
+
+            //プレイヤー動きの追加
+            Player.instance.isPlayerTurn = true;
         }
     }
 
@@ -81,9 +85,9 @@ public class RoundController : MonoBehaviour
     public void SetRound(int rd) { playerround = rd; }
     public void EnemyTurnEnd() 
     { 
-        Player.instance.isPlayerTurn = true;
         recordTurnPositon.SetTurnPosition(enemyturn);
         enemyturn++;
+        if (enemyturn < 12) Player.instance.isPlayerTurn = true;
     }
     public void EnemyRoundEnd()
     {

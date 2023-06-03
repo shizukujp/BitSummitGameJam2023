@@ -46,6 +46,7 @@ public class EnemyMove : MonoBehaviour
         //次移動する場所の設定
         if(Go && One && isVertical)
         {
+            Debug.Log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
             //縦方向への移動(vct2へ向かう)
             if(vct2.y < transform.position.y)
             {
@@ -103,9 +104,9 @@ public class EnemyMove : MonoBehaviour
         if(transform.position.x == MovePos.x && transform.position.y == MovePos.y)
         {
             Debug.Log("敵の移動完了");
-            Player.instance.TurnText.GetComponent<Count>().score += 1;
+            //Player.instance.TurnText.GetComponent<Count>().score += 1;
             animator.SetBool("IsMove", false);
-            Player.instance.isPlayerTurn = true;
+            RoundController.instance.EnemyTurnEnd();
             One = true;
         }
         //敵がvct2かvct3、または元いた場所に到達したかどうか
