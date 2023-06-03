@@ -145,12 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &15279834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -250,12 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &27967818 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -278,12 +270,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &34920914
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,12 +511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &64274126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -633,12 +617,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &69235335 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -661,12 +641,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &73222099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -926,12 +902,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &85466925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1353,12 +1325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &101562873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,12 +1743,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &158249677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1933,12 +1897,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &165708514 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -1961,12 +1921,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &172756754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2071,12 +2027,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &188009993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -2099,12 +2051,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &190834633 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -2127,12 +2075,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &192019318 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -2155,12 +2099,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &194123148 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -2183,12 +2123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &198193427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2882,6 +2818,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6768842667893864861, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: m_Color.b
+      value: 0.94509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768842667893864861, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: m_Color.g
+      value: 0.94509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768842667893864861, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: m_Color.r
+      value: 0.94509804
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adfed11546c3f429a964c176a8163350, type: 3}
 --- !u!4 &244295609 stripped
@@ -2993,12 +2941,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &254508284 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -3021,12 +2965,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &257244119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3440,9 +3380,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1055969625}
-  MyColor: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
 --- !u!1001 &266395143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3542,12 +3479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &284929042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3793,12 +3726,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &303557492 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -3821,12 +3750,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &306922406 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -3849,12 +3774,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &320712794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4032,12 +3953,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &322663066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4931,12 +4848,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &371419007 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -4959,12 +4872,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &379652552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5044,12 +4953,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &383944837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5649,12 +5554,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &415291515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -5677,12 +5578,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &415930311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5844,12 +5741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &422342952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5929,12 +5822,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &424411183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -5957,12 +5846,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &439125450 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -5985,12 +5870,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &441903195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6172,12 +6053,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &445668621
 GameObject:
   m_ObjectHideFlags: 0
@@ -6273,12 +6150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &457820612
 GameObject:
   m_ObjectHideFlags: 0
@@ -6505,12 +6378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &466544724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6590,12 +6459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &466867772 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -6618,12 +6483,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &468353868 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -6646,12 +6507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &472691406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6863,12 +6720,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &502293594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7067,8 +6920,6 @@ MonoBehaviour:
   ismove: 0
   countText: {fileID: 34920914}
   TurnText: {fileID: 1734884249}
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 2100000, guid: e6b276ec991f467aa14ef1f3cc665993, type: 2}
   isPlayerTurn: 0
 --- !u!224 &519420034
 RectTransform:
@@ -7120,12 +6971,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &525546283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7424,12 +7271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &541118674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7812,12 +7655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &557906823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8067,12 +7906,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &613146468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8250,12 +8085,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &626896099
 GameObject:
   m_ObjectHideFlags: 0
@@ -8318,12 +8149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &631478487 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -8346,12 +8173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &648506945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8917,12 +8740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &679629193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9018,12 +8837,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &685354672 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -9046,12 +8861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &686749647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9179,12 +8990,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &694134308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9579,12 +9386,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &737955482 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -9607,12 +9410,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &769221612 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -9635,12 +9434,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!4 &773926684 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -10005,12 +9800,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &827122470 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -10033,12 +9824,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &831998069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10608,12 +10395,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &868833170 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -10636,12 +10419,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &871984679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11016,12 +10795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &897936996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11190,12 +10965,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &903258877
 GameObject:
   m_ObjectHideFlags: 0
@@ -11619,12 +11390,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &917834238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11918,12 +11685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &924046817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12101,12 +11864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &928025113 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -12129,12 +11888,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &936732032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12417,12 +12172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &959145541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12700,12 +12451,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1000188666
 GameObject:
   m_ObjectHideFlags: 0
@@ -12836,12 +12583,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!4 &1007048689 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -13154,12 +12897,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1042920191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13294,12 +13033,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1049721532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13562,7 +13297,8 @@ Transform:
   m_LocalPosition: {x: 1, y: 1, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 1992674009}
   m_Father: {fileID: 1988088216}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13728,12 +13464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1063460441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13813,12 +13545,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1067958056 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -13841,12 +13569,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!4 &1075204241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -14168,12 +13892,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1104365211 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -14196,12 +13916,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1106228459
 GameObject:
   m_ObjectHideFlags: 0
@@ -14414,12 +14130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1134041249
 GameObject:
   m_ObjectHideFlags: 0
@@ -14477,12 +14189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1145374821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14587,12 +14295,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1161839694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14754,12 +14458,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1169654561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15087,12 +14787,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1205170189 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -15115,12 +14811,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1222219773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15436,12 +15128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1236030515
 GameObject:
   m_ObjectHideFlags: 0
@@ -15720,12 +15408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1254413925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16060,12 +15744,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1281122005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16227,12 +15907,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1287398099
 GameObject:
   m_ObjectHideFlags: 0
@@ -16575,12 +16251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1312616928 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -16603,12 +16275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1313135431
 GameObject:
   m_ObjectHideFlags: 0
@@ -16623,7 +16291,7 @@ GameObject:
   - component: {fileID: 1313135435}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16728,6 +16396,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  Enem: {fileID: 0}
+  player: {fileID: 1055969625}
   isVertical: 1
   EnemyMovePos_y: 0
   EnemyMovePos_x: 0
@@ -16736,6 +16406,7 @@ MonoBehaviour:
   Down: 1
   Right: 0
   Left: 0
+  Deathcount: 0
 --- !u!1001 &1313198425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16866,12 +16537,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1316506956 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -16894,12 +16561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1317810786 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -16922,12 +16585,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1322582073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17141,12 +16800,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1342939610
 GameObject:
   m_ObjectHideFlags: 0
@@ -17253,12 +16908,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1356729320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17499,12 +17150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!4 &1372209135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -17614,17 +17261,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!4 &1376957087 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
   m_PrefabInstance: {fileID: 1293245357}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1378444214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
+  m_PrefabInstance: {fileID: 244295608}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1378444219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378444214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4603eb44eb4624967a2ced136dc3325d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1384550938 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -17647,12 +17307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!4 &1384887679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -17680,12 +17336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1387660838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17781,12 +17433,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1392206973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17975,12 +17623,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1404491045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18829,12 +18473,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1452068138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19021,12 +18661,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!4 &1479330025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -19229,12 +18865,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1510007267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19443,12 +19075,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1537621576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19615,12 +19243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1545074606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19829,12 +19453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1560124058
 GameObject:
   m_ObjectHideFlags: 0
@@ -19892,12 +19512,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1565673370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19977,12 +19593,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1573012245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20428,12 +20040,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1612975470 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -20456,12 +20064,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1613399521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20726,12 +20330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1652993761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -20754,12 +20354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1659215265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21122,12 +20718,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1684150885 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -21150,12 +20742,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1684551977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21255,12 +20843,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1686677164 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -21283,12 +20867,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1686693804 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -21311,12 +20891,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1691182371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21396,12 +20972,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1705062047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21538,12 +21110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1723791922 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -21566,12 +21134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1725638384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22546,12 +22110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1786606135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22704,12 +22264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!4 &1795429422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -23170,12 +22726,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1860278793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23372,12 +22924,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1876173431
 GameObject:
   m_ObjectHideFlags: 0
@@ -23435,12 +22983,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1879289940 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -23463,12 +23007,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1879583739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23630,12 +23170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1897382797 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -23658,12 +23194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1897503796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23841,12 +23373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1907758230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23951,12 +23479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1919036763 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -23979,12 +23503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1925436211
 GameObject:
   m_ObjectHideFlags: 0
@@ -24087,12 +23607,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1927084267 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -24115,12 +23631,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1933524195 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -24143,12 +23655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1942711416 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -24171,12 +23679,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1948321378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -24199,12 +23703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1950363285 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -24227,12 +23727,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1961297428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24337,12 +23833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &1963792215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24668,12 +24160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &1988088214
 GameObject:
   m_ObjectHideFlags: 0
@@ -24721,6 +24209,90 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1992674008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1992674009}
+  - component: {fileID: 1992674010}
+  m_Layer: 0
+  m_Name: Circle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1992674009
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992674008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.21, z: 0.3}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1055969627}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1992674010
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992674008}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Color: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1992940552
 GameObject:
   m_ObjectHideFlags: 0
@@ -24838,12 +24410,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &2001864982 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -24866,12 +24434,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!4 &2003341389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -25095,12 +24659,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1001 &2032757063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25447,12 +25007,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &2061801482
 GameObject:
   m_ObjectHideFlags: 0
@@ -25596,12 +25152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &2085161378
 GameObject:
   m_ObjectHideFlags: 0
@@ -25841,12 +25393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &2099517903 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -25869,12 +25417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &2100328971
 GameObject:
   m_ObjectHideFlags: 0
@@ -26198,12 +25742,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &2121624956 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -26226,12 +25766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor2: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  MyColor3: {fileID: 0}
   A: 1
   Enemy: {fileID: 0}
-  Arpha: 0
 --- !u!1 &2125375924
 GameObject:
   m_ObjectHideFlags: 0

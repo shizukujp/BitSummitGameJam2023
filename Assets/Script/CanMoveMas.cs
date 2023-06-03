@@ -5,9 +5,7 @@ using UnityEngine;
 public class CanMoveMas : MonoBehaviour
 {
     public GameObject player;
-    public Material MyColor;//一番薄い色
-    public Material MyColor2;//2番目に濃い色
-    public Material MyColor3;//3
+
     public static CanMoveMas instance;
 
     public void Awake()
@@ -37,15 +35,16 @@ public class CanMoveMas : MonoBehaviour
         {
             if(child.transform.position == player.transform.position)
             {
-                child.GetComponent<Renderer>().material = MyColor3;
-            }else if (Vector2.Distance(player.transform.position, child.transform.position) / 1f <= 2f)
+                child.GetComponent<SpriteRenderer>().color = new Color(0.157f, 0.157f, 0.157f, 0.475f);
+            }
+            else if (Vector2.Distance(player.transform.position, child.transform.position) <= 2f)
             {
-                //Debug.Log("移動可能です");
-                child.GetComponent<Renderer>().material = MyColor2;
+                Debug.Log("移動可能です");
+                child.GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);
             }
             else
             {
-                child.GetComponent<Renderer>().material = MyColor;
+                child.GetComponent<SpriteRenderer>().color = new Color(0.943f, 0.943f, 0.943f, 0.475f);
             }
         }
     }
@@ -58,7 +57,7 @@ public class CanMoveMas : MonoBehaviour
         // 子オブジェクトを全て取得する
         foreach (Transform child in parentTransform)
         {
-            child.GetComponent<Renderer>().material = MyColor;
+            child.GetComponent<SpriteRenderer>().color = new Color(0.943f, 0.943f, 0.943f, 0.475f);
         }
     }
 }

@@ -14,7 +14,12 @@ public class Player : MonoBehaviour
     {
         if (instance == null)
         {
+            //DontDestroyOnLoad(gameObject);
             instance = this;
+        }
+        else
+        {
+            //Destroy(gameObject);
         }
     }
     Animator animator;
@@ -33,10 +38,6 @@ public class Player : MonoBehaviour
     public bool ismove = false;
     public GameObject countText;
     public GameObject TurnText;
-    
-    //クリックした場所の色を変更する
-    public Material MyColor;
-    public Material MyColor2;
 
     //int turnpreb = 0;
 
@@ -98,7 +99,7 @@ public class Player : MonoBehaviour
                         ismove = true;
                         //移動する場所のマスを変更する
                         clickPos = clickedGameObject.transform.position;
-                        clickedGameObject.GetComponent<Renderer>().material = MyColor2;
+                        //clickedGameObject.GetComponent<SpriteRenderer>().color = new Color(0.157f, 0.157f, 0.157f, 0.475f);
 
 
                     }
@@ -154,13 +155,11 @@ public class Player : MonoBehaviour
                 if (clickedGameObject.transform.position.y == player.transform.position.y)
                 {
                     Second = false;
-                    //clickedGameObject.GetComponent<Renderer>().material = MyColor;
-                    //TurnText.GetComponent<Count>().score = RoundController.instance.GetTurn();
+
                     RoundController.instance.SetTurn(RoundController.instance.GetTurn() + 1);
                     Debug.Log("移動完了");
                     isPlayerTurn = false;
-                    //移動が終わったら色を戻す
-                    //clickedGameObject.GetComponent<Renderer>().material = MyColor;
+                        
                     ismove = false;
                     CanMoveMas.instance.CanMove();
                     clickedGameObject = null;
