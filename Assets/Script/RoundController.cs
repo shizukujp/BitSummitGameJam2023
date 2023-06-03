@@ -54,7 +54,11 @@ public class RoundController : MonoBehaviour
         //�e�X�g�p
         if (Input.GetKey(KeyCode.Escape) && !Player.instance.isPlayerTurn) EnemyTurnEnd();
 
-
+        //敵に見つかった次のターンに戻る処理
+        if(EnemyMove.Deathcount == 2 || Input.GetKey(KeyCode.L))
+        {
+            recordTurnPositon.GetTurnPositionToScene(0);
+        }
         //Debug.Log(enemyturn);
         if (enemyturn >= 12)
         {

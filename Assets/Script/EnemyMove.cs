@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class EnemyMove : MonoBehaviour
 {
     public static EnemyMove instance;
-
+    GameObject GameManager;
+    RecordTurnPosition recordTurnPositon;
     public void Awake()
     {
         if (instance == null)
@@ -42,9 +43,11 @@ public class EnemyMove : MonoBehaviour
     public bool isEneMove = false;
     //敵が動いている方向
     public bool Up,Down, Right, Left;
-    public int Deathcount = 0;
+    public static int Deathcount = 0;
     void Start()
     {
+        GameManager = GameObject.FindGameObjectWithTag("GameController");
+        recordTurnPositon = GameManager.GetComponent<RecordTurnPosition>();
         //初めの敵のポジション
         vct1 = new Vector2(transform.position.x, transform.position.y);
         //敵が移動する最も遠いポジション(縦方向)
@@ -80,7 +83,9 @@ public class EnemyMove : MonoBehaviour
         {
             //ループ
             Debug.Log("死に戻り");
-            Time.timeScale = 0;
+            Deathcount = 2;
+            isEneMove = true;
+            One = false;
             //SceneManager.LoadScene("SampleScene2");
         }
 
@@ -168,7 +173,7 @@ public class EnemyMove : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, MovePos, speed * Time.deltaTime);
         if(transform.position.x == MovePos.x && transform.position.y == MovePos.y)
         {
-            Debug.Log("敵の移動完了");
+            //Debug.Log("敵の移動完了");
             Player.instance.TurnText.GetComponent<Count>().score += 1;
             animator.SetBool("IsMove", false);
             if (Discover())
@@ -213,28 +218,28 @@ public class EnemyMove : MonoBehaviour
     {
         if(Up)
         {
-            if (-1 > player.transform.position.x - transform.position.x && player.transform.position.x - transform.position.x > 1) { animator.SetBool("isDiscover", false); return false;}
-            if (player.transform.position.y - transform.position.y < 0f && 4 < player.transform.position.y - transform.position.y) { animator.SetBool("isDiscover", false); return false; }
-            Debug.Log("発見！");
+            if (player.transform.position.y - transform.position.y < 0 ||  4 < player.transform.position.y - transform.position.y) { animator.SetBool("isDiscover", false); return false;}
+            if (player.transform.position.x - transform.position.x < -1 || 1 < player.transform.position.x - transform.position.x) { animator.SetBool("isDiscover", false); return false; }
+            //Debug.Log("発見！");
             return true;
         }
         if(Down)
         {
             if (transform.position.y - player.transform.position.y < 0 || 4 < transform.position.y - player.transform.position.y) { animator.SetBool("isDiscover", false); return false; }
             if (transform.position.x - player.transform.position.x < -1 || 1 < transform.position.x - player.transform.position.x) { animator.SetBool("isDiscover", false); return false; }
-            Debug.Log("発見！");
+            //Debug.Log("発見！");
             return true;
         }
         if(Right)
         {
-            if (player.transform.position.x - transform.position.x < 0f && 4 < player.transform.position.x - transform.position.x) { animator.SetBool("isDiscover", false); return false; }
-            if (transform.position.y - player.transform.position.y < -1 && 1 < transform.position.y - player.transform.position.y) { animator.SetBool("isDiscover", false); return false; }
+            if (player.transform.position.x - transform.position.x < 0f || 4 < player.transform.position.x - transform.position.x) { animator.SetBool("isDiscover", false); return false; }
+            if (transform.position.y - player.transform.position.y < -1 || 1 < transform.position.y - player.transform.position.y) { animator.SetBool("isDiscover", false); return false; }
             return true;
         }
         if(Left)
         {
-            if (transform.position.x - player.transform.position.x < 0f && 4 < transform.position.x - player.transform.position.x) { animator.SetBool("isDiscover", false); return false; }
-            if (transform.position.y - player.transform.position.y < -1 && 1 < transform.position.y - player.transform.position.y) { animator.SetBool("isDiscover", false); return false; }
+            if (transform.position.x - player.transform.position.x < 0f || 4 < transform.position.x - player.transform.position.x) { animator.SetBool("isDiscover", false); return false; }
+            if (transform.position.y - player.transform.position.y < -1 || 1 < transform.position.y - player.transform.position.y) { animator.SetBool("isDiscover", false); return false; }
             return true;
         }
         return false;

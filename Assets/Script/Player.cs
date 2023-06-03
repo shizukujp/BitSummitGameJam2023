@@ -45,7 +45,6 @@ public class Player : MonoBehaviour
 
     int turnpreb = 0;
 
-    //int turnpreb = 0;
 
     //ターン関連
     public bool isPlayerTurn;

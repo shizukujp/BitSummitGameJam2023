@@ -58,8 +58,12 @@ public class ColorChange : MonoBehaviour
                 if(isDanger())
                 {
                     //最も危険
-                    GetComponent<SpriteRenderer>().color = new Color(1f, 0.1f, 0.1f, 0.475f);
-                    return;
+                    if (EnemyMove.Deathcount == 0)
+                    {
+                        GetComponent<SpriteRenderer>().color = new Color(1f, 0.1f, 0.1f, 0.475f);
+                        return;
+                    }
+                        
                 }
                 GetComponent<SpriteRenderer>().color = new Color(0.157f, 0.157f, 0.157f, 0.475f);
             }
@@ -67,15 +71,20 @@ public class ColorChange : MonoBehaviour
             {
                 if(isDanger())
                 {
-                    //危険な色
-                    GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
-                    return;
+                   
+                    if (EnemyMove.Deathcount == 0)
+                    {
+                        //危険な色
+                        GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
+                        return;
+                    }
+                        
                 }
                 GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);
             }
         }
 
-        if(EnemyMove.instance.isEneMove || EnemyMove.instance.Deathcount == 1)
+        if(EnemyMove.instance.isEneMove)
         {
             if (!isDanger())
             {
@@ -133,8 +142,11 @@ public class ColorChange : MonoBehaviour
             if (isDanger())
             {
                 //さらに危険な色
-                GetComponent<SpriteRenderer>().color = new Color(1f, 0.1f, 0.1f, 0.475f);
-                return;
+                if (EnemyMove.Deathcount == 0)
+                {
+                    GetComponent<SpriteRenderer>().color = new Color(1f, 0.1f, 0.1f, 0.475f);
+                    return;
+                }
             }
             //濃い鼠色
             GetComponent<SpriteRenderer>().color = new Color(0.157f, 0.157f, 0.157f, 0.475f);
@@ -144,8 +156,11 @@ public class ColorChange : MonoBehaviour
             if (isDanger())
             {
                 //危険な色
-                GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
-                return;
+                if (EnemyMove.Deathcount == 0)
+                {
+                    GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
+                    return;
+                }
             }
             //薄い鼠色
             GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);
@@ -168,9 +183,12 @@ public class ColorChange : MonoBehaviour
         {
             if(isDanger())
             {
-                //2番目に危険な色
-                GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
-                return;
+                if (EnemyMove.Deathcount == 0)
+                {
+                    //2番目に危険な色
+                    GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
+                    return;
+                }
             }
             //プレイヤーの周囲
             GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);
@@ -179,8 +197,11 @@ public class ColorChange : MonoBehaviour
         {
             if (isDanger())
             {
-                //危険な色
-                GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
+                if (EnemyMove.Deathcount == 0)
+                {
+                    //危険な色
+                    GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
+                }
             }
             else
             {

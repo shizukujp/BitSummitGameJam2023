@@ -6920,6 +6920,8 @@ MonoBehaviour:
   ismove: 0
   countText: {fileID: 34920914}
   TurnText: {fileID: 1734884249}
+  MyColor: {fileID: 0}
+  MyColor2: {fileID: 0}
   isPlayerTurn: 0
 --- !u!224 &519420034
 RectTransform:
@@ -12033,7 +12035,7 @@ GameObject:
   - component: {fileID: 946667890}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16406,7 +16408,6 @@ MonoBehaviour:
   Down: 1
   Right: 0
   Left: 0
-  Deathcount: 0
 --- !u!1001 &1313198425
 PrefabInstance:
   m_ObjectHideFlags: 0
