@@ -14,15 +14,23 @@ public class Player : MonoBehaviour
     {
         if (instance == null)
         {
+            //DontDestroyOnLoad(gameObject);
             instance = this;
         }
+        else
+        {
+            //Destroy(gameObject);
+        }
     }
+    Animator animator;
 
     public GameObject player;   //①移動させたいオブジェクト
     public int speed = 5; //移動スピード
     GameObject clickedGameObject;//クリックされたゲームオブジェクトを代入する変数
     Vector2 RL;//移動する場所のX座標
     Vector2 UD;//移動する場所のY座標
+    public Vector3 currentPos;
+    public Vector3 clickPos;
     bool First = false;
     bool Second = false;
     float CurrentY;//現在のプレイヤーのY座標
@@ -37,6 +45,8 @@ public class Player : MonoBehaviour
 
     int turnpreb = 0;
 
+    //int turnpreb = 0;
+
     //ターン関連
     public bool isPlayerTurn;
 
@@ -44,16 +54,21 @@ public class Player : MonoBehaviour
     {
         isPlayerTurn = true;
         TurnText.GetComponent<Count>().score += 1;
+        animator = player.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (RoundController.instance.GetTurn() != turnpreb)
+        if (Input.GetMouseButtonDown(1))
+        {
+            Motion();
+        }
+        /*if(RoundController.instance.GetTurn() != turnpreb)
         {
             TurnText.GetComponent<Count>().score = RoundController.instance.GetTurn();
-        }
-        //プレイヤーのターンじゃない場合は動かないようにする
+        }*/
+            //プレイヤーのターンじゃない場合は動かないようにする
         if (isPlayerTurn)
         {
             if (Input.GetMouseButtonDown(0) && Second == false)  //左クリックでif分起動
@@ -65,11 +80,11 @@ public class Player : MonoBehaviour
                 //Debug.DrawRay(ray.origin, ray.direction * 30, Color.red, 20f);
                 if (hit2d)
                 {
-                    Debug.Log(hit2d.transform.position);
+                    //Debug.Log(hit2d.transform.position);
                     CurrentY = player.transform.position.y;
                     CurrentX = player.transform.position.x;
                     clickedGameObject = hit2d.transform.gameObject;
-                    Debug.Log(clickedGameObject);//ゲームオブジェクトの名前を出力
+                    //Debug.Log(clickedGameObject);//ゲームオブジェクトの名前を出力
                     RL = new Vector2(clickedGameObject.transform.position.x, player.transform.position.y);
 
                     if (clickedGameObject.transform.position == player.transform.position)
@@ -86,9 +101,11 @@ public class Player : MonoBehaviour
                     else
                     {
                         First = Second = true;
+                        currentPos = player.transform.position;
                         ismove = true;
                         //移動する場所のマスを変更する
-                        clickedGameObject.GetComponent<Renderer>().material = MyColor2;
+                        clickPos = clickedGameObject.transform.position;
+                        //clickedGameObject.GetComponent<SpriteRenderer>().color = new Color(0.157f, 0.157f, 0.157f, 0.475f);
 
 
                     }
@@ -144,18 +161,20 @@ public class Player : MonoBehaviour
                 if (clickedGameObject.transform.position.y == player.transform.position.y)
                 {
                     Second = false;
-                    //clickedGameObject.GetComponent<Renderer>().material = MyColor;
-                    //TurnText.GetComponent<Count>().score = RoundController.instance.GetTurn();
+
                     RoundController.instance.SetTurn(RoundController.instance.GetTurn() + 1);
                     Debug.Log("移動完了");
                     isPlayerTurn = false;
-                    //移動が終わったら色を戻す
-                    clickedGameObject.GetComponent<Renderer>().material = MyColor;
+                        
                     ismove = false;
                     CanMoveMas.instance.CanMove();
                     clickedGameObject = null;
                 }
             }
         }
+    }
+    void Motion()
+    {
+        animator.SetTrigger("IsMotion");
     }
 }

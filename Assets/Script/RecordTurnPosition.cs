@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class RecordTurnPosition : MonoBehaviour
 {
-    GameObject[] enemy = new GameObject[10];     //“GƒIƒuƒWƒFƒNƒg‚Ì”z—ñ
-    GameObject player;      //ƒvƒŒƒCƒ„[
+    GameObject[] enemy = new GameObject[10];     //ï¿½Gï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½Ì”zï¿½ï¿½
+    GameObject player;      //ï¿½vï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½[
 
 
-    //ƒ‰ƒEƒ“ƒh‚²‚Æ‚Ìƒ|ƒWƒVƒ‡ƒ“‚Ì•Û‘¶•Ï””z—ñi0‚Íƒ‰ƒEƒ“ƒh‚ªn‚Ü‚é‘O‚ÌˆÊ’uî•ñj
+    //ï¿½ï¿½ï¿½Eï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Æ‚Ìƒ|ï¿½Wï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½Ì•Û‘ï¿½ï¿½Ïï¿½ï¿½zï¿½ï¿½i0ï¿½Íƒï¿½ï¿½Eï¿½ï¿½ï¿½hï¿½ï¿½ï¿½nï¿½Ü‚ï¿½Oï¿½ÌˆÊ’uï¿½ï¿½ï¿½j
     Vector3[] roundPosition0 = new Vector3[11], roundPosition1 = new Vector3[11], roundPosition2 = new Vector3[11], roundPosition3 = new Vector3[11], roundPosition4 = new Vector3[11],
         roundPosition5 = new Vector3[11], roundPosition6 = new Vector3[11], roundPosition7 = new Vector3[11], roundPosition8 = new Vector3[11],
         roundPosition9 = new Vector3[11], roundPosition10 = new Vector3[11], roundPosition11 = new Vector3[11], roundPosition12 = new Vector3[11];
@@ -26,7 +26,7 @@ public class RecordTurnPosition : MonoBehaviour
         
     }
 
-    //“G‚ÌŒÂ”‚ğƒXƒLƒƒƒ“‚µ‚Äg‚¤
+    //ï¿½Gï¿½ÌŒÂï¿½ï¿½ï¿½ï¿½Xï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ägï¿½ï¿½
     public void ScanEnemy()
     {
         var i = 0;
@@ -41,7 +41,7 @@ public class RecordTurnPosition : MonoBehaviour
         }
     }
 
-    //ˆÊ’uî•ñ‚Ìg—p
+    //ï¿½Ê’uï¿½ï¿½ï¿½Ìgï¿½p
     public void GetTurnPositionToScene(int turn)
     {
         switch (turn)
@@ -242,13 +242,13 @@ public class RecordTurnPosition : MonoBehaviour
                 player.transform.position = roundPosition12[i12];
                 break;
             default:
-                Debug.Log("•Û‘¶‚³‚ê‚Ä‚¢‚È‚¢•Ï””z—ñ‚ªŒÄ‚Î‚ê‚Ä‚¢‚éA‚à‚¤ˆê“xŠm”F‚µ‚Ä‚­‚¾‚³‚¢");
+                Debug.Log("ï¿½Û‘ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½Ïï¿½ï¿½zï¿½ñ‚ªŒÄ‚Î‚ï¿½Ä‚ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½mï¿½Fï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
                 break;
         }
     }
 
 
-    //ƒ‰ƒEƒ“ƒh‚²‚Æ‚ÉˆÊ’uî•ñ‚Ì•Û‘¶
+    //ï¿½ï¿½ï¿½Eï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Æ‚ÉˆÊ’uï¿½ï¿½ï¿½Ì•Û‘ï¿½
     public void SetTurnPosition(int turn)
     {
         switch (turn)
@@ -449,7 +449,6 @@ public class RecordTurnPosition : MonoBehaviour
                 roundPosition12[i12] = player.transform.position;
                 break;
             default:
-                Debug.Log("ƒP[ƒX‚É‚È‚¢’l‚ª•Û‘¶‚³‚ê‚½A‚à‚¤ˆê“xŠm”F‚µ‚Ä‚­‚¾‚³‚¢");
                 break;
         }
     }

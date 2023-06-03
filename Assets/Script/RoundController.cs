@@ -7,7 +7,7 @@ public class RoundController : MonoBehaviour
 {
     public static RoundController instance;
 
-    //ƒV[ƒ“‚ÌŒğŠ·‚É‚Â‚¢‚Ä
+    //ã‚·ãƒ¼ãƒ³ã®äº¤æ›ã«ã¤ã„ã¦
     Scene scenePreb;
 
     int playerturn = 1, playerturnpreb = 1, playerround = 1, enemyturn = 1, enemyround = 1;
@@ -30,10 +30,10 @@ public class RoundController : MonoBehaviour
     }
 
 
-    //Às—pŠÖ”
+    //å®Ÿè¡Œç”¨é–¢æ•°
     private void Update()
     {
-        //‚à‚µƒV[ƒ“‚ª•Ï‚í‚Á‚½‚ç
+        //ã‚‚ã—ã‚·ãƒ¼ãƒ³ãŒå¤‰ã‚ã£ãŸã‚‰
         if (SceneManager.GetActiveScene() != scenePreb)
         {
             playerturn = 1;
@@ -49,8 +49,10 @@ public class RoundController : MonoBehaviour
             playerturnpreb = playerturn;
             Player.instance.isPlayerTurn = false;
         }
-        //ƒeƒXƒg—p
+        //ãƒ†ã‚¹ãƒˆç”¨
         //if (Input.GetKey(KeyCode.Escape) && !Player.instance.isPlayerTurn) EnemyTurnEnd();
+        //ï¿½eï¿½Xï¿½gï¿½p
+        if (Input.GetKey(KeyCode.Escape) && !Player.instance.isPlayerTurn) EnemyTurnEnd();
 
 
         //Debug.Log(enemyturn);
@@ -62,23 +64,23 @@ public class RoundController : MonoBehaviour
             playerturnpreb = 1;
             enemyturn = 1;
 
-            //FC³
+            //è‰²ä¿®æ­£
             CanMoveMas.instance.Moveoff();
             CanMoveMas.instance.CanMove();
 
-            //ƒvƒŒƒCƒ„[“®‚«‚Ì’Ç‰Á
+            //ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼å‹•ãã®è¿½åŠ 
             Player.instance.isPlayerTurn = true;
         }
     }
 
 
 
-    //“à•”‚Å“®‚­ŠÖ”
+    //å†…éƒ¨ã§å‹•ãé–¢æ•°
 
 
 
 
-    //ƒpƒuƒŠƒbƒNŠÖ”
+    //ãƒ‘ãƒ–ãƒªãƒƒã‚¯é–¢æ•°
     public int GetTurn() { return playerturn; }
     public int GetRound() { return playerround; }
     public void SetTurn(int tn) { playerturn = tn; }

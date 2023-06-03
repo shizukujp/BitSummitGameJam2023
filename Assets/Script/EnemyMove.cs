@@ -1,14 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyMove : MonoBehaviour
 {
+    public static EnemyMove instance;
+
+    public void Awake()
+    {
+        if (instance == null)
+        {
+            //DontDestroyOnLoad(gameObject);
+            instance = this;
+        }
+        else
+        {
+            //Destroy(gameObject);
+        }
+    }
+
     Animator animator;
     public float speed = 1f;
     Vector2 vct1;
     Vector2 vct2;
     Vector2 vct3;
+    public GameObject Enem;
+    public GameObject player;
     //敵が次のターンに移動するポジション
     Vector2 MovePos;
     //敵がvct2.vct3まで向かっているか(falseの場合、元いた場所まで向かう)
@@ -20,7 +38,11 @@ public class EnemyMove : MonoBehaviour
     public int EnemyMovePos_y = 0;
     //敵が移動するポジションのx座標
     public int EnemyMovePos_x = 0;
-    // Start is called before the first frame update
+    //敵が移動しているかどうか
+    public bool isEneMove = false;
+    //敵が動いている方向
+    public bool Up,Down, Right, Left;
+    public int Deathcount = 0;
     void Start()
     {
         //初めの敵のポジション
@@ -30,6 +52,9 @@ public class EnemyMove : MonoBehaviour
         //敵が移動する最も遠いポジション(横方向)
         vct3 = new Vector2(EnemyMovePos_x, transform.position.y);
         animator = GetComponent<Animator>();
+        //Up = Down = Right = Left = false;
+        Enem = this.gameObject;
+
     }
 
     // Update is called once per frame
@@ -39,23 +64,46 @@ public class EnemyMove : MonoBehaviour
         {
             Move();
         }
+        /*if (Player.instance.ismove || isEneMove)
+            Discover(Up, Down, Right, Left);*/
     }
 
     void Move()
     {
-        //次移動する場所の設定
-        if(Go && One && isVertical)
+        //アラームモードにはいったら
+        if(Discover())
         {
-            Debug.Log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            isEneMove = true;
+            One = false;
+        }
+        if (Deathcount == 1)
+        {
+            //ループ
+            Debug.Log("死に戻り");
+            Time.timeScale = 0;
+            //SceneManager.LoadScene("SampleScene2");
+        }
+
+        //次移動する場所の設定
+        if (Go && One && isVertical)
+        {
             //縦方向への移動(vct2へ向かう)
             if(vct2.y < transform.position.y)
             {
+                //下方向
                 MovePos = new Vector2(transform.position.x, transform.position.y - 1f);
-            }else if(vct2.y > transform.position.y)
+                Down = true;
+                Up = Right = Left = false;
+            }
+            else if(vct2.y > transform.position.y)
             {
+                //上方向
                 MovePos = new Vector2(transform.position.x, transform.position.y + 1f);
+                Up = true;
+                Down = Right = Left = false;
             }
             One = false;
+            isEneMove = true; 
             animator.SetBool("IsMove", true);
         }
         else if(Go && One && !isVertical)
@@ -63,13 +111,20 @@ public class EnemyMove : MonoBehaviour
             //横方向への移動(vct3へ向かう)
             if (vct3.x < transform.position.x)
             {
+                //左方向
                 MovePos = new Vector2(transform.position.x - 1f, transform.position.y);
+                Right = true;
+                Up = Down = Left = false;
             }
             else if (vct3.x > transform.position.x)
             {
+                //右方向
                 MovePos = new Vector2(transform.position.x + 1f, transform.position.y);
+                Left = true;
+                Up = Right = Down = false;
             }
             One = false;
+            isEneMove = true;
             animator.SetBool("IsMove", true);
         }
         else if(!Go && One && isVertical)
@@ -78,12 +133,17 @@ public class EnemyMove : MonoBehaviour
             if (vct1.y < transform.position.y)
             {
                 MovePos = new Vector2(transform.position.x, transform.position.y - 1f);
+                Down = true;
+                Up = Right = Left = false;
             }
             else if (vct1.y > transform.position.y)
             {
                 MovePos = new Vector2(transform.position.x, transform.position.y + 1f);
+                Up = true;
+                Down = Right = Left = false;
             }
             One = false;
+            isEneMove = true;
             animator.SetBool("IsMove", true);
         } else if(!Go && One && !isVertical)
         {
@@ -91,12 +151,17 @@ public class EnemyMove : MonoBehaviour
             if (vct1.x < transform.position.x)
             {
                 MovePos = new Vector2(transform.position.x - 1f, transform.position.y);
+                Right = true;
+                Up = Down = Left = false;
             }
             else if (vct1.x > transform.position.x)
             {
                 MovePos = new Vector2(transform.position.x + 1f, transform.position.y);
+                Left = true;
+                Up = Right = Down = false;
             }
             One = false;
+            isEneMove = true;
             animator.SetBool("IsMove", true);
         }
 
@@ -104,20 +169,29 @@ public class EnemyMove : MonoBehaviour
         if(transform.position.x == MovePos.x && transform.position.y == MovePos.y)
         {
             Debug.Log("敵の移動完了");
-            //Player.instance.TurnText.GetComponent<Count>().score += 1;
+            Player.instance.TurnText.GetComponent<Count>().score += 1;
             animator.SetBool("IsMove", false);
-            RoundController.instance.EnemyTurnEnd();
+            if (Discover())
+            {
+                animator.SetBool("isDiscover", true);
+                Deathcount = 1;
+            }
+            isEneMove = false;
+            Player.instance.isPlayerTurn = true;
             One = true;
         }
+
+
         //敵がvct2かvct3、または元いた場所に到達したかどうか
         if (isVertical)
         {
+            
             //縦方向の場合(vct2)
             if (transform.position.y == vct2.y)
             {
                 Go = false;
             }else if(transform.position.y == vct1.y)
-            {
+            { 
                 Go = true;
             }
         }
@@ -133,5 +207,36 @@ public class EnemyMove : MonoBehaviour
                 Go = true;
             }
         }
+    }
+
+    public bool Discover()
+    {
+        if(Up)
+        {
+            if (-1 > player.transform.position.x - transform.position.x && player.transform.position.x - transform.position.x > 1) { animator.SetBool("isDiscover", false); return false;}
+            if (player.transform.position.y - transform.position.y < 0f && 4 < player.transform.position.y - transform.position.y) { animator.SetBool("isDiscover", false); return false; }
+            Debug.Log("発見！");
+            return true;
+        }
+        if(Down)
+        {
+            if (transform.position.y - player.transform.position.y < 0 || 4 < transform.position.y - player.transform.position.y) { animator.SetBool("isDiscover", false); return false; }
+            if (transform.position.x - player.transform.position.x < -1 || 1 < transform.position.x - player.transform.position.x) { animator.SetBool("isDiscover", false); return false; }
+            Debug.Log("発見！");
+            return true;
+        }
+        if(Right)
+        {
+            if (player.transform.position.x - transform.position.x < 0f && 4 < player.transform.position.x - transform.position.x) { animator.SetBool("isDiscover", false); return false; }
+            if (transform.position.y - player.transform.position.y < -1 && 1 < transform.position.y - player.transform.position.y) { animator.SetBool("isDiscover", false); return false; }
+            return true;
+        }
+        if(Left)
+        {
+            if (transform.position.x - player.transform.position.x < 0f && 4 < transform.position.x - player.transform.position.x) { animator.SetBool("isDiscover", false); return false; }
+            if (transform.position.y - player.transform.position.y < -1 && 1 < transform.position.y - player.transform.position.y) { animator.SetBool("isDiscover", false); return false; }
+            return true;
+        }
+        return false;
     }
 }
