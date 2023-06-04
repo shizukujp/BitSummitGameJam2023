@@ -32,25 +32,24 @@ public class ColorChange : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);
         }
-        if (0 <= (Enemy.transform.position.y - transform.position.y) && (Enemy.transform.position.y - transform.position.y) <= 3)
+        /*if (0 <= (Enemy.transform.position.y - transform.position.y) && (Enemy.transform.position.y - transform.position.y) <= 3)
         {
             if(1 >= (Enemy.transform.position.x - transform.position.x) && (Enemy.transform.position.x - transform.position.x) >= -1)
             {
                 this.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
             }
             //Dangermat.color = new Color(255, 167, 167, 121);
+        }*/
+        if(isDanger())
+        {
+            this.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        //プレイヤーが動いていない間
-        if (A && !Player.instance.ismove)
-        {
-            //Debug.Log("生成");
-            //CanPlayerMove();
-        }
+        //プレイヤーが動いている時
         if(Player.instance.ismove)
         {
             if (Vector2.Distance(player.transform.position, transform.position) < 0.5f)
@@ -83,7 +82,7 @@ public class ColorChange : MonoBehaviour
                 GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);
             }
         }
-
+        //敵が動いている時
         if(EnemyMove.instance.isEneMove)
         {
             if (!isDanger())
@@ -105,6 +104,7 @@ public class ColorChange : MonoBehaviour
             GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
             //DangerColor(EnemyMove.instance.Enem, EnemyMove.instance.Up, EnemyMove.instance.Down, EnemyMove.instance.Right, EnemyMove.instance.Left);
         }
+        
     }
 
     /*void OnMouseEnter()
@@ -195,13 +195,10 @@ public class ColorChange : MonoBehaviour
         }
         else
         {
-            if (isDanger())
+            if (isDanger() && EnemyMove.Deathcount == 0)
             {
-                if (EnemyMove.Deathcount == 0)
-                {
-                    //危険な色
-                    GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
-                }
+                //危険な色
+                GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
             }
             else
             {
@@ -412,4 +409,23 @@ public class ColorChange : MonoBehaviour
         return true;
     }
 
+    public void RisetColor()
+    {
+        if (isDanger())
+        {
+            this.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
+        }
+        if (Vector2.Distance(player.transform.position, transform.position) == 0)
+        {
+            GetComponent<SpriteRenderer>().color = new Color(0.157f, 0.157f, 0.157f, 0.475f);
+        }
+        else if (Vector2.Distance(player.transform.position, transform.position) <= 2f)
+        {
+            GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);
+        }else
+        {
+            if(isDanger()) return;
+            GetComponent<SpriteRenderer>().color = new Color(0.943f, 0.943f, 0.943f, 0.475f);
+        }
+    }
 }

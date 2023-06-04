@@ -39,7 +39,7 @@ public class CanMoveMas : MonoBehaviour
             }
             else if (Vector2.Distance(player.transform.position, child.transform.position) <= 2f)
             {
-                Debug.Log("移動可能です");
+                //Debug.Log("移動可能です");
                 child.GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);
             }
             else

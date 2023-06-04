@@ -7,6 +7,8 @@ public class RecordTurnPosition : MonoBehaviour
     GameObject[] enemy = new GameObject[10];     //�G�I�u�W�F�N�g�̔z��
     GameObject player;      //�v���C���[
 
+    GameObject[] Tiles;
+    int i = 0;
 
     //���E���h���Ƃ̃|�W�V�����̕ۑ��ϐ��z��i0�̓��E���h���n�܂�O�̈ʒu���j
     Vector3[] roundPosition0 = new Vector3[11], roundPosition1 = new Vector3[11], roundPosition2 = new Vector3[11], roundPosition3 = new Vector3[11], roundPosition4 = new Vector3[11],
@@ -19,6 +21,11 @@ public class RecordTurnPosition : MonoBehaviour
         
         player = GameObject.Find("Player");
         SetTurnPosition(0);
+    }
+    private void Start()
+    {
+        Tiles = GameObject.FindGameObjectsWithTag("Tile");
+        //Debug.Log("タイルの数:"　+ Tiles.Length);
     }
 
     private void Update()
@@ -245,6 +252,13 @@ public class RecordTurnPosition : MonoBehaviour
                 Debug.Log("�ۑ�����Ă��Ȃ��ϐ��z�񂪌Ă΂�Ă���A������x�m�F���Ă�������");
                 break;
         }
+        foreach (GameObject tiles in GameObject.FindGameObjectsWithTag("Tile"))
+        {
+            ColorChange change = Tiles[i].GetComponent<ColorChange>();
+            change.RisetColor();
+            i++;
+        }
+        i = 0;
     }
 
 

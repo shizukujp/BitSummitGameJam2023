@@ -12,6 +12,9 @@ public class RoundController : MonoBehaviour
 
     int playerturn = 1, playerturnpreb = 1, playerround = 1, enemyturn = 1, enemyround = 1;
     RecordTurnPosition recordTurnPositon;
+    
+    public GameObject countText;
+    public GameObject TurnText;
 
     private void Awake()
     {
@@ -28,7 +31,7 @@ public class RoundController : MonoBehaviour
         scenePreb = SceneManager.GetActiveScene();
         recordTurnPositon = GetComponent<RecordTurnPosition>();
     }
-
+    
 
     //実行用関数
     private void Update()
@@ -58,6 +61,9 @@ public class RoundController : MonoBehaviour
         if(EnemyMove.Deathcount == 2 || Input.GetKey(KeyCode.L))
         {
             recordTurnPositon.GetTurnPositionToScene(0);
+            TurnText.GetComponent<Count>().score = 1;
+            countText.GetComponent<Count>().score = 0;
+            EnemyMove.Deathcount = 0;
         }
         //Debug.Log(enemyturn);
         if (enemyturn >= 12)
