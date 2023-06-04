@@ -16,6 +16,13 @@ public class RoundController : MonoBehaviour
 
     bool playerWatchSave = false;
 
+    public GameObject countText;
+    public GameObject TurnText;
+
+    public static bool OnOff_Enemy = false;
+    public static bool OnOff_Player = false;
+
+
     GameObject player;
     PocketWatch pocketWatch;
 
@@ -39,13 +46,23 @@ public class RoundController : MonoBehaviour
         scenePreb = SceneManager.GetActiveScene();
         recordTurnPositon = GetComponent<RecordTurnPosition>();
     }
-    
+
 
     //実行用関数
     private void Update()
     {
-        //もしシーンが変わったら
-        if (SceneManager.GetActiveScene() != scenePreb)
+        if(Input.GetKey(KeyCode.O))
+        {
+            if(!OnOff_Enemy)OnOff_Enemy = OnOff_Player = true;
+            MasRiset();
+        }
+        if (Input.GetKey(KeyCode.P))
+        {
+            if (OnOff_Enemy) OnOff_Enemy = OnOff_Player = false;
+            MasRiset();
+        }
+            //もしシーンが変わったら
+            if (SceneManager.GetActiveScene() != scenePreb)
         {
             playerturn = 1;
             playerturnpreb = 1;
@@ -78,8 +95,10 @@ public class RoundController : MonoBehaviour
             GameReset();
             EnemyMove.Deathcount = 0;
         }
-        //Debug.Log(enemyturn);
-        if (enemyturn >= 12)
+        
+
+            //Debug.Log(enemyturn);
+            if (enemyturn >= 12)
         {
             GameReset();
         }
@@ -141,5 +160,15 @@ public class RoundController : MonoBehaviour
     public void EnemyRoundEnd()
     {
         enemyround++;
+    }
+    public void MasRiset()
+    {
+        int i = 0;
+        foreach (GameObject tiles in recordTurnPositon.Tiles)
+        {
+            ColorChange change = recordTurnPositon.Tiles[i].GetComponent<ColorChange>();
+            change.RisetColor();
+            i++;
+        }
     }
 }

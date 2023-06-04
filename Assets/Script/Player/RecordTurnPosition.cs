@@ -7,8 +7,10 @@ public class RecordTurnPosition : MonoBehaviour
     GameObject[] enemy = new GameObject[10];     //敵のオブジェクト群
     GameObject player;      //プレイヤーオブジェクト
 
-    GameObject[] Tiles;
+    public GameObject[] Tiles;
     int i = 0;
+    GameObject[] Enemys;
+    int j = 0;
 
     //ラウンドごとに敵とプレイヤーの位置を保存する関数の宣言
     Vector3[] roundPosition0 = new Vector3[11], roundPosition1 = new Vector3[11], roundPosition2 = new Vector3[11], roundPosition3 = new Vector3[11], roundPosition4 = new Vector3[11],
@@ -25,6 +27,7 @@ public class RecordTurnPosition : MonoBehaviour
     private void Start()
     {
         Tiles = GameObject.FindGameObjectsWithTag("Tile");
+        Enemys = GameObject.FindGameObjectsWithTag("Enemy");
         //Debug.Log("タイルの数:"　+ Tiles.Length);
     }
 
@@ -252,12 +255,21 @@ public class RecordTurnPosition : MonoBehaviour
                 Debug.Log("�ۑ�����Ă��Ȃ��ϐ��z�񂪌Ă΂�Ă���A������x�m�F���Ă�������");
                 break;
         }
-        foreach (GameObject tiles in GameObject.FindGameObjectsWithTag("Tile"))
+        foreach (GameObject enemys in Enemys)
+        {
+            EnemyMove enemy = Enemys[j].GetComponent<EnemyMove>();
+            enemy.Up = enemy.FUp;
+            enemy.Down = enemy.FDown;
+            enemy.Right = enemy.FRight;
+            enemy.Left = enemy.FLeft;
+        }
+        foreach (GameObject tiles in Tiles)
         {
             ColorChange change = Tiles[i].GetComponent<ColorChange>();
             change.RisetColor();
             i++;
         }
+        j = 0;
         i = 0;
     }
 

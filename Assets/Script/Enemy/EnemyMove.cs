@@ -43,6 +43,7 @@ public class EnemyMove : MonoBehaviour
     public bool isEneMove = false;
     //敵が動いている方向
     public bool Up,Down, Right, Left;
+    public bool FUp, FDown, FRight, FLeft;
     public static int Deathcount = 0;
     void Start()
     {
@@ -57,7 +58,10 @@ public class EnemyMove : MonoBehaviour
         animator = GetComponent<Animator>();
         //Up = Down = Right = Left = false;
         Enem = this.gameObject;
-
+        FUp = Up;
+        FDown = Down;
+        FRight = Right;
+        FLeft = Left;
     }
 
     // Update is called once per frame
@@ -181,23 +185,45 @@ public class EnemyMove : MonoBehaviour
                 animator.SetBool("isDiscover", true);
                 Deathcount = 1;
             }
-            isEneMove = false;
             Player.instance.isPlayerTurn = true;
+            isEneMove = false;
             One = true;
         }
 
-
-        //敵がvct2かvct3、または元いた場所に到達したかどうか
+        // 敵がvct2かvct3、または元いた場所に到達したかどうか
         if (isVertical)
         {
-            
+
             //縦方向の場合(vct2)
             if (transform.position.y == vct2.y)
             {
+                if (Up)
+                {
+                    Up = false;
+                    Down = true;
+                }
+                if (Down)
+                {
+                    Down = false;
+                    Up = true;
+                }
                 Go = false;
-            }else if(transform.position.y == vct1.y)
-            { 
+                RoundController.instance.MasRiset();
+            }
+            else if (transform.position.y == vct1.y)
+            {
+                if (Up)
+                {
+                    Up = false;
+                    Down = true;
+                }
+                if (Down)
+                {
+                    Down = false;
+                    Up = true;
+                }
                 Go = true;
+                RoundController.instance.MasRiset();
             }
         }
         else
@@ -205,13 +231,36 @@ public class EnemyMove : MonoBehaviour
             //横方向の場合(vct3)
             if (transform.position.x == vct3.x)
             {
+                if (Right)
+                {
+                    Right = false;
+                    Left = true;
+                }
+                if (Left)
+                {
+                    Left = false;
+                    Right = true;
+                }
                 Go = false;
+                RoundController.instance.MasRiset();
             }
             else if (transform.position.x == vct1.x)
             {
+                if (Right)
+                {
+                    Right = false;
+                    Left = true;
+                }
+                if (Left)
+                {
+                    Left = false;
+                    Right = true;
+                }
                 Go = true;
+                RoundController.instance.MasRiset();
             }
         }
+
     }
 
     public bool Discover()
