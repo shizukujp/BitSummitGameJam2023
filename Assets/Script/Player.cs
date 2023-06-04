@@ -40,8 +40,8 @@ public class Player : MonoBehaviour
     public GameObject TurnText;
     
     //クリックした場所の色を変更する
-    public Material MyColor;
-    public Material MyColor2;
+    //public Material MyColor;
+    //public Material MyColor2;
 
     int turnpreb = 0;
 
@@ -49,11 +49,14 @@ public class Player : MonoBehaviour
     //ターン関連
     public bool isPlayerTurn;
 
+    Vector2 pos;
+
     void Start()
     {
         isPlayerTurn = true;
         TurnText.GetComponent<Count>().score += 1;
         animator = player.GetComponent<Animator>();
+        pos = transform.localScale;//(1.25, 1.25, 1.25)
     }
 
     // Update is called once per frame
@@ -102,8 +105,19 @@ public class Player : MonoBehaviour
                         First = Second = true;
                         currentPos = player.transform.position;
                         ismove = true;
+                        animator.SetBool("isRunning", true);
+                        
                         //移動する場所のマスを変更する
                         clickPos = clickedGameObject.transform.position;
+                        if (clickedGameObject.transform.position.x - transform.position.x > 0 && pos.x > 0)
+                        {
+                            pos.x *= -1;
+                        }
+                        if (clickedGameObject.transform.position.x - transform.position.x < 0 && pos.x < 0)
+                        {
+                            pos.x *= -1;
+                        }
+                        transform.localScale = pos;
                         //clickedGameObject.GetComponent<SpriteRenderer>().color = new Color(0.157f, 0.157f, 0.157f, 0.475f);
 
 
@@ -166,6 +180,7 @@ public class Player : MonoBehaviour
                     isPlayerTurn = false;
                         
                     ismove = false;
+                    animator.SetBool("isRunning", false);
                     CanMoveMas.instance.CanMove();
                     clickedGameObject = null;
                 }
