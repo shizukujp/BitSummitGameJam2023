@@ -208,8 +208,7 @@ public class EnemyMove : MonoBehaviour
                     Up = true;
                 }
                 Go = false;
-                Orikaeshi = true;
-                hajime = false;
+                RoundController.instance.MasRiset();
             }
             else if (transform.position.y == vct1.y)
             {
@@ -224,8 +223,7 @@ public class EnemyMove : MonoBehaviour
                     Up = true;
                 }
                 Go = true;
-                Orikaeshi = false;
-                hajime = true;
+                RoundController.instance.MasRiset();
             }
         }
         else
@@ -244,6 +242,7 @@ public class EnemyMove : MonoBehaviour
                     Right = true;
                 }
                 Go = false;
+                RoundController.instance.MasRiset();
             }
             else if (transform.position.x == vct1.x)
             {
@@ -258,6 +257,7 @@ public class EnemyMove : MonoBehaviour
                     Right = true;
                 }
                 Go = true;
+                RoundController.instance.MasRiset();
             }
         }
 

@@ -7,9 +7,9 @@ public class RecordTurnPosition : MonoBehaviour
     GameObject[] enemy = new GameObject[10];     //�G�I�u�W�F�N�g�̔z��
     GameObject player;      //�v���C���[
 
-    GameObject[] Tiles;
+    public GameObject[] Tiles;
     int i = 0;
-    public GameObject[] Enemys;
+    GameObject[] Enemys;
     int j = 0;
 
     //���E���h���Ƃ̃|�W�V�����̕ۑ��ϐ��z��i0�̓��E���h���n�܂�O�̈ʒu���j
