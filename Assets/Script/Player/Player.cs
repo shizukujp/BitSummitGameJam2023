@@ -178,10 +178,10 @@ public class Player : MonoBehaviour
                     RoundController.instance.SetTurn(RoundController.instance.GetTurn() + 1);
                     Debug.Log("移動完了");
                     isPlayerTurn = false;
-                        
+                    RoundController.instance.MasRiset();
                     ismove = false;
                     animator.SetBool("isRunning", false);
-                    CanMoveMas.instance.CanMove();
+                    //CanMoveMas.instance.CanMove();
                     clickedGameObject = null;
                 }
             }

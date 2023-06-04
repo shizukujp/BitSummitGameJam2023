@@ -61,8 +61,8 @@ public class RoundController : MonoBehaviour
             if (OnOff_Enemy) OnOff_Enemy = OnOff_Player = false;
             MasRiset();
         }
-            //もしシーンが変わったら
-            if (SceneManager.GetActiveScene() != scenePreb)
+         //もしシーンが変わったら
+        if (SceneManager.GetActiveScene() != scenePreb)
         {
             playerturn = 1;
             playerturnpreb = 1;
@@ -121,9 +121,10 @@ public class RoundController : MonoBehaviour
         if (pocketWatch.GetPocketWatchCheck()) pocketWatch.ResetPocketWatchCheck();
 
         //色修正
-        CanMoveMas.instance.Moveoff();
-        CanMoveMas.instance.CanMove();
-
+        //CanMoveMas.instance.Moveoff();
+        //CanMoveMas.instance.CanMove();
+        TurnText.GetComponent<Count>().score = 1;
+        countText.GetComponent<Count>().score = 0;
         //プレイヤー動きの追加
         Player.instance.isPlayerTurn = true;
     }

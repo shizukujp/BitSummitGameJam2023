@@ -30,7 +30,8 @@ public class ColorChange : MonoBehaviour
         /*if (Vector2.Distance(player.transform.position, transform.position) == 0)
         {
             GetComponent<SpriteRenderer>().color = new Color(0.157f, 0.157f, 0.157f, 0.475f);
-        }else */if (Vector2.Distance(player.transform.position, transform.position) <= 2f)
+        }else */
+        if(CanPlayerMoveColor())
         {
             GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);
         }
@@ -52,7 +53,7 @@ public class ColorChange : MonoBehaviour
     void Update()
     {
         //プレイヤーが動いている時
-        if(Player.instance.ismove)
+        if(Player.instance.ismove && !RoundController.OnOff_Player)
         {
             /*if (Vector2.Distance(player.transform.position, transform.position) < 0.5f)
             {
@@ -85,7 +86,7 @@ public class ColorChange : MonoBehaviour
             }
         }
         //敵が動いている時
-        if(EnemyMove.instance.isEneMove)
+        if(EnemyMove.instance.isEneMove && !RoundController.OnOff_Enemy)
         {
             if (!isDanger())
             {
