@@ -174,8 +174,8 @@ public class EnemyMove : MonoBehaviour
         if(transform.position.x == MovePos.x && transform.position.y == MovePos.y)
         {
             //Debug.Log("敵の移動完了");
-            Player.instance.TurnText.GetComponent<Count>().score += 1;
             animator.SetBool("IsMove", false);
+            player.
             if (Discover())
             {
                 animator.SetBool("isDiscover", true);

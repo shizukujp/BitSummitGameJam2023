@@ -6981,7 +6981,6 @@ GameObject:
   - component: {fileID: 519420034}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  - component: {fileID: 519420033}
   - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
@@ -7041,28 +7040,6 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &519420033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 761ab931e83b94966bf008a27101e200, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1055969625}
-  speed: 1
-  currentPos: {x: 0, y: 0, z: 0}
-  clickPos: {x: 0, y: 0, z: 0}
-  ismove: 0
-  countText: {fileID: 34920914}
-  TurnText: {fileID: 1734884249}
-  MyColor: {fileID: 0}
-  MyColor2: {fileID: 0}
-  isPlayerTurn: 0
 --- !u!224 &519420034
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12236,8 +12213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22d2f61cbf4dba47a7a2baea6860ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countText: {fileID: 34920914}
-  TurnText: {fileID: 1734884249}
 --- !u!4 &946667889
 Transform:
   m_ObjectHideFlags: 0
@@ -13427,6 +13402,8 @@ GameObject:
   - component: {fileID: 1055969630}
   - component: {fileID: 1055969632}
   - component: {fileID: 1055969633}
+  - component: {fileID: 1055969634}
+  - component: {fileID: 1055969635}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -13569,6 +13546,40 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1055969634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055969625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ab931e83b94966bf008a27101e200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1055969625}
+  speed: 3
+  currentPos: {x: 0, y: 0, z: 0}
+  clickPos: {x: 0, y: 0, z: 0}
+  ismove: 0
+  countText: {fileID: 34920914}
+  TurnText: {fileID: 1734884249}
+  MyColor: {fileID: 0}
+  MyColor2: {fileID: 0}
+  isPlayerTurn: 0
+--- !u!114 &1055969635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055969625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c39c02f367df82847bd112f54912cacd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1059848852
 PrefabInstance:
   m_ObjectHideFlags: 0

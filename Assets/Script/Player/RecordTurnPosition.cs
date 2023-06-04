@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class RecordTurnPosition : MonoBehaviour
 {
-    GameObject[] enemy = new GameObject[10];     //�G�I�u�W�F�N�g�̔z��
-    GameObject player;      //�v���C���[
+    GameObject[] enemy = new GameObject[10];     //敵のオブジェクト群
+    GameObject player;      //プレイヤーオブジェクト
 
     GameObject[] Tiles;
     int i = 0;
 
-    //���E���h���Ƃ̃|�W�V�����̕ۑ��ϐ��z��i0�̓��E���h���n�܂�O�̈ʒu���j
+    //ラウンドごとに敵とプレイヤーの位置を保存する関数の宣言
     Vector3[] roundPosition0 = new Vector3[11], roundPosition1 = new Vector3[11], roundPosition2 = new Vector3[11], roundPosition3 = new Vector3[11], roundPosition4 = new Vector3[11],
         roundPosition5 = new Vector3[11], roundPosition6 = new Vector3[11], roundPosition7 = new Vector3[11], roundPosition8 = new Vector3[11],
         roundPosition9 = new Vector3[11], roundPosition10 = new Vector3[11], roundPosition11 = new Vector3[11], roundPosition12 = new Vector3[11];
@@ -33,7 +33,7 @@ public class RecordTurnPosition : MonoBehaviour
         
     }
 
-    //�G�̌����X�L�������Ďg��
+    //敵は何人いるかを再スキャンする
     public void ScanEnemy()
     {
         var i = 0;
@@ -48,7 +48,7 @@ public class RecordTurnPosition : MonoBehaviour
         }
     }
 
-    //�ʒu���̎g�p
+    //関数で保存した位置を呼び出して代入する。
     public void GetTurnPositionToScene(int turn)
     {
         switch (turn)
@@ -262,7 +262,7 @@ public class RecordTurnPosition : MonoBehaviour
     }
 
 
-    //���E���h���ƂɈʒu���̕ۑ�
+    //ターン毎に位置を保存する
     public void SetTurnPosition(int turn)
     {
         switch (turn)
