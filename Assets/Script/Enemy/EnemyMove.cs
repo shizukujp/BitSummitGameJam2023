@@ -179,7 +179,7 @@ public class EnemyMove : MonoBehaviour
         {
             //Debug.Log("敵の移動完了");
             animator.SetBool("IsMove", false);
-            player.
+            Player.instance.TurnText.GetComponent<Count>().score += 1;
             if (Discover())
             {
                 animator.SetBool("isDiscover", true);
