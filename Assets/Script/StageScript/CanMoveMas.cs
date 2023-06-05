@@ -33,11 +33,11 @@ public class CanMoveMas : MonoBehaviour
         // 子オブジェクトを全て取得する
         foreach (Transform child in parentTransform)
         {
-            if(child.transform.position == player.transform.position)
+            /*if(child.transform.position == player.transform.position)
             {
                 child.GetComponent<SpriteRenderer>().color = new Color(0.157f, 0.157f, 0.157f, 0.475f);
             }
-            else if (Vector2.Distance(player.transform.position, child.transform.position) <= 2f)
+            else */if (Vector2.Distance(player.transform.position, child.transform.position) <= 2f)
             {
                 //Debug.Log("移動可能です");
                 child.GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);

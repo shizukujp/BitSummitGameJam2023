@@ -23,6 +23,7 @@ public class EnemyMove : MonoBehaviour
 
     Animator animator;
     public float speed = 1f;
+
     Vector2 vct1;
     Vector2 vct2;
     Vector2 vct3;
@@ -67,7 +68,7 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!Player.instance.isPlayerTurn)
+        if (!Player.instance.isPlayerTurn)
         {
             Move();
         }
@@ -80,7 +81,7 @@ public class EnemyMove : MonoBehaviour
         //アラームモードにはいったら
         if(Discover())
         {
-            isEneMove = true;
+            //isEneMove = true;
             One = false;
         }
         if (Deathcount == 1)
@@ -208,6 +209,14 @@ public class EnemyMove : MonoBehaviour
                     Up = true;
                 }
                 Go = false;
+                
+                if (Discover())
+                {
+                    //Deathcount = 1;
+                    Invoke(nameof(call), 0.25f);
+                    //animator.SetBool("isDiscover", true);
+                    //CanMoveMas.instance.CanMove();
+                }
                 RoundController.instance.MasRiset();
             }
             else if (transform.position.y == vct1.y)
@@ -223,6 +232,13 @@ public class EnemyMove : MonoBehaviour
                     Up = true;
                 }
                 Go = true;
+                if (Discover())
+                {
+                    Deathcount = 1;
+                    Invoke(nameof(call), 1f);
+                    
+                    //CanMoveMas.instance.CanMove();
+                }
                 RoundController.instance.MasRiset();
             }
         }
@@ -292,5 +308,12 @@ public class EnemyMove : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    void call()
+    {
+        Deathcount = 1;
+        CanMoveMas.instance.CanMove();
+        animator.SetBool("isDiscover", true);
     }
 }
