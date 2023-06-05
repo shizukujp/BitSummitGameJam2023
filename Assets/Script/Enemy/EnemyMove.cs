@@ -88,9 +88,11 @@ public class EnemyMove : MonoBehaviour
         {
             //ループ
             Debug.Log("死に戻り");
+            Go = true;
             Deathcount = 2;
-            isEneMove = true;
-            One = false;
+            isEneMove = false;
+            One = true;
+            return;
             //SceneManager.LoadScene("SampleScene2");
         }
 
@@ -181,11 +183,12 @@ public class EnemyMove : MonoBehaviour
             //Debug.Log("敵の移動完了");
             animator.SetBool("IsMove", false);
             Player.instance.TurnText.GetComponent<Count>().score += 1;
+            RoundController.instance.MasRiset();
             if (Discover())
             {
-                animator.SetBool("isDiscover", true);
-                Deathcount = 1;
+                Invoke(nameof(Death), 0.25f);
             }
+            
             Player.instance.isPlayerTurn = true;
             isEneMove = false;
             One = true;
@@ -198,48 +201,47 @@ public class EnemyMove : MonoBehaviour
             //縦方向の場合(vct2)
             if (transform.position.y == vct2.y)
             {
-                if (Up)
+                int i = 0;
+                if (Up && i == 0)
                 {
                     Up = false;
                     Down = true;
+                    i = 1;
                 }
-                if (Down)
+                if (Down && i == 0)
                 {
                     Down = false;
                     Up = true;
                 }
                 Go = false;
-                
+                RoundController.instance.MasRiset();
                 if (Discover())
                 {
-                    //Deathcount = 1;
-                    Invoke(nameof(call), 0.25f);
-                    //animator.SetBool("isDiscover", true);
-                    //CanMoveMas.instance.CanMove();
+                    Invoke(nameof(Death), 0.25f);
                 }
-                RoundController.instance.MasRiset();
+                
             }
             else if (transform.position.y == vct1.y)
             {
-                if (Up)
+                int i = 0;
+                if (Up && i == 0)
                 {
                     Up = false;
                     Down = true;
+                    i = 1;
                 }
-                if (Down)
+                if (Down && i == 0)
                 {
                     Down = false;
                     Up = true;
                 }
                 Go = true;
+                RoundController.instance.MasRiset();
                 if (Discover())
                 {
-                    Deathcount = 1;
-                    Invoke(nameof(call), 1f);
-                    
-                    //CanMoveMas.instance.CanMove();
+                    Invoke(nameof(Death), 1f);
                 }
-                RoundController.instance.MasRiset();
+               
             }
         }
         else
@@ -258,6 +260,10 @@ public class EnemyMove : MonoBehaviour
                     Right = true;
                 }
                 Go = false;
+                if (Discover())
+                {
+                    Invoke(nameof(Death), 1f);
+                }
                 RoundController.instance.MasRiset();
             }
             else if (transform.position.x == vct1.x)
@@ -273,6 +279,10 @@ public class EnemyMove : MonoBehaviour
                     Right = true;
                 }
                 Go = true;
+                if (Discover())
+                {
+                    Invoke(nameof(Death), 1f);
+                }
                 RoundController.instance.MasRiset();
             }
         }
@@ -310,10 +320,16 @@ public class EnemyMove : MonoBehaviour
         return false;
     }
 
-    void call()
+    void Death()
     {
         Deathcount = 1;
         CanMoveMas.instance.CanMove();
         animator.SetBool("isDiscover", true);
     }
+    /*void Death2()
+    {
+        Deathcount = 1;
+        //CanMoveMas.instance.CanMove();
+        animator.SetBool("isDiscover", true);
+    }*/
 }
