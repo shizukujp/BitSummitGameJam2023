@@ -188,10 +188,10 @@ public class EnemyMove : MonoBehaviour
             animator.SetBool("IsMove", false);
             RoundController.instance.EnemyTurnEnd();
             //RoundController.instance.MasRiset();
-            /*if (Discover())
+            if (Discover())
             {
                 Invoke(nameof(Death), 0.25f);
-            }*/
+            }
             Player.instance.isPlayerTurn = true;
             isEneMove = false;
             One = true;
@@ -296,14 +296,14 @@ public class EnemyMove : MonoBehaviour
     {
         if(Up)
         {
-            if (player.transform.position.y - transform.position.y < 0 ||  4 < player.transform.position.y - transform.position.y) { animator.SetBool("isDiscover", false); return false;}
+            if (player.transform.position.y - transform.position.y < 0 ||  3 < player.transform.position.y - transform.position.y) { animator.SetBool("isDiscover", false); return false;}
             if (player.transform.position.x - transform.position.x < -1 || 1 < player.transform.position.x - transform.position.x) { animator.SetBool("isDiscover", false); return false; }
             //Debug.Log("発見！");
             return true;
         }
         if(Down)
         {
-            if (transform.position.y - player.transform.position.y < 0 || 4 < transform.position.y - player.transform.position.y) { animator.SetBool("isDiscover", false); return false; }
+            if (transform.position.y - player.transform.position.y < 0 || 3 < transform.position.y - player.transform.position.y) { animator.SetBool("isDiscover", false); return false; }
             if (transform.position.x - player.transform.position.x < -1 || 1 < transform.position.x - player.transform.position.x) { animator.SetBool("isDiscover", false); return false; }
             //Debug.Log("発見！");
             return true;
