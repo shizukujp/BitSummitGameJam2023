@@ -7,28 +7,31 @@ public class PocketWatch : MonoBehaviour
     int pocketWatchCheackLoad = 0;
     bool pocketWatchCheck = false;
 
+    public static bool SameTime = false;
     private void Update()
     {
-        //ƒvƒŒƒCƒ„[‚Ìƒ^[ƒ“‚É‰ù’†Œv‚ğg—p‰Â”\‚É‚·‚é
+        //ï¿½vï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½[ï¿½Ìƒ^ï¿½[ï¿½ï¿½ï¿½É‰ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½gï¿½pï¿½Â”\ï¿½É‚ï¿½ï¿½ï¿½
         if (Player.instance.isPlayerTurn)
         {
-            if (Input.GetKeyDown(KeyCode.E) && pocketWatchCheck && pocketWatchCheackLoad == 0)
+            if (Input.GetKeyDown(KeyCode.E) && pocketWatchCheck && pocketWatchCheackLoad == 0 && !SameTime)
             {
+                SameTime = false;
                 pocketWatchCheackLoad++;
                 RoundController.instance.UsePocketWatchToLoad();
             }
 
             if (Input.GetKeyDown(KeyCode.E) && !pocketWatchCheck)
             {
+                SameTime = true;
                 pocketWatchCheck = true;
                 RoundController.instance.UsePocketWatchToSave();
-                //ƒZ[ƒu‚µ‚½ƒ^[ƒ“‚ÌÚ×‚ğ‚à‚ç‚¤
+                //ï¿½Zï¿½[ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½^ï¿½[ï¿½ï¿½ï¿½ÌÚ×‚ï¿½ï¿½ï¿½ï¿½ç‚¤
                 RoundController.instance.GetSaveTurn();
             }
         }
-        //ˆê‰ñg—p‚µ‚½Œã‚É‰ù’†Œv‚ğÁ‚·
+        //ï¿½ï¿½ï¿½gï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É‰ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if (pocketWatchCheackLoad != 0 && pocketWatchCheck) pocketWatch.gameObject.SetActive(false);
-        //ˆê‰ñ‚àg—p‚µ‚Ä‚È‚¢‚Æ‚«‚ÍŒ©‚¦‚é‚æ‚¤‚É‚·‚é
+        //ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½pï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½Æ‚ï¿½ï¿½ÍŒï¿½ï¿½ï¿½ï¿½ï¿½æ‚¤ï¿½É‚ï¿½ï¿½ï¿½
         if (pocketWatchCheackLoad == 0) pocketWatch.gameObject.SetActive(true);
         Debug.Log(pocketWatchCheackLoad);
 
@@ -43,7 +46,7 @@ public class PocketWatch : MonoBehaviour
     }
 
 
-    //‰ù’†Œv‚ÌƒQƒbƒgƒZƒbƒgŠÖ”
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ÌƒQï¿½bï¿½gï¿½Zï¿½bï¿½gï¿½Öï¿½
     public bool GetPocketWatchCheck()
     {
         return pocketWatchCheck;
@@ -52,20 +55,20 @@ public class PocketWatch : MonoBehaviour
     {
         pocketWatchCheck = PWC;
     }
-    //‰ù’†Œv‚ÌƒŠƒZƒbƒgŠÖ”
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Ìƒï¿½ï¿½Zï¿½bï¿½gï¿½Öï¿½
     public void ResetPocketWatchCheck()
     {
         pocketWatchCheck = false;
         pocketWatchCheackLoad = 0;
     }
-    //“à•”ŠÖ”
-    //Œ³‚É–ß‚·
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Öï¿½
+    //ï¿½ï¿½ï¿½É–ß‚ï¿½
     void NotUsingWatch()
     {
         pocketWatch.color = new Color(1f, 1f, 1f, 0.4f);
     }
 
-    //“§–¾“x‚ğ’á‚­‚·‚é
+    //ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½á‚­ï¿½ï¿½ï¿½ï¿½
     void UsingWatch()
     {
         pocketWatch.color = new Color(1f, 1f, 1f, 1f);

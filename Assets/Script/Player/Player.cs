@@ -173,8 +173,8 @@ public class Player : MonoBehaviour
 
                     RoundController.instance.SetTurn(RoundController.instance.GetTurn() + 1);
                     Debug.Log("移動完了");
+                    PocketWatch.SameTime = false;
                     isPlayerTurn = false;
-                    //CanMoveMas.instance.CanMove();
                     ismove = false;
                     animator.SetBool("isRunning", false);
                     //CanMoveMas.instance.CanMove();
