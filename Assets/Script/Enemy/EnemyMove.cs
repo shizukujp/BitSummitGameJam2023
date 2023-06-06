@@ -72,6 +72,7 @@ public class EnemyMove : MonoBehaviour
         {
             Move();
         }
+        //Debug.Log(Discover());
         /*if (Player.instance.ismove || isEneMove)
             Discover(Up, Down, Right, Left);*/
     }
@@ -79,9 +80,8 @@ public class EnemyMove : MonoBehaviour
     void Move()
     {
         //アラームモードにはいったら
-        if(Discover())
+        if(Discover() && Deathcount == 0)
         {
-            Player.instance.TurnText.GetComponent<Count>().score += 1;
             RoundController.instance.MasRiset();
             Invoke(nameof(Death), 0.25f);
             Player.instance.isPlayerTurn = true;
@@ -186,7 +186,7 @@ public class EnemyMove : MonoBehaviour
         {
             //Debug.Log("敵の移動完了");
             animator.SetBool("IsMove", false);
-            Player.instance.TurnText.GetComponent<Count>().score += 1;
+            RoundController.instance.EnemyTurnEnd();
             //RoundController.instance.MasRiset();
             /*if (Discover())
             {

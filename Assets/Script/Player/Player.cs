@@ -25,7 +25,8 @@ public class Player : MonoBehaviour
     Animator animator;
 
     public GameObject player;   //①移動させたいオブジェクト
-    public int speed = 5; //移動スピード
+    public int speed = 5;       //移動スピード
+    public int playerwalkcount = 0;    //プレイヤー歩数のカウンター
     GameObject clickedGameObject;//クリックされたゲームオブジェクトを代入する変数
     Vector2 RL;//移動する場所のX座標
     Vector2 UD;//移動する場所のY座標
@@ -36,14 +37,10 @@ public class Player : MonoBehaviour
     float CurrentY;//現在のプレイヤーのY座標
     float CurrentX;//現在のプレイヤーのX座標
     public bool ismove = false;
-    public GameObject countText;
-    public GameObject TurnText;
     
     //クリックした場所の色を変更する
     //public Material MyColor;
     //public Material MyColor2;
-
-    int turnpreb = 0;
 
 
     //ターン関連
@@ -54,7 +51,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         isPlayerTurn = true;
-        TurnText.GetComponent<Count>().score += 1;
         animator = player.GetComponent<Animator>();
         pos = transform.localScale;//(1.25, 1.25, 1.25)
     }
@@ -66,11 +62,11 @@ public class Player : MonoBehaviour
         {
             Motion();
         }
-        /*if(RoundController.instance.GetTurn() != turnpreb)
+        /*if (RoundController.instance.GetTurn() != turnpreb)
         {
             TurnText.GetComponent<Count>().score = RoundController.instance.GetTurn();
         }*/
-            //プレイヤーのターンじゃない場合は動かないようにする
+        //プレイヤーのターンじゃない場合は動かないようにする
         if (isPlayerTurn)
         {
             if (Input.GetMouseButtonDown(0) && Second == false)  //左クリックでif分起動
@@ -135,14 +131,14 @@ public class Player : MonoBehaviour
                 {
                     if (Mathf.Abs(player.transform.position.x - CurrentX)/1 >= 1)
                     {
-                        countText.GetComponent<Count>().score = countText.GetComponent<Count>().score + 1;
+                        playerwalkcount++;
                         CurrentX = Mathf.Floor(player.transform.position.x);
                     }
                 }else if(player.transform.position.x < CurrentX)
                 {
                     if (Mathf.Abs(CurrentX - player.transform.position.x)/1 >= 1)
                     {
-                        countText.GetComponent<Count>().score = countText.GetComponent<Count>().score + 1;
+                        playerwalkcount++;
                         CurrentX = Mathf.Ceil(player.transform.position.x);
                     }
                 }
@@ -158,7 +154,7 @@ public class Player : MonoBehaviour
                 {
                     if (Mathf.Abs(player.transform.position.y - CurrentY) / 1 >= 1)
                     {
-                        countText.GetComponent<Count>().score = countText.GetComponent<Count>().score + 1;
+                        playerwalkcount++;
                         CurrentY = Mathf.Floor(player.transform.position.y);
                     }
                 }
@@ -166,7 +162,7 @@ public class Player : MonoBehaviour
                 {
                     if (Mathf.Abs(CurrentY - player.transform.position.y) / 1 >= 1)
                     {
-                        countText.GetComponent<Count>().score = countText.GetComponent<Count>().score + 1;
+                        playerwalkcount++;
                         CurrentY = Mathf.Ceil(player.transform.position.y);
                     }
                 }

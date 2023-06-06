@@ -11,7 +11,8 @@ public class RoundController : MonoBehaviour
     //シーンの交換について
     Scene scenePreb;
 
-    int playerturn = 1, playerturnpreb = 1, playerround = 1, enemyturn = 1, enemyround = 1, saveturn = -1;
+    int playerturn = 1, playerturnpreb = 1, playerround = 1, enemyturn = 1,
+        enemyturnend = 0, enemyround = 1, saveturn = -1;
     RecordTurnPosition recordTurnPositon;
 
     bool playerWatchSave = false;
@@ -89,8 +90,17 @@ public class RoundController : MonoBehaviour
         //テスト用
         //if (Input.GetKey(KeyCode.Escape) && !Player.instance.isPlayerTurn) EnemyTurnEnd();
 
+        //シーン内に敵がいないときに自動プレイヤーのターンに移行する
+        if (recordTurnPositon.EnemyCount() == 0 && !Player.instance.isPlayerTurn)
+        {
+            if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn);
+            if (playerWatchSave) playerWatchSave = false;
+            enemyturn++;
+            if (enemyturn < 12) Player.instance.isPlayerTurn = true;
+        }
+
         //敵に見つかった次のターンに戻る処理
-        if(EnemyMove.Deathcount == 2)
+        if (EnemyMove.Deathcount == 2)
         {
             GameReset();
             EnemyMove.Deathcount = 0;
@@ -98,7 +108,7 @@ public class RoundController : MonoBehaviour
         
 
             //Debug.Log(enemyturn);
-            if (enemyturn >= 12)
+            if (enemyturn > 12)
         {
             GameReset();
         }
@@ -123,8 +133,8 @@ public class RoundController : MonoBehaviour
         //色修正
         //CanMoveMas.instance.Moveoff();
         //CanMoveMas.instance.CanMove();
-        TurnText.GetComponent<Count>().score = 1;
-        countText.GetComponent<Count>().score = 0;
+        //TurnText.GetComponent<Count>().score = 1;
+        //countText.GetComponent<Count>().score = 0;
         //プレイヤー動きの追加
         Player.instance.isPlayerTurn = true;
     }
@@ -142,21 +152,30 @@ public class RoundController : MonoBehaviour
     public void UsePocketWatchToLoad()
     {
         recordTurnPositon.GetTurnPositionToScene(saveturn);
+        saveturn = -1;
     }
 
     //ターン関係
     public int GetTurn() { return playerturn; }
+    public int GetETurn() { return enemyturn; }
     public int GetRound() { return playerround; }
+    public int GetERound() { return enemyround; }
     public void SetTurn(int tn) { playerturn = tn; }
     public void SetRound(int rd) { playerround = rd; }
+    public int GetSaveTurn() { return saveturn; }
     
-    //ターンの交代に関して
+    //全ての敵が移動を終えたからターンを終わらせる
     public void EnemyTurnEnd() 
-    { 
-        if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn);
-        if (playerWatchSave) playerWatchSave = false;
-        enemyturn++;
-        if (enemyturn < 12) Player.instance.isPlayerTurn = true;
+    {
+        enemyturnend++;
+        if (recordTurnPositon.EnemyCount() >= enemyturnend)
+        {
+            if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn);
+            if (playerWatchSave) playerWatchSave = false;
+            enemyturn++;
+            if (enemyturn < 12) Player.instance.isPlayerTurn = true;
+            enemyturnend = 0;
+        }
     }
     public void EnemyRoundEnd()
     {

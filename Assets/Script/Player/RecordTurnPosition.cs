@@ -22,6 +22,7 @@ public class RecordTurnPosition : MonoBehaviour
         ScanEnemy();
         
         player = GameObject.Find("Player");
+        Enemys = GameObject.FindGameObjectsWithTag("Enemy");
         SetTurnPosition(0);
     }
     private void Start()
@@ -33,9 +34,9 @@ public class RecordTurnPosition : MonoBehaviour
 
     private void Update()
     {
-        
+        //Debug.Log(Enemys.Length);
     }
-
+    public int EnemyCount(){ return Enemys.Length; }
     //敵は何人いるかを再スキャンする
     public void ScanEnemy()
     {
