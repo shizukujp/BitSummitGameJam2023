@@ -11,7 +11,7 @@ public class PocketWatch : MonoBehaviour
     private void Update()
     {
         //�v���C���[�̃^�[���ɉ������v���g�p�\�ɂ���
-        if (Player.instance.isPlayerTurn)
+        if (Player.isPlayerTurn)
         {
             if (Input.GetKeyDown(KeyCode.E) && pocketWatchCheck && pocketWatchCheackLoad == 0 && !SameTime)
             {
@@ -33,7 +33,7 @@ public class PocketWatch : MonoBehaviour
         if (pocketWatchCheackLoad != 0 && pocketWatchCheck) pocketWatch.gameObject.SetActive(false);
         //�����g�p���ĂȂ��Ƃ��͌�����悤�ɂ���
         if (pocketWatchCheackLoad == 0) pocketWatch.gameObject.SetActive(true);
-        Debug.Log(pocketWatchCheackLoad);
+        //Debug.Log(pocketWatchCheackLoad);
 
         if (RoundController.instance.GetSaveTurn() != -1 && pocketWatchCheck)
         {

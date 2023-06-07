@@ -8,9 +8,7 @@ public class RecordTurnPosition : MonoBehaviour
     GameObject player;      //プレイヤーオブジェクト
 
     public GameObject[] Tiles;
-    int i = 0;
     GameObject[] Enemys;
-    int j = 0;
 
     //ラウンドごとに敵とプレイヤーの位置を保存する関数の宣言
     Vector3[] roundPosition0 = new Vector3[11], roundPosition1 = new Vector3[11], roundPosition2 = new Vector3[11], roundPosition3 = new Vector3[11], roundPosition4 = new Vector3[11],
@@ -258,20 +256,20 @@ public class RecordTurnPosition : MonoBehaviour
         }
         foreach (GameObject enemys in Enemys)
         {
-            EnemyMove enemy = Enemys[j].GetComponent<EnemyMove>();
+            EnemyMove enemy = enemys.GetComponent<EnemyMove>();
+            enemy.Go = true;
             enemy.Up = enemy.FUp;
             enemy.Down = enemy.FDown;
             enemy.Right = enemy.FRight;
             enemy.Left = enemy.FLeft;
+            enemy.animator.SetBool("isDiscover", false);
+            enemy.isAlerm = false;
         }
         foreach (GameObject tiles in Tiles)
         {
-            ColorChange change = Tiles[i].GetComponent<ColorChange>();
+            ColorChange change = tiles.GetComponent<ColorChange>();
             change.RisetColor();
-            i++;
         }
-        j = 0;
-        i = 0;
     }
 
 

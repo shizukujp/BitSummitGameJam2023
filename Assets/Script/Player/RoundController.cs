@@ -83,7 +83,7 @@ public class RoundController : MonoBehaviour
         if (playerturn != playerturnpreb )
         {
             playerturnpreb = playerturn;
-            Player.instance.isPlayerTurn = false;
+            Player.isPlayerTurn = false;
         }
         //テスト用
         //if (Input.GetKey(KeyCode.Escape) && !Player.instance.isPlayerTurn) EnemyTurnEnd();
@@ -91,12 +91,12 @@ public class RoundController : MonoBehaviour
         //if (Input.GetKey(KeyCode.Escape) && !Player.instance.isPlayerTurn) EnemyTurnEnd();
 
         //シーン内に敵がいないときに自動プレイヤーのターンに移行する
-        if (recordTurnPositon.EnemyCount() == 0 && !Player.instance.isPlayerTurn)
+        if (recordTurnPositon.EnemyCount() == 0 && !Player.isPlayerTurn)
         {
             if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn);
             if (playerWatchSave) playerWatchSave = false;
             enemyturn++;
-            if (enemyturn < 12) Player.instance.isPlayerTurn = true;
+            if (enemyturn < 12) Player.isPlayerTurn = true;
         }
 
         //敵に見つかった次のターンに戻る処理
@@ -136,7 +136,8 @@ public class RoundController : MonoBehaviour
         //TurnText.GetComponent<Count>().score = 1;
         //countText.GetComponent<Count>().score = 0;
         //プレイヤー動きの追加
-        Player.instance.isPlayerTurn = true;
+        EnemyMove.IsEnemyMove = false;
+        Player.isPlayerTurn = true;
     }
 
 
@@ -172,8 +173,11 @@ public class RoundController : MonoBehaviour
         {
             if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn);
             if (playerWatchSave) playerWatchSave = false;
+            
+            if (enemyturn < 12) Player.isPlayerTurn = true;
+            if (recordTurnPositon.EnemyCount() != enemyturnend) return;
+            EnemyMove.IsEnemyMove = false;
             enemyturn++;
-            if (enemyturn < 12) Player.instance.isPlayerTurn = true;
             enemyturnend = 0;
         }
     }
@@ -189,6 +193,17 @@ public class RoundController : MonoBehaviour
             ColorChange change = recordTurnPositon.Tiles[i].GetComponent<ColorChange>();
             change.RisetColor();
             i++;
+        }
+    }
+    public void EnemyTurn()
+    {
+        if (GameObject.FindGameObjectWithTag("Enemy"))
+        {
+            foreach (GameObject enemys in GameObject.FindGameObjectsWithTag("Enemy"))
+            {
+                EnemyMove enem =  enemys.GetComponent<EnemyMove>();
+                enem.isEneMove = true;
+            }
         }
     }
 }
