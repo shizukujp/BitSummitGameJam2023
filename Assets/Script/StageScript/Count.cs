@@ -46,7 +46,7 @@ public class Count : MonoBehaviour
                 }
                 break;
             case TextMode.Whichturn:
-                if (Player.instance.isPlayerTurn)
+                if (Player.isPlayerTurn)
                 {
                     scoreText.text = Myturn.ToString();
                 }

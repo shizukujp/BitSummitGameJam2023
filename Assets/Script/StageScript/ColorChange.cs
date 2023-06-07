@@ -136,7 +136,7 @@ public class ColorChange : MonoBehaviour
     }*/
     void OnMouseOver()
     {
-        if (!Player.instance.isPlayerTurn) return;
+        if (!Player.isPlayerTurn) return;
         if (Player.instance.ismove) return;
             //プレイヤーが移動可能なマスだったら
         
@@ -174,7 +174,7 @@ public class ColorChange : MonoBehaviour
     //マウスカーソルを離したとき
     void OnMouseExit()
     {
-        if (!Player.instance.isPlayerTurn) return;
+        if (!Player.isPlayerTurn) return;
         if (Player.instance.ismove) return;
         //プレイヤーが移動可能な範囲のマスだったら
         /*if (Vector2.Distance(player.transform.position, transform.position) == 0)
@@ -334,75 +334,78 @@ public class ColorChange : MonoBehaviour
         }
     }*/
 
-    bool IsDangerColor(GameObject[] enemy, bool up, bool down, bool right, bool left)
+    bool IsDangerColor(GameObject enemy, bool up, bool down, bool right, bool left)
     {
         //上に動く場合
-        for(int a = 0; a < enemy.Length; a++)
+        if (up)
         {
-            if (up)
+            if (-0.5f <= (transform.position.y - enemy.transform.position.y) && (transform.position.y - enemy.transform.position.y) <= 3.5f)
             {
-                if (-0.5f <= (transform.position.y - enemy[a].transform.position.y) && (transform.position.y - enemy[a].transform.position.y) <= 3.5f)
+                if (-1 <= (enemy.transform.position.x - transform.position.x) && (enemy.transform.position.x - transform.position.x) <= 1)
                 {
-                    if (-1 <= (enemy[a].transform.position.x - transform.position.x) && (enemy[a].transform.position.x - transform.position.x) <= 1)
-                    {
-                        //GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
-                        return true;
-                    }
-                    return false;
+                    //GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
+                    return true;
                 }
                 return false;
             }
-            //下に動く場合
-            if (down)
+            return false;
+        }
+        //下に動く場合
+        if (down)
+        {
+            //Debug.Log("した");
+            if (-0.5f <= (enemy.transform.position.y - transform.position.y) && (enemy.transform.position.y - transform.position.y) <= 3.5f)
             {
-                //Debug.Log("した");
-                if (-0.5f <= (enemy[a].transform.position.y - transform.position.y) && (enemy[a].transform.position.y - transform.position.y) <= 3.5f)
+                if (1 >= (enemy.transform.position.x - transform.position.x) && (enemy.transform.position.x - transform.position.x) >= -1)
                 {
-                    if (1 >= (enemy[a].transform.position.x - transform.position.x) && (enemy[a].transform.position.x - transform.position.x) >= -1)
-                    {
-                        //this.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
-                        return true;
-                    }
-                    return false;
+                    //this.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
+                    return true;
                 }
                 return false;
             }
+            return false;
+        }
 
-            //右に動く場合
-            if (right)
+        //右に動く場合
+        if (right)
+        {
+            if (-0.5 <= (transform.position.x - enemy.transform.position.x) && (transform.position.x - enemy.transform.position.x) <= 3.5f)
             {
-                if (-0.5 <= (transform.position.x - enemy[a].transform.position.x) && (transform.position.x - enemy[a].transform.position.x) <= 3.5f)
+                if (-1 <= transform.position.y - enemy.transform.position.y && transform.position.y - enemy.transform.position.y <= 1)
                 {
-                    if (-1 <= transform.position.y - enemy[a].transform.position.y && transform.position.y - enemy[a].transform.position.y <= 1)
-                    {
-                        //GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
-                        return true;
-                    }
-                    return false;
+                    //GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
+                    return true;
                 }
                 return false;
             }
-            //左に動く場合
-            if (left)
+            return false;
+        }
+        //左に動く場合
+        if (left)
+        {
+            if (-0.5 <= (enemy.transform.position.x - transform.position.x) && (enemy.transform.position.x - transform.position.x) <= 3.5f)
             {
-                if (-0.5 <= (enemy[a].transform.position.x - transform.position.x) && (enemy[a].transform.position.x - transform.position.x) <= 3.5f)
+                if (-1 <= transform.position.y - enemy.transform.position.y && transform.position.y - enemy.transform.position.y <= 1)
                 {
-                    if (-1 <= transform.position.y - enemy[a].transform.position.y && transform.position.y - enemy[a].transform.position.y <= 1)
-                    {
-                        //this.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
-                        return true;
-                    }
-                    return false;
+                    //this.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
+                    return true;
                 }
                 return false;
             }
+            return false;
         }
         return false;
     }
     public bool isDanger()
     {
         if (RoundController.OnOff_Enemy) return false;
-        if (IsDangerColor(GameObject.FindGameObjectsWithTag("Enemy"), EnemyMove.instance.Up, EnemyMove.instance.Down, EnemyMove.instance.Right, EnemyMove.instance.Left)) return true ;
+        GameObject[] Enemys = GameObject.FindGameObjectsWithTag("Enemy");
+        for(int i = 0; i < Enemys.Length; i++)
+        {
+            EnemyMove enemy =  Enemys[i].GetComponent<EnemyMove>();
+            if (enemy.isAlerm) return false;
+            if (IsDangerColor(Enemys[i], enemy.Up, enemy.Down, enemy.Right, enemy.Left)) return true;
+        }
         return false;
     }
 

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EnemyMove : MonoBehaviour
 {
     public static EnemyMove instance;
-    GameObject GameManager;
+    static GameObject GameManager;
     RecordTurnPosition recordTurnPositon;
     public void Awake()
     {
@@ -21,18 +21,18 @@ public class EnemyMove : MonoBehaviour
         }
     }
 
-    Animator animator;
+    public Animator animator;
     public float speed = 1f;
 
     Vector2 vct1;
-    Vector2 vct2;
-    Vector2 vct3;
+    Vector2 vct2;//目的地
+    //Vector2 vct3;
     public GameObject Enem;
     public GameObject player;
     //敵が次のターンに移動するポジション
     Vector2 MovePos;
     //敵がvct2.vct3まで向かっているか(falseの場合、元いた場所まで向かう)
-    bool Go = true;
+    public bool Go = true;
     bool One = true;
     //縦方向に移動するかどうか(falseなら横方向)
     public bool isVertical = true;
@@ -42,10 +42,14 @@ public class EnemyMove : MonoBehaviour
     public int EnemyMovePos_x = 0;
     //敵が移動しているかどうか
     public bool isEneMove = false;
+
+    public static bool IsEnemyMove = false;
     //敵が動いている方向
     public bool Up,Down, Right, Left;
     public bool FUp, FDown, FRight, FLeft;
     public static int Deathcount = 0;
+
+    public bool isAlerm = false;
     void Start()
     {
         if(player == null) { player = GameObject.Find("Player"); }
@@ -54,9 +58,9 @@ public class EnemyMove : MonoBehaviour
         //初めの敵のポジション
         vct1 = new Vector2(transform.position.x, transform.position.y);
         //敵が移動する最も遠いポジション(縦方向)
-        vct2 = new Vector2(transform.position.x, EnemyMovePos_y);
+        vct2 = new Vector2(EnemyMovePos_x, EnemyMovePos_y);
         //敵が移動する最も遠いポジション(横方向)
-        vct3 = new Vector2(EnemyMovePos_x, transform.position.y);
+        //vct3 = new Vector2(EnemyMovePos_x, transform.position.y);
         animator = GetComponent<Animator>();
         //Up = Down = Right = Left = false;
         Enem = this.gameObject;
@@ -69,7 +73,7 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Player.instance.isPlayerTurn)
+        if (isEneMove && IsEnemyMove)
         {
             Move();
         }
@@ -83,23 +87,22 @@ public class EnemyMove : MonoBehaviour
         //アラームモードにはいったら
         if(Discover() && Deathcount == 0)
         {
-            RoundController.instance.MasRiset();
+            //RoundController.instance.MasRiset();
             Invoke(nameof(Death), 0.25f);
-            Player.instance.isPlayerTurn = true;
-            return;
-
+            isEneMove = false;
+            One = false;
+            isAlerm = true;
         }
-        if (Deathcount == 1)
+        /*if (isAlerm && Deathcount == 1)
         {
             //ループ
             Debug.Log("死に戻り");
             Go = true;
             Deathcount = 2;
             isEneMove = false;
-            One = true;
+            One = false;
             return;
-            //SceneManager.LoadScene("SampleScene2");
-        }
+        }*/
 
         //次移動する場所の設定
         if (Go && One && isVertical)
@@ -126,14 +129,14 @@ public class EnemyMove : MonoBehaviour
         else if(Go && One && !isVertical)
         {
             //横方向への移動(vct3へ向かう)
-            if (vct3.x < transform.position.x)
+            if (vct2.x < transform.position.x)
             {
                 //左方向
                 MovePos = new Vector2(transform.position.x - 1f, transform.position.y);
                 Left = true;
                 Up = Down = Right = false;
             }
-            else if (vct3.x > transform.position.x)
+            else if (vct2.x > transform.position.x)
             {
                 //右方向
                 MovePos = new Vector2(transform.position.x + 1f, transform.position.y);
@@ -185,17 +188,18 @@ public class EnemyMove : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, MovePos, speed * Time.deltaTime);
         if(transform.position.x == MovePos.x && transform.position.y == MovePos.y)
         {
-            //Debug.Log("敵の移動完了");
-            animator.SetBool("IsMove", false);
-            RoundController.instance.EnemyTurnEnd();
+            Debug.Log(gameObject + "の移動完了");
+            this.animator.SetBool("IsMove", false);
+            
             //RoundController.instance.MasRiset();
             if (Discover())
             {
                 Invoke(nameof(Death), 0.25f);
             }
-            Player.instance.isPlayerTurn = true;
+            Player.isPlayerTurn = true;
             isEneMove = false;
             One = true;
+            RoundController.instance.EnemyTurnEnd();
         }
 
         // 敵がvct2かvct3、または元いた場所に到達したかどうか
@@ -251,43 +255,49 @@ public class EnemyMove : MonoBehaviour
         else
         {
             //横方向の場合(vct3)
-            if (transform.position.x == vct3.x)
+            if (transform.position.x == vct2.x)
             {
-                if (Right)
+                int i = 0;
+                if (Right && i == 0)
                 {
                     Right = false;
                     Left = true;
+                    i = 1;
                 }
-                if (Left)
+                if (Left && i == 0)
                 {
                     Left = false;
                     Right = true;
                 }
                 Go = false;
+                RoundController.instance.MasRiset();
                 if (Discover())
                 {
-                    Invoke(nameof(Death), 1f);
+                    Invoke(nameof(Death), 0.5f);
                 }
-                RoundController.instance.MasRiset();
+                
             }
             else if (transform.position.x == vct1.x)
             {
-                if (Right)
+                int i = 0;
+                if (Right && i == 0)
                 {
                     Right = false;
                     Left = true;
+                    i = 1;
                 }
-                if (Left)
+                if (Left && i == 0)
                 {
                     Left = false;
                     Right = true;
                 }
                 Go = true;
+                RoundController.instance.MasRiset();
                 if (Discover())
                 {
-                    Invoke(nameof(Death), 1f);
+                    Invoke(nameof(Death), 0.5f);
                 }
-                RoundController.instance.MasRiset();
+                
             }
         }
 

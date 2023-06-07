@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
 
 
     //ターン関連
-    public bool isPlayerTurn;
+    public static bool isPlayerTurn;
 
     Vector2 pos;
 
@@ -179,6 +179,15 @@ public class Player : MonoBehaviour
                     animator.SetBool("isRunning", false);
                     //CanMoveMas.instance.CanMove();
                     clickedGameObject = null;
+                    if(EnemyMove.Deathcount == 1)
+                    {
+                        EnemyMove.Deathcount = 2;
+                    }else
+                    {
+                        EnemyMove.IsEnemyMove = true;
+                        RoundController.instance.EnemyTurn();
+                    }
+                    
                 }
             }
         }
