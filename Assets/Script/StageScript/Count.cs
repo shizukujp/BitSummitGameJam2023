@@ -40,9 +40,9 @@ public class Count : MonoBehaviour
                 }
                 break;
             case TextMode.round:
-                if (scoreText.text != RoundController.instance.GetERound().ToString())
+                if (scoreText.text != RoundController.instance.GetRound().ToString())
                 {
-                    scoreText.text = RoundController.instance.GetERound().ToString();
+                    scoreText.text = RoundController.instance.GetRound().ToString();
                 }
                 break;
             case TextMode.Whichturn:

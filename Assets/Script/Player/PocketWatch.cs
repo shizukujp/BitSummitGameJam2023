@@ -10,12 +10,11 @@ public class PocketWatch : MonoBehaviour
     public static bool SameTime = false;
     private void Update()
     {
-        //�v���C���[�̃^�[���ɉ������v���g�p�\�ɂ���
+        //check playerturn and use watch
         if (Player.instance.isPlayerTurn)
         {
             if (Input.GetKeyDown(KeyCode.E) && pocketWatchCheck && pocketWatchCheackLoad == 0 && !SameTime)
             {
-                SameTime = false;
                 pocketWatchCheackLoad++;
                 RoundController.instance.UsePocketWatchToLoad();
             }
@@ -25,15 +24,15 @@ public class PocketWatch : MonoBehaviour
                 SameTime = true;
                 pocketWatchCheck = true;
                 RoundController.instance.UsePocketWatchToSave();
-                //�Z�[�u�����^�[���̏ڍׂ����炤
+                //get saving turn to show
                 RoundController.instance.GetSaveTurn();
             }
         }
-        //���g�p������ɉ������v������
+        //if pocketwatch used dissapear
         if (pocketWatchCheackLoad != 0 && pocketWatchCheck) pocketWatch.gameObject.SetActive(false);
         //�����g�p���ĂȂ��Ƃ��͌�����悤�ɂ���
         if (pocketWatchCheackLoad == 0) pocketWatch.gameObject.SetActive(true);
-        Debug.Log(pocketWatchCheackLoad);
+        //Debug.Log(pocketWatchCheackLoad);
 
         if (RoundController.instance.GetSaveTurn() != -1 && pocketWatchCheck)
         {

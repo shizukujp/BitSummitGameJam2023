@@ -11,8 +11,8 @@ public class RoundController : MonoBehaviour
     //シーンの交換について
     Scene scenePreb;
 
-    int playerturn = 1, playerturnpreb = 1, playerround = 1, enemyturn = 1,
-        enemyturnend = 0, enemyround = 1, saveturn = -1;
+    int playerturn = 1, playerturnpreb = 1, round = 1, enemyturn = 1,
+        enemyturnend = 0, saveturn = -1;
     RecordTurnPosition recordTurnPositon;
 
     bool playerWatchSave = false;
@@ -24,7 +24,7 @@ public class RoundController : MonoBehaviour
     public static bool OnOff_Player = false;
 
 
-    GameObject player;
+    GameObject player, monsterGenerator;
     PocketWatch pocketWatch;
 
     private void Awake()
@@ -46,6 +46,7 @@ public class RoundController : MonoBehaviour
 
         scenePreb = SceneManager.GetActiveScene();
         recordTurnPositon = GetComponent<RecordTurnPosition>();
+        if (GameObject.Find("MonsterGenerator") != null) monsterGenerator = GameObject.Find("MonsterGenerator");
     }
 
 
@@ -67,9 +68,8 @@ public class RoundController : MonoBehaviour
         {
             playerturn = 1;
             playerturnpreb = 1;
-            playerround = 1;
+            round = 1;
             enemyturn = 1;
-            enemyround = 1;
             recordTurnPositon.SetTurnPosition(0);
 
             //シーンが変わったらプレイヤーオブジェクトを代入
@@ -119,8 +119,15 @@ public class RoundController : MonoBehaviour
     //内部で動く関数
     void GameReset()
     {
+        round++;
+
         //敵とプレイヤーの位置を最初の位置に戻す
         recordTurnPositon.GetTurnPositionToScene(0);
+
+        //モンスターをラウンドごとに生成する（あれば）
+        if (monsterGenerator.GetComponent<MonsterGenerator>().SetRound(round))
+            recordTurnPositon.ScanEnemy();
+
 
         //ターンを最初のターンに戻す
         playerturn = 1;
@@ -158,10 +165,9 @@ public class RoundController : MonoBehaviour
     //ターン関係
     public int GetTurn() { return playerturn; }
     public int GetETurn() { return enemyturn; }
-    public int GetRound() { return playerround; }
-    public int GetERound() { return enemyround; }
+    public int GetRound() { return round; }
     public void SetTurn(int tn) { playerturn = tn; }
-    public void SetRound(int rd) { playerround = rd; }
+    public void SetRound(int rd) { round = rd; }
     public int GetSaveTurn() { return saveturn; }
     
     //全ての敵が移動を終えたからターンを終わらせる
@@ -176,10 +182,6 @@ public class RoundController : MonoBehaviour
             if (enemyturn < 12) Player.instance.isPlayerTurn = true;
             enemyturnend = 0;
         }
-    }
-    public void EnemyRoundEnd()
-    {
-        enemyround++;
     }
     public void MasRiset()
     {
