@@ -52,6 +52,7 @@ public class EnemyMove : MonoBehaviour
     public bool isAlerm = false;
     void Start()
     {
+        if(player == null) { player = GameObject.Find("Player"); }
         GameManager = GameObject.FindGameObjectWithTag("GameController");
         recordTurnPositon = GameManager.GetComponent<RecordTurnPosition>();
         //初めの敵のポジション
@@ -345,4 +346,15 @@ public class EnemyMove : MonoBehaviour
         //CanMoveMas.instance.CanMove();
         animator.SetBool("isDiscover", true);
     }*/
+
+    public void SetMovingDir(int movex, int movey, bool isver, bool lt, bool rt, bool up, bool dn)
+    {
+        EnemyMovePos_x = movex;
+        EnemyMovePos_y = movey;
+        isVertical = isver;
+        Left = lt;
+        Right = rt;
+        Up = up;
+        Down = dn;
+    }
 }

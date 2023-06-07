@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RecordTurnPosition : MonoBehaviour
 {
-    GameObject[] enemy = new GameObject[10];     //敵のオブジェクト群
+    GameObject[] enemy;     //敵のオブジェクト群
     GameObject player;      //プレイヤーオブジェクト
 
     public GameObject[] Tiles;
@@ -38,16 +38,7 @@ public class RecordTurnPosition : MonoBehaviour
     //敵は何人いるかを再スキャンする
     public void ScanEnemy()
     {
-        var i = 0;
-
-        if (GameObject.FindGameObjectWithTag("Enemy"))
-        {
-            foreach (GameObject enemys in GameObject.FindGameObjectsWithTag("Enemy"))
-            {
-                enemy[i] = enemys;
-                i++;
-            }
-        }
+        enemy = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     //関数で保存した位置を呼び出して代入する。
