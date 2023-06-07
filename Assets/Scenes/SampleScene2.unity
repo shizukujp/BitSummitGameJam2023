@@ -16750,14 +16750,14 @@ MonoBehaviour:
   speed: 1
   Enem: {fileID: 0}
   player: {fileID: 1055969625}
-  isVertical: 1
+  isVertical: 0
   EnemyMovePos_y: 0
   EnemyMovePos_x: 0
   isEneMove: 0
   Up: 0
-  Down: 1
+  Down: 0
   Right: 0
-  Left: 0
+  Left: 1
   FUp: 0
   FDown: 0
   FRight: 0

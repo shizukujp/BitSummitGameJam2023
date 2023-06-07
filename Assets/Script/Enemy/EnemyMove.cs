@@ -129,15 +129,15 @@ public class EnemyMove : MonoBehaviour
             {
                 //左方向
                 MovePos = new Vector2(transform.position.x - 1f, transform.position.y);
-                Right = true;
-                Up = Down = Left = false;
+                Left = true;
+                Up = Down = Right = false;
             }
             else if (vct3.x > transform.position.x)
             {
                 //右方向
                 MovePos = new Vector2(transform.position.x + 1f, transform.position.y);
-                Left = true;
-                Up = Right = Down = false;
+                Right = true;
+                Up = Left = Down = false;
             }
             One = false;
             isEneMove = true;
@@ -167,14 +167,14 @@ public class EnemyMove : MonoBehaviour
             if (vct1.x < transform.position.x)
             {
                 MovePos = new Vector2(transform.position.x - 1f, transform.position.y);
-                Right = true;
-                Up = Down = Left = false;
+                Left = true;
+                Up = Down = Right = false;
             }
             else if (vct1.x > transform.position.x)
             {
                 MovePos = new Vector2(transform.position.x + 1f, transform.position.y);
-                Left = true;
-                Up = Right = Down = false;
+                Right = true;
+                Up = Left = Down = false;
             }
             One = false;
             isEneMove = true;
@@ -310,13 +310,13 @@ public class EnemyMove : MonoBehaviour
         }
         if(Right)
         {
-            if (player.transform.position.x - transform.position.x < 0f || 4 < player.transform.position.x - transform.position.x) { animator.SetBool("isDiscover", false); return false; }
-            if (transform.position.y - player.transform.position.y < -1 || 1 < transform.position.y - player.transform.position.y) { animator.SetBool("isDiscover", false); return false; }
+            if (player.transform.position.x - transform.position.x < 0f || 3 < player.transform.position.x - transform.position.x) { animator.SetBool("isDiscover", false); return false; }
+            if (player.transform.position.y - transform.position.y < -1 || 1 < player.transform.position.y - transform.position.y) { animator.SetBool("isDiscover", false); return false; }
             return true;
         }
         if(Left)
         {
-            if (transform.position.x - player.transform.position.x < 0f || 4 < transform.position.x - player.transform.position.x) { animator.SetBool("isDiscover", false); return false; }
+            if (transform.position.x - player.transform.position.x < 0f || 3 < transform.position.x - player.transform.position.x) { animator.SetBool("isDiscover", false); return false; }
             if (transform.position.y - player.transform.position.y < -1 || 1 < transform.position.y - player.transform.position.y) { animator.SetBool("isDiscover", false); return false; }
             return true;
         }
