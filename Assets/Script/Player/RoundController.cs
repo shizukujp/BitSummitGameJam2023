@@ -126,7 +126,12 @@ public class RoundController : MonoBehaviour
 
         //モンスターをラウンドごとに生成する（あれば）
         if (monsterGenerator.GetComponent<MonsterGenerator>().SetRound(round))
+        {
             recordTurnPositon.ScanEnemy();
+            recordTurnPositon.SetTurnPosition(0);
+
+        }
+            
 
 
         //ターンを最初のターンに戻す

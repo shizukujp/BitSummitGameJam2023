@@ -34,7 +34,10 @@ public class RecordTurnPosition : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log(Enemys.Length);
+        //Debug.Log(enemy[0].transform.position);
+        //Debug.Log(enemy[1].transform.position);
+        //Debug.Log(enemy[2].transform.position);
+        //Debug.Log(enemy[3].transform.position);
     }
     public int EnemyCount(){ return Enemys.Length; }
     //敵は何人いるかを再スキャンする
@@ -244,7 +247,7 @@ public class RecordTurnPosition : MonoBehaviour
                 player.transform.position = roundPosition12[i12];
                 break;
             default:
-                Debug.Log("�ۑ�����Ă��Ȃ��ϐ��z�񂪌Ă΂�Ă���A������x�m�F���Ă�������");
+                Debug.Log("enemy load error");
                 break;
         }
         foreach (GameObject enemys in Enemys)
