@@ -264,6 +264,7 @@ public class RecordTurnPosition : MonoBehaviour
             ColorChange change = tiles.GetComponent<ColorChange>();
             change.RisetColor();
         }
+        Player.isPlayerTurn = true;
     }
 
 

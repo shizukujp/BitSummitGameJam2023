@@ -57,12 +57,10 @@ public class EnemyMove : MonoBehaviour
         recordTurnPositon = GameManager.GetComponent<RecordTurnPosition>();
         //初めの敵のポジション
         vct1 = new Vector2(transform.position.x, transform.position.y);
-        //敵が移動する最も遠いポジション(縦方向)
+        //敵が移動するポジション
         vct2 = new Vector2(EnemyMovePos_x, EnemyMovePos_y);
-        //敵が移動する最も遠いポジション(横方向)
-        //vct3 = new Vector2(EnemyMovePos_x, transform.position.y);
         animator = GetComponent<Animator>();
-        //Up = Down = Right = Left = false;
+
         Enem = this.gameObject;
         FUp = Up;
         FDown = Down;
@@ -337,7 +335,8 @@ public class EnemyMove : MonoBehaviour
     void Death()
     {
         Deathcount = 1;
-        CanMoveMas.instance.CanMove();
+        //CanMoveMas.instance.CanMove();
+        RoundController.instance.MasRiset();
         animator.SetBool("isDiscover", true);
     }
     /*void Death2()

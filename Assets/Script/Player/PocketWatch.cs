@@ -11,6 +11,7 @@ public class PocketWatch : MonoBehaviour
     private void Update()
     {
         //check playerturn and use watch
+
         if (Player.isPlayerTurn)
         {
             if (Input.GetKeyDown(KeyCode.E) && pocketWatchCheck && pocketWatchCheackLoad == 0 && !SameTime)

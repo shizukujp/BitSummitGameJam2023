@@ -73,14 +73,9 @@ public class ColorChange : MonoBehaviour
             {
                 if(isDanger())
                 {
-                   
-                    if (EnemyMove.Deathcount == 0)
-                    {
-                        //危険な色
-                        GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
-                        return;
-                    }
-                        
+                    //危険な色
+                    GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
+                    return;
                 }
                 GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);
             }
