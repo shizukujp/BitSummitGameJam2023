@@ -62,17 +62,7 @@ public class Player : MonoBehaviour
         {
             Motion();
         }
-        //メッセージが表示されている間は左クリックするまで何もできない
-        if(Massage.inMassage)
-        {
-            if (Input.GetMouseButtonDown(0))
-                Massage.instance.MessageClose();
-            return;
-        }
-        /*if (RoundController.instance.GetTurn() != turnpreb)
-        {
-            TurnText.GetComponent<Count>().score = RoundController.instance.GetTurn();
-        }*/
+
         //プレイヤーのターンじゃない場合は動かないようにする
         if (isPlayerTurn)
         {
@@ -100,8 +90,6 @@ public class Player : MonoBehaviour
                     else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) / 1f > 2f)
                     {
                         Debug.Log("移動できません");
-                        //仮
-                        Massage.instance.MessageOpen(clickedGameObject);
                         clickedGameObject = null;
                       
                     }
