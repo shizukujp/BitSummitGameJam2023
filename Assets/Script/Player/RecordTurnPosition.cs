@@ -37,7 +37,11 @@ public class RecordTurnPosition : MonoBehaviour
         //Debug.Log(enemy[2].transform.position);
         //Debug.Log(enemy[3].transform.position);
     }
-    public int EnemyCount(){ return enemy.Length; }
+    public int EnemyCount()
+    {
+        Enemys = GameObject.FindGameObjectsWithTag("Enemy");
+        return Enemys.Length;
+    }
     //敵は何人いるかを再スキャンする
     public void ScanEnemy()
     {
@@ -249,7 +253,7 @@ public class RecordTurnPosition : MonoBehaviour
                 Debug.Log("enemy load error");
                 break;
         }
-        foreach (GameObject enemys in Enemys)
+        foreach (GameObject enemys in GameObject.FindGameObjectsWithTag("Enemy"))
         {
             EnemyMove enemy = enemys.GetComponent<EnemyMove>();
             enemy.Go = true;
@@ -258,7 +262,9 @@ public class RecordTurnPosition : MonoBehaviour
             enemy.Right = enemy.FRight;
             enemy.Left = enemy.FLeft;
             enemy.animator.SetBool("isDiscover", false);
+            //enemy.animator.SetBool("IsMove", false);
             enemy.isAlerm = false;
+            enemy.isEneMove = false;
         }
         foreach (GameObject tiles in Tiles)
         {

@@ -109,7 +109,7 @@ public class RoundController : MonoBehaviour
         
 
             //Debug.Log(enemyturn);
-            if (enemyturn > 12)
+        if (enemyturn > 12)
         {
             GameReset();
         }
@@ -132,7 +132,8 @@ public class RoundController : MonoBehaviour
             recordTurnPositon.SetTurnPosition(0);
 
         }
-            
+        //敵のアニメーションを待機モーションにする
+        EnemyMotionRiset();
 
 
         //ターンを最初のターンに戻す
@@ -215,7 +216,18 @@ public class RoundController : MonoBehaviour
             {
                 EnemyMove enem =  enemys.GetComponent<EnemyMove>();
                 enem.isEneMove = true;
+                enem.isAlerm = false;
             }
+        }
+    }
+    public void EnemyMotionRiset()
+    {
+        if (!GameObject.FindGameObjectWithTag("Enemy")) return;
+        foreach (GameObject enemys in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            Animator enem = enemys.GetComponent<Animator>();
+            enem.SetBool("isDiscover", false);
+            enem.SetBool("IsMove", false);
         }
     }
 }
