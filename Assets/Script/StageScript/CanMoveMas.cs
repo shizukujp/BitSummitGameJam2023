@@ -29,7 +29,6 @@ public class CanMoveMas : MonoBehaviour
     public void CanMove()
     {
         Transform parentTransform = transform;
-
         // 子オブジェクトを全て取得する
         foreach (Transform child in parentTransform)
         {
