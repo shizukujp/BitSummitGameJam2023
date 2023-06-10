@@ -160,7 +160,7 @@ public class RoundController : MonoBehaviour
     {
         playerWatchSave = true;
         recordTurnPositon.SetTurnPosition(enemyturn);
-        saveturn = enemyturn;
+        saveturn = playerturn;
     } 
     public void UsePocketWatchToLoad()
     {
@@ -183,10 +183,11 @@ public class RoundController : MonoBehaviour
         if (recordTurnPositon.EnemyCount() >= enemyturnend)
         {
             if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn);
-            if (playerWatchSave) playerWatchSave = false;
             
             if (enemyturn < 12) Player.isPlayerTurn = true;
             if (recordTurnPositon.EnemyCount() != enemyturnend) return;
+            //敵の動きがすべて終わった後に実行する関数
+            if (playerWatchSave) playerWatchSave = false;
             EnemyMove.IsEnemyMove = false;
             enemyturn++;
             enemyturnend = 0;
