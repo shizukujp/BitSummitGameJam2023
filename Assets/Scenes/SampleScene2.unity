@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &15279834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &27967818 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &34920914 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 101090383420243001, guid: 6a7119405038f4946b5fc77dd29821c5, type: 3}
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &64274126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &69235335 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &73222099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -833,7 +833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &85466925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &101562873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,7 +1686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &158249677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1840,7 +1840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &165708514 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -1864,7 +1864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &172756754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1974,7 +1974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &188009993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -1998,7 +1998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &190834633 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -2022,7 +2022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &192019318 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -2046,7 +2046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &194123148 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -2070,7 +2070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &198193427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2912,7 +2912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &254508284 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -2936,7 +2936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &257244119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3462,7 +3462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &274331190
 GameObject:
   m_ObjectHideFlags: 0
@@ -3474,7 +3474,7 @@ GameObject:
   - component: {fileID: 274331192}
   - component: {fileID: 274331191}
   m_Layer: 0
-  m_Name: "\u58C1\uFF3F\u5168\u90E8\u8868\u793A (4)"
+  m_Name: Wall4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3793,7 +3793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &303557492 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -3817,7 +3817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &306922406 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -3841,7 +3841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &320712794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4024,7 +4024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &322663066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4378,7 +4378,7 @@ GameObject:
   - component: {fileID: 331747562}
   - component: {fileID: 331747561}
   m_Layer: 0
-  m_Name: "\u58C1\uFF3F\u5168\u90E8\u8868\u793A (1)"
+  m_Name: Wall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5031,7 +5031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &371419007 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -5055,7 +5055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!114 &377823352 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 101090383746385299, guid: 6a7119405038f4946b5fc77dd29821c5, type: 3}
@@ -5147,7 +5147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &383944837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5764,7 +5764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &415291515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -5788,7 +5788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &415930311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5955,7 +5955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &422342952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6036,7 +6036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &424411183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -6060,7 +6060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &439125450 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -6084,7 +6084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &441903195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6275,7 +6275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &445668621
 GameObject:
   m_ObjectHideFlags: 0
@@ -6334,7 +6334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &457820612
 GameObject:
   m_ObjectHideFlags: 0
@@ -6570,7 +6570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &466544724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6651,7 +6651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &466867772 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -6675,7 +6675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &468353868 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -6699,7 +6699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &472691406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6912,7 +6912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &502293594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7044,7 +7044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &525546283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7352,7 +7352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &541118674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7748,7 +7748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &557906823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7965,7 +7965,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: fa7d67a1e737147ff92ff36ae7e8c6af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8135,7 +8135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &613146468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8318,7 +8318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &626896099
 GameObject:
   m_ObjectHideFlags: 0
@@ -8382,7 +8382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &631478487 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -8406,7 +8406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &648506945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8973,7 +8973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &679629193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9070,7 +9070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &685354672 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -9094,7 +9094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &686749647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9223,7 +9223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &694134308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9619,7 +9619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &737955482 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -9643,7 +9643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &769221612 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -9667,7 +9667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!4 &773926684 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -10045,7 +10045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &827122470 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -10069,7 +10069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &831998069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10644,7 +10644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &868833170 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -10668,7 +10668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &871984679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11044,7 +11044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &897936996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11214,7 +11214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &903258877
 GameObject:
   m_ObjectHideFlags: 0
@@ -11639,7 +11639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &917834238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11934,7 +11934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &924046817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12117,7 +12117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &928025113 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -12141,7 +12141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &936732032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12379,7 +12379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &959145541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12658,7 +12658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1000188666
 GameObject:
   m_ObjectHideFlags: 0
@@ -12790,7 +12790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!4 &1007048689 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -13108,7 +13108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1042920191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13248,7 +13248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1049721532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13538,7 +13538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1063460441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13619,7 +13619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1067706407
 GameObject:
   m_ObjectHideFlags: 0
@@ -13631,7 +13631,7 @@ GameObject:
   - component: {fileID: 1067706409}
   - component: {fileID: 1067706408}
   m_Layer: 0
-  m_Name: "\u58C1\uFF3F\u5168\u90E8\u8868\u793A (2)"
+  m_Name: Wall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13727,7 +13727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!4 &1075204241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -14058,7 +14058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1104365211 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -14082,7 +14082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1106228459
 GameObject:
   m_ObjectHideFlags: 0
@@ -14300,7 +14300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1134041249
 GameObject:
   m_ObjectHideFlags: 0
@@ -14359,7 +14359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1145374821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14469,7 +14469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1161839694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14636,7 +14636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1169654561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14880,7 +14880,7 @@ GameObject:
   - component: {fileID: 1178422943}
   - component: {fileID: 1178422942}
   m_Layer: 0
-  m_Name: "\u58C1\uFF3F\u5168\u90E8\u8868\u793A (5)"
+  m_Name: Wall5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15057,7 +15057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1199410525
 GameObject:
   m_ObjectHideFlags: 0
@@ -15118,7 +15118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1222219773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15443,7 +15443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1236030515
 GameObject:
   m_ObjectHideFlags: 0
@@ -15731,7 +15731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1254413925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16071,7 +16071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1281122005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16238,7 +16238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1287398099
 GameObject:
   m_ObjectHideFlags: 0
@@ -16420,7 +16420,7 @@ GameObject:
   - component: {fileID: 1290906850}
   - component: {fileID: 1290906849}
   m_Layer: 0
-  m_Name: "\u58C1\uFF3F\u5168\u90E8\u8868\u793A"
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16678,7 +16678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1312616928 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -16702,7 +16702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1313135431 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5654384668995628007, guid: 83e680fcec2cd384e89ce0770f96a378, type: 3}
@@ -16844,7 +16844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1316506956 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -16868,7 +16868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1317810786 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -16892,7 +16892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1322582073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17111,7 +17111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1342939610
 GameObject:
   m_ObjectHideFlags: 0
@@ -17219,7 +17219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1356729320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17465,7 +17465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!4 &1372209135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -17580,7 +17580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!4 &1376957087 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -17626,7 +17626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!4 &1384887679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -17655,7 +17655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1387660838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17752,7 +17752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1392206973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17942,7 +17942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1404491045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18808,7 +18808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1452068138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19007,7 +19007,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1496982633}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1463693106
 SpriteRenderer:
@@ -19084,7 +19084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!4 &1479330025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -19118,8 +19118,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1463693105}
   - {fileID: 1998782265}
+  - {fileID: 1463693105}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -19203,7 +19203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1510007267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19386,7 +19386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1537621576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19554,7 +19554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1545074606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19779,7 +19779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1560124058
 GameObject:
   m_ObjectHideFlags: 0
@@ -19838,7 +19838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1565673370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19919,7 +19919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1573012245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20378,7 +20378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1612975470 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -20402,7 +20402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1613399521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20676,7 +20676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1652993761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -20700,7 +20700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1659215265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21072,7 +21072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1684150885 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -21096,7 +21096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1684551977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21201,7 +21201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1686677164 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -21225,7 +21225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1686693804 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -21249,7 +21249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1691182371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21330,7 +21330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1705062047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21399,7 +21399,7 @@ GameObject:
   - component: {fileID: 1718046205}
   - component: {fileID: 1718046204}
   m_Layer: 0
-  m_Name: "\u58C1\uFF3F\u5168\u90E8\u8868\u793A (3)"
+  m_Name: Wall3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21552,7 +21552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1723791922 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -21576,7 +21576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1725638384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22482,7 +22482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1786606135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22636,7 +22636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!4 &1795429422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -23102,7 +23102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1860278793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23304,7 +23304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1876173431
 GameObject:
   m_ObjectHideFlags: 0
@@ -23363,7 +23363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1879289940 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -23387,7 +23387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1879583739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23554,7 +23554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1897382797 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -23578,7 +23578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1897503796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23761,7 +23761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1907758230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23871,7 +23871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1919036763 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -23895,7 +23895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1926002205 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -23919,7 +23919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1927084267 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -23943,7 +23943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1933524195 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -23967,7 +23967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1942711416 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -23991,7 +23991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1948321378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -24015,7 +24015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1950363285 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -24039,7 +24039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1961297428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24149,7 +24149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &1963792215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24480,7 +24480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &1988088214
 GameObject:
   m_ObjectHideFlags: 0
@@ -24612,7 +24612,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1496982633}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1998782266
 MonoBehaviour:
@@ -24626,7 +24626,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22f25def3bd75c24b99a12c6bd988ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorOrSwitch: 0
 --- !u!1 &2001758591 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -24650,7 +24649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &2001864982 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -24674,7 +24673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!4 &2003341389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -24903,7 +24902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &2032757063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25259,7 +25258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &2061801482
 GameObject:
   m_ObjectHideFlags: 0
@@ -25408,7 +25407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1001 &2094812221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25546,7 +25545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &2099517903 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: b977149249d304b1f85ce1d2abda02cc, type: 3}
@@ -25570,7 +25569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &2100328971
 GameObject:
   m_ObjectHideFlags: 0
@@ -25903,7 +25902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &2121624956 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646540336478859267, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -25927,7 +25926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: 1
-  Enemy: {fileID: 0}
+  ColorChangeOn: 1
 --- !u!1 &2125375924
 GameObject:
   m_ObjectHideFlags: 0
@@ -26286,6 +26285,10 @@ PrefabInstance:
     - target: {fileID: 6452371661608975865, guid: 36d585c6f25eff149adc391f75a3b9d8, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452371661608975866, guid: 36d585c6f25eff149adc391f75a3b9d8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6452371661608975867, guid: 36d585c6f25eff149adc391f75a3b9d8, type: 3}
       propertyPath: m_RootOrder

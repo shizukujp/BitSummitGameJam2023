@@ -7487,7 +7487,7 @@ MonoBehaviour:
   summonobj: {fileID: 5654384668995628007, guid: 83e680fcec2cd384e89ce0770f96a378, type: 3}
   Environment: {fileID: 1988088214}
   newEnemies:
-  - RoundCount: 3
+  - RoundCount: 2
     PositionX: 6
     PositionY: 6
     MovePosX: 0
