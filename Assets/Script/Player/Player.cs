@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
                         clickedGameObject = null;
                         //First = Second = false;
                     }
-                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) / 1f > 2f)
+                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) / 1f > 2f || !clickedGameObject.CompareTag("Tile"))
                     {
                         Debug.Log("移動できません");
                         clickedGameObject = null;
