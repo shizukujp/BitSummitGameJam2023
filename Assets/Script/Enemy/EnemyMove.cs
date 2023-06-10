@@ -71,12 +71,12 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isEneMove && IsEnemyMove)
+        if (isEneMove)
         {
             Move();
         }
 
-        animator.SetBool("IsMove", !Player.isPlayerTurn);
+        //animator.SetBool("IsMove", !Player.isPlayerTurn);
         //Debug.Log(Discover());
         /*if (Player.instance.ismove || isEneMove)
             Discover(Up, Down, Right, Left);*/
@@ -123,7 +123,7 @@ public class EnemyMove : MonoBehaviour
                 Down = Right = Left = false;
             }
             One = false;
-            isEneMove = true; 
+            animator.SetBool("IsMove", true);
         }
         else if(Go && One && !isVertical)
         {
@@ -143,8 +143,7 @@ public class EnemyMove : MonoBehaviour
                 Up = Left = Down = false;
             }
             One = false;
-            isEneMove = true;
-            //animator.SetBool("IsMove", !Player.isPlayerTurn);
+            animator.SetBool("IsMove", true);
         }
         else if(!Go && One && isVertical)
         {
@@ -162,8 +161,7 @@ public class EnemyMove : MonoBehaviour
                 Down = Right = Left = false;
             }
             One = false;
-            isEneMove = true;
-            //animator.SetBool("IsMove", !Player.isPlayerTurn);
+            animator.SetBool("IsMove", true);
         } else if(!Go && One && !isVertical)
         {
             //自分が初めにいた場所へ向かう(横方向)
@@ -180,23 +178,22 @@ public class EnemyMove : MonoBehaviour
                 Up = Left = Down = false;
             }
             One = false;
-            isEneMove = true;
-            //animator.SetBool("IsMove", !Player.isPlayerTurn);
+            animator.SetBool("IsMove", true);
         }
 
         transform.position = Vector2.MoveTowards(transform.position, MovePos, speed * Time.deltaTime);
         if(transform.position.x == MovePos.x && transform.position.y == MovePos.y)
         {
             Debug.Log(gameObject + "の移動完了");
-            //this.animator.SetBool("IsMove", !Player.isPlayerTurn);
-            
+            animator.SetBool("IsMove", false);
+
             //RoundController.instance.MasRiset();
             if (Discover())
             {
                 isAlerm = true;
                 Invoke(nameof(Death), 0.25f);
             }
-            Player.isPlayerTurn = true;
+            //Player.isPlayerTurn = true;
             isEneMove = false;
             One = true;
             RoundController.instance.EnemyTurnEnd();

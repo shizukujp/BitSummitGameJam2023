@@ -180,7 +180,8 @@ public class Player : MonoBehaviour
                         EnemyMove.Deathcount = 2;
                     }else
                     {
-                        if(enemys.Length != 0)
+                        enemys = GameObject.FindGameObjectsWithTag("Enemy");
+                        if (enemys.Length != 0)
                         {
                             EnemyMove.IsEnemyMove = true;
                             RoundController.instance.EnemyTurn();
