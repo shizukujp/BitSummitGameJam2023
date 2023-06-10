@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
+
 public class RoundController : MonoBehaviour
 {
     public static RoundController instance;
@@ -184,18 +185,21 @@ public class RoundController : MonoBehaviour
         enemyturnend++;
         if (recordTurnPositon.EnemyCount() == enemyturnend)
         {
-            if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn);
-            
-            if (enemyturn < 12) Player.isPlayerTurn = true;
+            Debug.Log(enemyturnend);
+            Debug.Log(recordTurnPositon.EnemyCount());
             if (recordTurnPositon.EnemyCount() != enemyturnend) return;
             //敵の動きがすべて終わった後に実行する関数
+            if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn);
+            if (enemyturn < 12) Player.isPlayerTurn = true;
             if (playerWatchSave) playerWatchSave = false;
             EnemyMove.IsEnemyMove = false;
             enemyturn++;
             enemyturnend = 0;
         }
+        Debug.Log(enemyturnend);
+        Debug.Log(recordTurnPositon.EnemyCount());
     }
-    public void MasRiset()
+        public void MasRiset()
     {
         int i = 0;
         foreach (GameObject tiles in recordTurnPositon.Tiles)
