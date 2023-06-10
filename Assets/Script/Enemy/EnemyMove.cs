@@ -82,8 +82,9 @@ public class EnemyMove : MonoBehaviour
 
     void Move()
     {
+        animator.SetBool("IsMove", !Player.isPlayerTurn);
         //アラームモードにはいったら
-        if(Discover() && Deathcount == 0 && One)
+        if (Discover() && Deathcount == 0 && One)
         {
             //RoundController.instance.MasRiset();
             Invoke(nameof(Death), 0.25f);
@@ -122,7 +123,6 @@ public class EnemyMove : MonoBehaviour
             }
             One = false;
             isEneMove = true; 
-            animator.SetBool("IsMove", true);
         }
         else if(Go && One && !isVertical)
         {
@@ -143,7 +143,7 @@ public class EnemyMove : MonoBehaviour
             }
             One = false;
             isEneMove = true;
-            animator.SetBool("IsMove", true);
+            //animator.SetBool("IsMove", !Player.isPlayerTurn);
         }
         else if(!Go && One && isVertical)
         {
@@ -162,7 +162,7 @@ public class EnemyMove : MonoBehaviour
             }
             One = false;
             isEneMove = true;
-            animator.SetBool("IsMove", true);
+            //animator.SetBool("IsMove", !Player.isPlayerTurn);
         } else if(!Go && One && !isVertical)
         {
             //自分が初めにいた場所へ向かう(横方向)
@@ -180,14 +180,14 @@ public class EnemyMove : MonoBehaviour
             }
             One = false;
             isEneMove = true;
-            animator.SetBool("IsMove", true);
+            //animator.SetBool("IsMove", !Player.isPlayerTurn);
         }
 
         transform.position = Vector2.MoveTowards(transform.position, MovePos, speed * Time.deltaTime);
         if(transform.position.x == MovePos.x && transform.position.y == MovePos.y)
         {
             Debug.Log(gameObject + "の移動完了");
-            this.animator.SetBool("IsMove", false);
+            //this.animator.SetBool("IsMove", !Player.isPlayerTurn);
             
             //RoundController.instance.MasRiset();
             if (Discover())

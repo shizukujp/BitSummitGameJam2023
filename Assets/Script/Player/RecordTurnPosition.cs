@@ -32,8 +32,8 @@ public class RecordTurnPosition : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log(enemy[0].transform.position);
-        //Debug.Log(enemy[1].transform.position);
+        //Debug.Log(roundPosition1);
+        //Debug.Log(roundPosition2);
         //Debug.Log(enemy[2].transform.position);
         //Debug.Log(enemy[3].transform.position);
     }
@@ -47,6 +47,7 @@ public class RecordTurnPosition : MonoBehaviour
     //関数で保存した位置を呼び出して代入する。
     public void GetTurnPositionToScene(int turn)
     {
+        Debug.Log("GetTurn : " + turn);
         switch (turn)
         {
             case 0:
@@ -271,6 +272,7 @@ public class RecordTurnPosition : MonoBehaviour
     //ターン毎に位置を保存する
     public void SetTurnPosition(int turn)
     {
+        Debug.Log("SetTurn : "+turn);
         switch (turn)
         {
             case 0:
