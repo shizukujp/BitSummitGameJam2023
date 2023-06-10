@@ -14,12 +14,13 @@ public class PocketWatch : MonoBehaviour
 
         if (Player.isPlayerTurn)
         {
+            //記録した場所に移動
             if (Input.GetKeyDown(KeyCode.E) && pocketWatchCheck && pocketWatchCheackLoad == 0 && !SameTime)
             {
                 pocketWatchCheackLoad++;
                 RoundController.instance.UsePocketWatchToLoad();
             }
-
+            //場所を記録
             if (Input.GetKeyDown(KeyCode.E) && !pocketWatchCheck)
             {
                 SameTime = true;
