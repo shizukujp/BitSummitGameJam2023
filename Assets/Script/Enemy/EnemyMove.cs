@@ -83,7 +83,7 @@ public class EnemyMove : MonoBehaviour
     void Move()
     {
         //アラームモードにはいったら
-        if(Discover() && Deathcount == 0)
+        if(Discover() && Deathcount == 0 && One)
         {
             //RoundController.instance.MasRiset();
             Invoke(nameof(Death), 0.25f);
@@ -192,6 +192,7 @@ public class EnemyMove : MonoBehaviour
             //RoundController.instance.MasRiset();
             if (Discover())
             {
+                isAlerm = true;
                 Invoke(nameof(Death), 0.25f);
             }
             Player.isPlayerTurn = true;
