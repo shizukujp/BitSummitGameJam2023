@@ -75,6 +75,8 @@ public class EnemyMove : MonoBehaviour
         {
             Move();
         }
+
+        animator.SetBool("IsMove", !Player.isPlayerTurn);
         //Debug.Log(Discover());
         /*if (Player.instance.ismove || isEneMove)
             Discover(Up, Down, Right, Left);*/
@@ -82,7 +84,6 @@ public class EnemyMove : MonoBehaviour
 
     void Move()
     {
-        animator.SetBool("IsMove", !Player.isPlayerTurn);
         //アラームモードにはいったら
         if (Discover() && Deathcount == 0 && One)
         {
