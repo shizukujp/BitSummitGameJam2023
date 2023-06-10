@@ -37,10 +37,8 @@ public class Player : MonoBehaviour
     float CurrentY;//現在のプレイヤーのY座標
     float CurrentX;//現在のプレイヤーのX座標
     public bool ismove = false;
-    
-    //クリックした場所の色を変更する
-    //public Material MyColor;
-    //public Material MyColor2;
+
+    public GameObject[] enemys;
 
 
     //ターン関連
@@ -53,6 +51,7 @@ public class Player : MonoBehaviour
         isPlayerTurn = true;
         animator = player.GetComponent<Animator>();
         pos = transform.localScale;//(1.25, 1.25, 1.25)
+        enemys = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     // Update is called once per frame
@@ -181,8 +180,15 @@ public class Player : MonoBehaviour
                         EnemyMove.Deathcount = 2;
                     }else
                     {
-                        EnemyMove.IsEnemyMove = true;
-                        RoundController.instance.EnemyTurn();
+                        if(enemys.Length != 0)
+                        {
+                            EnemyMove.IsEnemyMove = true;
+                            RoundController.instance.EnemyTurn();
+                        }else
+                        {
+                            RoundController.instance.MasRiset();
+                            isPlayerTurn = true;
+                        }
                     }
                     
                 }

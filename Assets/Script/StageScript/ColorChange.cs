@@ -11,10 +11,10 @@ public class ColorChange : MonoBehaviour
     // Start is called before the first frame update
     public bool A = true;
     GameObject player;
-    public GameObject Enemy;
+    //public GameObject[] Enemy;
     public static ColorChange instance;
     //
-
+    public bool ColorChangeOn = true;
     public void Awake()
     {
         if (instance == null)
@@ -47,6 +47,7 @@ public class ColorChange : MonoBehaviour
         {
             this.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
         }
+        //Enemy = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     // Update is called once per frame
@@ -71,7 +72,8 @@ public class ColorChange : MonoBehaviour
             }
             else */if (Vector2.Distance(Player.instance.currentPos, transform.position) <= 2f && Player.instance.clickPos != transform.position)
             {
-                if(isDanger())
+                if (!ColorChangeOn) return;
+                if (isDanger())
                 {
                     //危険な色
                     GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
@@ -81,28 +83,32 @@ public class ColorChange : MonoBehaviour
             }
         }
         //敵が動いている時
-        if(EnemyMove.instance.isEneMove && !RoundController.OnOff_Enemy)
+        if(Player.instance.enemys.Length != 0)
         {
-            if (!isDanger())
+            if (!ColorChangeOn) return;
+            if (EnemyMove.instance.isEneMove && !RoundController.OnOff_Enemy)
             {
-                CanPlayerMove();
-                return;
+                if (!isDanger())
+                {
+                    CanPlayerMove();
+                    return;
+                }
+                /*if (Vector2.Distance(player.transform.position, transform.position) < 0.5f)
+                {
+                    //最も危険
+                    GetComponent<SpriteRenderer>().color = new Color(1f, 0.1f, 0.1f, 0.475f);
+                    return;
+                }
+                else */
+                if (CanPlayerMoveColor())
+                {
+                    GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
+                    return;
+                }
+                GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
+                //DangerColor(EnemyMove.instance.Enem, EnemyMove.instance.Up, EnemyMove.instance.Down, EnemyMove.instance.Right, EnemyMove.instance.Left);
             }
-            /*if (Vector2.Distance(player.transform.position, transform.position) < 0.5f)
-            {
-                //最も危険
-                GetComponent<SpriteRenderer>().color = new Color(1f, 0.1f, 0.1f, 0.475f);
-                return;
-            }
-            else */if (CanPlayerMoveColor())
-            {
-                GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
-                return;
-            }
-            GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
-            //DangerColor(EnemyMove.instance.Enem, EnemyMove.instance.Up, EnemyMove.instance.Down, EnemyMove.instance.Right, EnemyMove.instance.Left);
         }
-        
     }
 
     /*void OnMouseEnter()
@@ -171,6 +177,7 @@ public class ColorChange : MonoBehaviour
     {
         if (!Player.isPlayerTurn) return;
         if (Player.instance.ismove) return;
+        if (!ColorChangeOn) return;
         //プレイヤーが移動可能な範囲のマスだったら
         /*if (Vector2.Distance(player.transform.position, transform.position) == 0)
         {
@@ -409,11 +416,13 @@ public class ColorChange : MonoBehaviour
     {
         if (RoundController.OnOff_Player) return false;
         if (Vector2.Distance(player.transform.position, transform.position) > 2f) return false;
+        if (!ColorChangeOn) return false;
         return true;
     }
 
     public void RisetColor()
     {
+        if(!ColorChangeOn) return;
         if (isDanger() && CanPlayerMoveColor())
         {
             GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
@@ -427,19 +436,5 @@ public class ColorChange : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = new Color(0.943f, 0.943f, 0.943f, 0.475f);
         }
-        /*if (Vector2.Distance(player.transform.position, transform.position) == 0)
-        {
-            GetComponent<SpriteRenderer>().color = new Color(0.157f, 0.157f, 0.157f, 0.475f);
-        }
-        else */
-
-        /*if (Vector2.Distance(player.transform.position, transform.position) <= 2f)
-        {
-            GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);
-        }else
-        {
-            if(isDanger()) return;
-            GetComponent<SpriteRenderer>().color = new Color(0.943f, 0.943f, 0.943f, 0.475f);
-        }*/
     }
 }
