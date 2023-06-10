@@ -7497,7 +7497,7 @@ MonoBehaviour:
     right: 0
     up: 0
     down: 1
-  - RoundCount: 4
+  - RoundCount: 3
     PositionX: 4
     PositionY: 4
     MovePosX: 0
