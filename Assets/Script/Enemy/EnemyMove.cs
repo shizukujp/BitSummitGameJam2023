@@ -182,7 +182,7 @@ public class EnemyMove : MonoBehaviour
         }
 
         transform.position = Vector2.MoveTowards(transform.position, MovePos, speed * Time.deltaTime);
-        if(transform.position.x == MovePos.x && transform.position.y == MovePos.y)
+        if(transform.position.x == MovePos.x && transform.position.y == MovePos.y || isAlerm)
         {
             Debug.Log(gameObject + "の移動完了");
             animator.SetBool("IsMove", false);

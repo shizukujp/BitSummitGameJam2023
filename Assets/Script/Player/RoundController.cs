@@ -93,6 +93,7 @@ public class RoundController : MonoBehaviour
         //シーン内に敵がいないときに自動プレイヤーのターンに移行する
         if (recordTurnPositon.EnemyCount() == 0 && !Player.isPlayerTurn)
         {
+            recordTurnPositon.EnemyCount();
             if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn);
             if (playerWatchSave) playerWatchSave = false;
             enemyturn++;
@@ -181,7 +182,7 @@ public class RoundController : MonoBehaviour
     public void EnemyTurnEnd() 
     {
         enemyturnend++;
-        if (recordTurnPositon.EnemyCount() >= enemyturnend)
+        if (recordTurnPositon.EnemyCount() == enemyturnend)
         {
             if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn);
             

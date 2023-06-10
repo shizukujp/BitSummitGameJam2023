@@ -40,6 +40,7 @@ public class RecordTurnPosition : MonoBehaviour
     public int EnemyCount()
     {
         Enemys = GameObject.FindGameObjectsWithTag("Enemy");
+       
         return Enemys.Length;
     }
     //敵は何人いるかを再スキャンする
