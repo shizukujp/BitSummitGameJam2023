@@ -84,7 +84,7 @@ public class RoundController : MonoBehaviour
         if (playerturn != playerturnpreb )
         {
             playerturnpreb = playerturn;
-            Player.isPlayerTurn = false;
+            //Player.isPlayerTurn = false;
         }
         //テスト用
         //if (Input.GetKey(KeyCode.Escape) && !Player.instance.isPlayerTurn) EnemyTurnEnd();

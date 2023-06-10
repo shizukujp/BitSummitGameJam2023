@@ -256,6 +256,8 @@ public class RecordTurnPosition : MonoBehaviour
         }
         foreach (GameObject enemys in GameObject.FindGameObjectsWithTag("Enemy"))
         {
+            Vector2 pos = enemys.transform.localScale;
+
             EnemyMove enemy = enemys.GetComponent<EnemyMove>();
             enemy.Go = true;
             enemy.Up = enemy.FUp;
@@ -263,9 +265,13 @@ public class RecordTurnPosition : MonoBehaviour
             enemy.Right = enemy.FRight;
             enemy.Left = enemy.FLeft;
             enemy.animator.SetBool("isDiscover", false);
-            //enemy.animator.SetBool("IsMove", false);
             enemy.isAlerm = false;
             enemy.isEneMove = false;
+
+            //向きの初期化
+            if (enemy.FRight && pos.x > 0) pos.x *= -1;
+            if (enemy.FLeft && pos.x < 0) pos.x *= -1;
+            enemy.transform.localScale = pos;
         }
         foreach (GameObject tiles in Tiles)
         {

@@ -26,6 +26,7 @@ public class EnemyMove : MonoBehaviour
 
     Vector2 vct1;
     Vector2 vct2;//目的地
+    Vector2 pos;
     //Vector2 vct3;
     public GameObject Enem;
     public GameObject player;
@@ -66,6 +67,7 @@ public class EnemyMove : MonoBehaviour
         FDown = Down;
         FRight = Right;
         FLeft = Left;
+        pos = transform.localScale;
     }
 
     // Update is called once per frame
@@ -134,6 +136,12 @@ public class EnemyMove : MonoBehaviour
                 MovePos = new Vector2(transform.position.x - 1f, transform.position.y);
                 Left = true;
                 Up = Down = Right = false;
+                //方向転換
+                if (pos.x < 0)
+                {
+                    pos.x *= -1;
+                }
+                transform.localScale = pos;
             }
             else if (vct2.x > transform.position.x)
             {
@@ -141,6 +149,13 @@ public class EnemyMove : MonoBehaviour
                 MovePos = new Vector2(transform.position.x + 1f, transform.position.y);
                 Right = true;
                 Up = Left = Down = false;
+                //方向転換
+                if (pos.x > 0)
+                {
+                    pos.x *= -1;
+                }
+                transform.localScale = pos;
+
             }
             One = false;
             animator.SetBool("IsMove", true);
@@ -162,7 +177,8 @@ public class EnemyMove : MonoBehaviour
             }
             One = false;
             animator.SetBool("IsMove", true);
-        } else if(!Go && One && !isVertical)
+        }
+        else if(!Go && One && !isVertical)
         {
             //自分が初めにいた場所へ向かう(横方向)
             if (vct1.x < transform.position.x)
@@ -170,12 +186,23 @@ public class EnemyMove : MonoBehaviour
                 MovePos = new Vector2(transform.position.x - 1f, transform.position.y);
                 Left = true;
                 Up = Down = Right = false;
+                //方向転換
+                if (pos.x < 0)
+                {
+                    pos.x *= -1;
+                }
+                transform.localScale = pos;
             }
             else if (vct1.x > transform.position.x)
             {
                 MovePos = new Vector2(transform.position.x + 1f, transform.position.y);
                 Right = true;
                 Up = Left = Down = false;
+                if (pos.x > 0)
+                {
+                    pos.x *= -1;
+                }
+                transform.localScale = pos;
             }
             One = false;
             animator.SetBool("IsMove", true);
@@ -206,7 +233,8 @@ public class EnemyMove : MonoBehaviour
             //縦方向の場合(vct2)
             if (transform.position.y == vct2.y)
             {
-                int i = 0;
+                if (Discover()) return;
+                    int i = 0;
                 if (Up && i == 0)
                 {
                     Up = false;
@@ -228,6 +256,7 @@ public class EnemyMove : MonoBehaviour
             }
             else if (transform.position.y == vct1.y)
             {
+                if (Discover()) return;
                 int i = 0;
                 if (Up && i == 0)
                 {
@@ -254,6 +283,7 @@ public class EnemyMove : MonoBehaviour
             //横方向の場合(vct3)
             if (transform.position.x == vct2.x)
             {
+                if (Discover()) return;
                 int i = 0;
                 if (Right && i == 0)
                 {
@@ -276,6 +306,7 @@ public class EnemyMove : MonoBehaviour
             }
             else if (transform.position.x == vct1.x)
             {
+                if (Discover()) return;
                 int i = 0;
                 if (Right && i == 0)
                 {

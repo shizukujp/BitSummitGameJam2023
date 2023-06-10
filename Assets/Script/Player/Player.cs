@@ -60,6 +60,7 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             Motion();
+            Debug.Log(isPlayerTurn);
         }
 
         //プレイヤーのターンじゃない場合は動かないようにする
@@ -188,7 +189,7 @@ public class Player : MonoBehaviour
                         }else
                         {
                             RoundController.instance.MasRiset();
-                            isPlayerTurn = true;
+                            //isPlayerTurn = true;
                         }
                     }
                     
