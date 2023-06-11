@@ -12,7 +12,7 @@ public class RoundController : MonoBehaviour
     //シーンの交換について
     Scene scenePreb;
 
-    int playerturn = 1, playerturnpreb = 1, round = 1, enemyturn = 1,
+    int playerturn = 1, /*playerturnpreb = 1, */round = 1, enemyturn = 1,
         enemyturnend = 0, saveturn = -1;
     RecordTurnPosition recordTurnPositon;
 
@@ -68,7 +68,7 @@ public class RoundController : MonoBehaviour
         if (SceneManager.GetActiveScene() != scenePreb)
         {
             playerturn = 1;
-            playerturnpreb = 1;
+            //playerturnpreb = 1;
             round = 1;
             enemyturn = 1;
             recordTurnPositon.SetTurnPosition(0);
@@ -139,7 +139,7 @@ public class RoundController : MonoBehaviour
 
         //ターンを最初のターンに戻す
         playerturn = 1;
-        playerturnpreb = 1;
+        //playerturnpreb = 1;
         enemyturn = 1;
 
         //懐中時計の設定
