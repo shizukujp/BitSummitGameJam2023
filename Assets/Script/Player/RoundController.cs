@@ -201,6 +201,7 @@ public class RoundController : MonoBehaviour
         public void MasRiset()
     {
         int i = 0;
+        recordTurnPositon.Tiles = GameObject.FindGameObjectsWithTag("Tile");
         foreach (GameObject tiles in recordTurnPositon.Tiles)
         {
             ColorChange change = recordTurnPositon.Tiles[i].GetComponent<ColorChange>();
