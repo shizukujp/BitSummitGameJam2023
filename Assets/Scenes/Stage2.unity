@@ -7779,15 +7779,15 @@ MonoBehaviour:
   Environment: {fileID: 1988088214}
   newEnemies:
   - RoundCount: 2
-    PositionX: -1
-    PositionY: 7
-    MovePosX: -1
-    MovePosY: 0
+    PositionX: 8
+    PositionY: 0
+    MovePosX: 8
+    MovePosY: 7
     isVertical: 1
     left: 0
     right: 0
-    up: 0
-    down: 1
+    up: 1
+    down: 0
   - RoundCount: 4
     PositionX: 4
     PositionY: 4

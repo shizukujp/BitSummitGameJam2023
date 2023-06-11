@@ -8636,16 +8636,6 @@ MonoBehaviour:
     right: 0
     up: 0
     down: 1
-  - RoundCount: 4
-    PositionX: 4
-    PositionY: 4
-    MovePosX: 0
-    MovePosY: 0
-    isVertical: 0
-    left: 1
-    right: 0
-    up: 0
-    down: 0
 --- !u!4 &1007048689 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
