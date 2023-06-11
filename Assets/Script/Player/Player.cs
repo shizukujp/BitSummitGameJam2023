@@ -125,8 +125,7 @@ public class Player : MonoBehaviour
         }
         //プレイヤーの移動＋歩数・ターンカウント
         if (clickedGameObject
-            && (((SceneManager.GetActiveScene().name == "Tutorial" && !(currentPos.x == 8 && (currentPos.y == 5 || currentPos.y == 4)))
-            || (SceneManager.GetActiveScene().name == "Stage2" && ((currentPos.x == 3 && currentPos.y == 2) || (currentPos.x == 3 && currentPos.y == 2)))) ))
+            && (SceneManager.GetActiveScene().name == "Tutorial" && !(currentPos.x == 8 && (currentPos.y == 5 || currentPos.y == 4))))
         {
             //RL = new Vector2(clickedGameObject.transform.position.x, player.transform.position.y);
             if (clickedGameObject.transform.position.x != player.transform.position.x && First)
@@ -306,5 +305,18 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.40f);
         MotionCheck = false;
         animator.SetBool("IsMotion", false);
+    }
+    bool RLfirst(GameObject clickOBJ)
+    {
+        //チュートリアルの先に縦移動する場所
+        Vector2[] vct = new[]{new Vector2(8, 5), new Vector2(8, 4)};
+        //ステージの先に縦移動する場所
+        Vector2[] vct1 = new[] { new Vector2(8, 5), new Vector2(8, 4) };
+        for (int i = 0; i < vct.Length; i++)
+        {
+            if (clickOBJ.transform.position.x == vct[i].x && clickOBJ.transform.position.y == vct[i].y) return true;
+        }
+        
+        return false;
     }
 }
