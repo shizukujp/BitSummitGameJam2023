@@ -43,9 +43,11 @@ public class GimmickDSwitch : MonoBehaviour
     //マウスの動き
     private void OnMouseOver()
     {
+        //Debug.Log(2);
         //Kはテスト用
         if (PlayerOverCheck && !animCheck && (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.K)))
         {
+            //Debug.Log(1);
             animCheck = true;
             SwitchHadOn = true;
             Player.instance.Motion();
@@ -85,14 +87,15 @@ public class GimmickDSwitch : MonoBehaviour
     //内部実行関数
     void PlayerPositonCheck()
     {
-        if (Mathf.Abs(player.transform.position.x - gameObject.transform.position.x) < 1.5f)
-        {
-            PlayerOverCheck = true;
-        }else if (Mathf.Abs(player.transform.position.y - gameObject.transform.position.y) < 1.5f)
+        if (Mathf.Abs(player.transform.position.x - gameObject.transform.position.x) <= 1.5f && Mathf.Abs(player.transform.position.y - gameObject.transform.position.y) <= 0.5f)
         {
             PlayerOverCheck = true;
         }
-        else
+        else if (Mathf.Abs(player.transform.position.x - gameObject.transform.position.x) <= 0.5f && Mathf.Abs(player.transform.position.y - gameObject.transform.position.y) <= 1.5f)
+        {
+            PlayerOverCheck = true;
+        }
+        else 
         {
             PlayerOverCheck = false;
         }

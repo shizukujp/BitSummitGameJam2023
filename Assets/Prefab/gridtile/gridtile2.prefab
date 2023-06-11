@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2768784419968380625}
   m_Layer: 0
   m_Name: gridtile2
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,7 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09a283a9f1b54422811cca03f16ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyColor: {fileID: 0}
-  MyColor2: {fileID: 0}
-  MyColor3: {fileID: 0}
   A: 1
+  ColorChangeOn: 1

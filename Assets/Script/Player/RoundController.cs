@@ -54,6 +54,10 @@ public class RoundController : MonoBehaviour
     //実行用関数
     private void Update()
     {
+        if(SceneManager.GetActiveScene().name == "Title" ||SceneManager.GetActiveScene().name == "GameOver")
+        {
+            Destroy(gameObject);
+        }
         if(Input.GetKey(KeyCode.O))
         {
             if(!OnOff_Enemy)OnOff_Enemy = OnOff_Player = true;
