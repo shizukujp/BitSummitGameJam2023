@@ -92,7 +92,7 @@ public class Player : MonoBehaviour
                         Motion();
                         clickedGameObject = null;
                     }
-                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) / 1f > 2f || !clickedGameObject.CompareTag("Tile") || (RLfirst && Vector2.Distance(clickedGameObject.transform.position, player.transform.position) == 2))
+                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) / 1f > 2f || !clickedGameObject.CompareTag("Tile") || (RLfirst && ((clickedGameObject.transform.position.x - player.transform.position.x == 2) || (clickedGameObject.transform.position.x - player.transform.position.x == -2))))
                     {
                         Debug.Log("移動できません");
                         clickedGameObject = null;
