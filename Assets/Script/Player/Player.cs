@@ -124,7 +124,9 @@ public class Player : MonoBehaviour
             }
         }
         //プレイヤーの移動＋歩数・ターンカウント
-        if (clickedGameObject && !(currentPos.x == 8 && (currentPos.y == 5 || currentPos.y == 4)))
+        if (clickedGameObject
+            && (((SceneManager.GetActiveScene().name == "Tutorial" && !(currentPos.x == 8 && (currentPos.y == 5 || currentPos.y == 4)))
+            || (SceneManager.GetActiveScene().name == "Stage2" && ((currentPos.x == 3 && currentPos.y == 2) || (currentPos.x == 3 && currentPos.y == 2)))) ))
         {
             //RL = new Vector2(clickedGameObject.transform.position.x, player.transform.position.y);
             if (clickedGameObject.transform.position.x != player.transform.position.x && First)
