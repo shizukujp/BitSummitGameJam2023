@@ -4702,7 +4702,7 @@ GameObject:
   - component: {fileID: 447385606}
   m_Layer: 0
   m_Name: box
-  m_TagString: Untagged
+  m_TagString: OBJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5849,7 +5849,7 @@ GameObject:
   - component: {fileID: 554269415}
   m_Layer: 0
   m_Name: box (13)
-  m_TagString: Untagged
+  m_TagString: OBJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6110,7 +6110,7 @@ GameObject:
   - component: {fileID: 598380073}
   m_Layer: 0
   m_Name: box (4)
-  m_TagString: Untagged
+  m_TagString: OBJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7959,9 +7959,10 @@ GameObject:
   m_Component:
   - component: {fileID: 929167847}
   - component: {fileID: 929167848}
+  - component: {fileID: 929167849}
   m_Layer: 0
   m_Name: box (11)
-  m_TagString: Untagged
+  m_TagString: OBJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8033,6 +8034,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &929167849
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929167846}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.8, y: 6.8}
+    newSize: {x: 6.8, y: 6.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.8, y: 6.8}
+  m_EdgeRadius: 0
 --- !u!1 &946667887
 GameObject:
   m_ObjectHideFlags: 0
@@ -8123,7 +8150,7 @@ GameObject:
   - component: {fileID: 948361645}
   m_Layer: 0
   m_Name: box (14)
-  m_TagString: Untagged
+  m_TagString: OBJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8291,7 +8318,7 @@ GameObject:
   - component: {fileID: 967062818}
   m_Layer: 0
   m_Name: box (10)
-  m_TagString: Untagged
+  m_TagString: OBJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11004,7 +11031,7 @@ GameObject:
   - component: {fileID: 1332648281}
   m_Layer: 0
   m_Name: box (12)
-  m_TagString: Untagged
+  m_TagString: OBJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11088,7 +11115,7 @@ GameObject:
   - component: {fileID: 1342508612}
   m_Layer: 0
   m_Name: box (6)
-  m_TagString: Untagged
+  m_TagString: OBJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11258,7 +11285,7 @@ GameObject:
   - component: {fileID: 1352223627}
   m_Layer: 0
   m_Name: box (5)
-  m_TagString: Untagged
+  m_TagString: OBJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11423,7 +11450,7 @@ GameObject:
   - component: {fileID: 1370560836}
   m_Layer: 0
   m_Name: box (2)
-  m_TagString: Untagged
+  m_TagString: OBJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11808,7 +11835,7 @@ GameObject:
   - component: {fileID: 1401990821}
   m_Layer: 0
   m_Name: box (9)
-  m_TagString: Untagged
+  m_TagString: OBJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14164,7 +14191,7 @@ GameObject:
   - component: {fileID: 1621872560}
   m_Layer: 0
   m_Name: box (3)
-  m_TagString: Untagged
+  m_TagString: OBJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15228,7 +15255,7 @@ GameObject:
   - component: {fileID: 1745822121}
   m_Layer: 0
   m_Name: box (8)
-  m_TagString: Untagged
+  m_TagString: OBJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15715,7 +15742,7 @@ GameObject:
   - component: {fileID: 1829171255}
   m_Layer: 0
   m_Name: box (1)
-  m_TagString: Untagged
+  m_TagString: OBJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1,27 +1,23 @@
 using UnityEngine;
+using System.Collections;
+using static UnityEngine.GraphicsBuffer;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 10;
+    [SerializeField]
+    [Tooltip("追従させたいターゲット")]
+    private GameObject target;
 
-    new Rigidbody2D rigidbody;
-    //Animator animator;
-    float inputX = 1, inputY;
-    //float stopX, stopY;
-    // Start is called before the first frame update
+    private Vector3 offset;
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
-        //animator = GetComponent<Animator>();
+        offset = gameObject.transform.position - target.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        inputX = Input.GetAxisRaw("Horizontal");
-        inputY = Input.GetAxisRaw("Vertical");
-        Vector2 input = (transform.right * inputX + transform.up * inputY).normalized;
-        rigidbody.velocity = input * speed;
+        gameObject.transform.position = target.transform.position + offset;
 
         /*if (input != Vector2.zero)
         {
