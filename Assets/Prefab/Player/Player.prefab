@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 31
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7c22673c4af074e748799b36fbd4a097, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -118,10 +118,10 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6452371661608975865}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -135,7 +135,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.4, y: 6.4}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!95 &6452371661608975809
 Animator:
@@ -175,6 +175,7 @@ MonoBehaviour:
   currentPos: {x: 0, y: 0, z: 0}
   clickPos: {x: 0, y: 0, z: 0}
   ismove: 0
+  enemys: []
 --- !u!114 &6452371661608975811
 MonoBehaviour:
   m_ObjectHideFlags: 0

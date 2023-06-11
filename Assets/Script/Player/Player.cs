@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
         }
     }
     Animator animator;
+    bool MotionCheck = false;
 
     public GameObject player;   //①移動させたいオブジェクト
     public int speed = 5;       //移動スピード
@@ -57,14 +58,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        /*if (Input.GetMouseButtonDown(1))
         {
             Motion();
             Debug.Log(isPlayerTurn);
-        }
+        }*/
 
         //プレイヤーのターンじゃない場合は動かないようにする
-        if (isPlayerTurn)
+        if (isPlayerTurn && !MotionCheck)
         {
             if (Input.GetMouseButtonDown(0) && Second == false)  //左クリックでif分起動
             {
@@ -197,8 +198,20 @@ public class Player : MonoBehaviour
             }
         }
     }
-    void Motion()
+    public void Motion()
     {
-        animator.SetTrigger("IsMotion");
+        if (!MotionCheck)
+        {
+            MotionCheck = true;
+            StartCoroutine(MotionCoolDown());
+            animator.SetBool("IsMotion", true);
+        }
+    }
+
+    IEnumerator MotionCoolDown()
+    {
+        yield return new WaitForSeconds(0.40f);
+        MotionCheck = false;
+        animator.SetBool("IsMotion", false);
     }
 }
