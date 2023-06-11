@@ -5,18 +5,16 @@ public class TitleStart : MonoBehaviour
 {
     public string GameScene = "";
 
-    private void OnMouseOver()
+   
+    public void GameStart()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (GameScene != "")
         {
-            if(GameScene != "")
-            {
-                SceneManager.LoadScene(GameScene);
-            }
-            else
-            {
-                Debug.Log("ゲームシーンのシーンネームを追加してください。");
-            }
+            SceneManager.LoadScene(GameScene);
+        }
+        else
+        {
+            Debug.Log("ゲームシーンのシーンネームを追加してください。");
         }
     }
 }
