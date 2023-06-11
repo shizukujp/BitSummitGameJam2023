@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     }
     Animator animator;
     bool MotionCheck = false;
-
+    bool RLfirst = false;
     public GameObject player;   //①移動させたいオブジェクト
     public int speed = 5;       //移動スピード
     public int playerwalkcount = 0;    //プレイヤー歩数のカウンター
@@ -306,17 +306,16 @@ public class Player : MonoBehaviour
         MotionCheck = false;
         animator.SetBool("IsMotion", false);
     }
-    bool RLfirst(GameObject clickOBJ)
+
+    void OnTriggerEnter(Collider other)
     {
-        //チュートリアルの先に縦移動する場所
-        Vector2[] vct = new[]{new Vector2(8, 5), new Vector2(8, 4)};
-        //ステージの先に縦移動する場所
-        Vector2[] vct1 = new[] { new Vector2(8, 5), new Vector2(8, 4) };
-        for (int i = 0; i < vct.Length; i++)
+        if (other.gameObject.CompareTag("OBJ") && !RLfirst)
         {
-            if (clickOBJ.transform.position.x == vct[i].x && clickOBJ.transform.position.y == vct[i].y) return true;
+            RLfirst = true;
+        }else if(RLfirst)
+        {
+            RLfirst = false;
         }
         
-        return false;
     }
 }
