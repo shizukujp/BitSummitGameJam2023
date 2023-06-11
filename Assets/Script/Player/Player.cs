@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
 
     public GameObject[] enemys;
 
-
+    bool Can = true;
     //ターン関連
     public static bool isPlayerTurn;
 
@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
                         Motion();
                         clickedGameObject = null;
                     }
-                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) / 1f > 2f || !clickedGameObject.CompareTag("Tile"))
+                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) / 1f > 2f || !clickedGameObject.CompareTag("Tile") || !Can)
                     {
                         Debug.Log("移動できません");
                         clickedGameObject = null;
@@ -180,6 +180,7 @@ public class Player : MonoBehaviour
                     PocketWatch.SameTime = false;
                     isPlayerTurn = false;
                     ismove = false;
+                    Can = true;
                     animator.SetBool("isRunning", false);
                     //CanMoveMas.instance.CanMove();
                     clickedGameObject = null;
@@ -263,6 +264,7 @@ public class Player : MonoBehaviour
                     PocketWatch.SameTime = false;
                     isPlayerTurn = false;
                     ismove = false;
+                    Can = true;
                     animator.SetBool("isRunning", false);
                     //CanMoveMas.instance.CanMove();
                     clickedGameObject = null;
@@ -311,6 +313,8 @@ public class Player : MonoBehaviour
         if (ismove) return;
         if (other.gameObject.CompareTag("OBJ") && !RLfirst)
         {
+            if (other.gameObject.CompareTag("OBJ") && Vector2.Distance(other.transform.position, player.transform.position) == 2 && Can) Can = false;
+
             Debug.Log("した方向");
             
             RLfirst = true;
