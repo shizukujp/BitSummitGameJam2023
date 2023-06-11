@@ -10266,11 +10266,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1289941876396457716, guid: ef72404ed04a4b847a102eb2345e2d3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 1289941876396457716, guid: ef72404ed04a4b847a102eb2345e2d3d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.05
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1289941876396457716, guid: ef72404ed04a4b847a102eb2345e2d3d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10312,6 +10312,10 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 784409469}
+    - target: {fileID: 9129571273114707537, guid: ef72404ed04a4b847a102eb2345e2d3d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef72404ed04a4b847a102eb2345e2d3d, type: 3}
 --- !u!1001 &1322582073
@@ -16439,6 +16443,10 @@ PrefabInstance:
     - target: {fileID: 6498917542812083390, guid: bc2c6edc75f09124788353ebe4c3a215, type: 3}
       propertyPath: m_Name
       value: ClearPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498917542812083390, guid: bc2c6edc75f09124788353ebe4c3a215, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7206759016416592851, guid: bc2c6edc75f09124788353ebe4c3a215, type: 3}
       propertyPath: NextSceneName
