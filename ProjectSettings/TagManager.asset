@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Tile
   - Item
+  - FxTemporaire
+  - Effect
   layers:
   - Default
   - TransparentFX

@@ -87,6 +87,10 @@ public class Player : MonoBehaviour
                     {
                         clickedGameObject = null;
                         //First = Second = false;
+                    }else if(clickedGameObject.CompareTag("Effect"))
+                    {
+                        Motion();
+                        clickedGameObject = null;
                     }
                     else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) / 1f > 2f || !clickedGameObject.CompareTag("Tile"))
                     {
