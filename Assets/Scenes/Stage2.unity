@@ -7779,6 +7779,16 @@ MonoBehaviour:
   Environment: {fileID: 1988088214}
   newEnemies:
   - RoundCount: 2
+    PositionX: -1
+    PositionY: 7
+    MovePosX: -1
+    MovePosY: 0
+    isVertical: 1
+    left: 0
+    right: 0
+    up: 0
+    down: 1
+  - RoundCount: 4
     PositionX: 8
     PositionY: 0
     MovePosX: 8
@@ -7787,16 +7797,6 @@ MonoBehaviour:
     left: 0
     right: 0
     up: 1
-    down: 0
-  - RoundCount: 4
-    PositionX: 4
-    PositionY: 4
-    MovePosX: 0
-    MovePosY: 0
-    isVertical: 0
-    left: 1
-    right: 0
-    up: 0
     down: 0
 --- !u!4 &1007048689 stripped
 Transform:
