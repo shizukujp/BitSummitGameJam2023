@@ -61,6 +61,7 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             Debug.Log(RLfirst);
+            Debug.Log(Can);
         }
 
         //プレイヤーのターンじゃない場合は動かないようにする
@@ -91,7 +92,7 @@ public class Player : MonoBehaviour
                         Motion();
                         clickedGameObject = null;
                     }
-                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) / 1f > 2f || !clickedGameObject.CompareTag("Tile") || !Can)
+                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) / 1f > 2f || !clickedGameObject.CompareTag("Tile") || (RLfirst && Vector2.Distance(clickedGameObject.transform.position, player.transform.position) == 2))
                     {
                         Debug.Log("移動できません");
                         clickedGameObject = null;
@@ -313,8 +314,6 @@ public class Player : MonoBehaviour
         if (ismove) return;
         if (other.gameObject.CompareTag("OBJ") && !RLfirst)
         {
-            if (other.gameObject.CompareTag("OBJ") && Vector2.Distance(other.transform.position, player.transform.position) == 2 && Can) Can = false;
-
             Debug.Log("した方向");
             
             RLfirst = true;
