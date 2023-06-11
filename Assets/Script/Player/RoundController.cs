@@ -81,11 +81,11 @@ public class RoundController : MonoBehaviour
             scenePreb = SceneManager.GetActiveScene();
         }
 
-        if (playerturn != playerturnpreb )
+        /*if (playerturn != playerturnpreb)
         {
-            playerturnpreb = playerturn;
+            //playerturnpreb = playerturn;
             //Player.isPlayerTurn = false;
-        }
+        }*/
         //テスト用
         //if (Input.GetKey(KeyCode.Escape) && !Player.instance.isPlayerTurn) EnemyTurnEnd();
         //テスト用
@@ -96,7 +96,7 @@ public class RoundController : MonoBehaviour
         {
             if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn);
             if (playerWatchSave) playerWatchSave = false;
-            enemyturn++;
+            if((SceneManager.GetActiveScene().name != "Tutorial"))enemyturn++;
             if (enemyturn < 12) Player.isPlayerTurn = true;
         }
 

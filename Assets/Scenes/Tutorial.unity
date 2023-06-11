@@ -7486,27 +7486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   summonobj: {fileID: 5654384668995628007, guid: 83e680fcec2cd384e89ce0770f96a378, type: 3}
   Environment: {fileID: 1988088214}
-  newEnemies:
-  - RoundCount: 3
-    PositionX: 6
-    PositionY: 6
-    MovePosX: 0
-    MovePosY: 0
-    isVertical: 1
-    left: 0
-    right: 0
-    up: 0
-    down: 1
-  - RoundCount: 4
-    PositionX: 4
-    PositionY: 4
-    MovePosX: 0
-    MovePosY: 0
-    isVertical: 0
-    left: 1
-    right: 0
-    up: 0
-    down: 0
+  newEnemies: []
 --- !u!4 &1007048689 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021916665362778418, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -11229,7 +11209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1495554589
 RectTransform:
   m_ObjectHideFlags: 0
