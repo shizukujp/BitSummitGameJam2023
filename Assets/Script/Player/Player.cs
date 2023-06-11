@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     }
     Animator animator;
     bool MotionCheck = false;
-
+    bool RLfirst = false;
     public GameObject player;   //①移動させたいオブジェクト
     public int speed = 5;       //移動スピード
     public int playerwalkcount = 0;    //プレイヤー歩数のカウンター
@@ -58,11 +58,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1))
         {
-            Motion();
-            Debug.Log(isPlayerTurn);
-        }*/
+            Debug.Log(RLfirst);
+        }
 
         //プレイヤーのターンじゃない場合は動かないようにする
         if (isPlayerTurn && !MotionCheck)
@@ -124,7 +123,7 @@ public class Player : MonoBehaviour
             }
         }
         //プレイヤーの移動＋歩数・ターンカウント
-        if (clickedGameObject && !(currentPos.x == 8 && (currentPos.y == 5 || currentPos.y == 4)))
+        if (clickedGameObject && !RLfirst)
         {
             //RL = new Vector2(clickedGameObject.transform.position.x, player.transform.position.y);
             if (clickedGameObject.transform.position.x != player.transform.position.x && First)
@@ -260,6 +259,7 @@ public class Player : MonoBehaviour
 
                     RoundController.instance.SetTurn(RoundController.instance.GetTurn() + 1);
                     Debug.Log("移動完了");
+                    RLfirst = false;
                     PocketWatch.SameTime = false;
                     isPlayerTurn = false;
                     ismove = false;
@@ -304,5 +304,16 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.40f);
         MotionCheck = false;
         animator.SetBool("IsMotion", false);
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (ismove) return;
+        if (other.gameObject.CompareTag("OBJ") && !RLfirst)
+        {
+            Debug.Log("した方向");
+            
+            RLfirst = true;
+        }
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - Item
   - FxTemporaire
   - Effect
+  - OBJ
   layers:
   - Default
   - TransparentFX
