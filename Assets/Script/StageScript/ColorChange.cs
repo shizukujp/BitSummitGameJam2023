@@ -137,6 +137,7 @@ public class ColorChange : MonoBehaviour
     }*/
     void OnMouseOver()
     {
+        if (!ColorChangeOn) return;
         if (!Player.isPlayerTurn) return;
         if (Player.instance.ismove) return;
             //プレイヤーが移動可能なマスだったら
