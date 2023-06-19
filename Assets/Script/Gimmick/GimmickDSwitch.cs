@@ -24,6 +24,7 @@ public class GimmickDSwitch : MonoBehaviour
     }
     public SwitchColorType color;
     string col;
+
     private void Start()
     {
         //set animator
@@ -39,10 +40,11 @@ public class GimmickDSwitch : MonoBehaviour
         if (SwitchHadOn && SwitchMode == 1 && animCheck)
         {
             animCheck = false;
-            StartCoroutine(CloseAnim());
+            //StartCoroutine(CloseAnim());
         }
         //Animator reset in new frame
         animator.SetInteger("SwitchMode", SwitchMode);
+
     }
 
 
@@ -58,7 +60,6 @@ public class GimmickDSwitch : MonoBehaviour
             animCheck = true;
             SwitchHadOn = true;
             StartCoroutine(OpenAnim());
-
         }
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,0.6f,0.6f,1f);
     }
@@ -78,7 +79,7 @@ public class GimmickDSwitch : MonoBehaviour
         foreach (GameObject door in doors)
         {
             GimmickDoor dor = door.GetComponent<GimmickDoor>();
-            StartCoroutine(dor.DoorOpenClose(col));
+            dor.DoorOpenOrClose(col);
         }
         Debug.Log("open");
     }
@@ -91,7 +92,7 @@ public class GimmickDSwitch : MonoBehaviour
         foreach (GameObject door in doors)
         {
             GimmickDoor dor = door.GetComponent<GimmickDoor>();
-            StartCoroutine(dor.DoorOpenClose(col));
+            dor.DoorOpenOrClose(col);
         }
         Debug.Log("close");
     }
