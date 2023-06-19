@@ -40,7 +40,8 @@ public class GimmickDSwitch : MonoBehaviour
         if (SwitchHadOn && SwitchMode == 1 && animCheck)
         {
             animCheck = false;
-            //StartCoroutine(CloseAnim());
+            Debug.Log("false");
+            StartCoroutine(CloseAnim());
         }
         //Animator reset in new frame
         animator.SetInteger("SwitchMode", SwitchMode);
@@ -54,13 +55,42 @@ public class GimmickDSwitch : MonoBehaviour
     {
         //Debug.Log(2);
         //K�̓e�X�g�p
-        if (PlayerOverCheck && !animCheck && (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.K)))
+        if (!doors[doors.Length - 1].GetComponent<GimmickDoor>().moving)
+        {
+            if (PlayerOverCheck && Input.GetMouseButton(0))
+            {
+                int i = 1;
+                if (SwitchMode != 1 && i == 1)
+                {
+                    SwitchMode = 1;
+                    i = 0;
+                    Debug.Log("orosu");
+                }
+                if(SwitchMode == 1 && i == 1)
+                {
+                    SwitchMode = 2;
+                    Debug.Log("ageru");
+                }
+                foreach (GameObject door in doors)
+                {
+                    GimmickDoor dor = door.GetComponent<GimmickDoor>();
+                    dor.DoorOpenOrClose(col);
+                }
+            }
+        }
+        
+        /*if (PlayerOverCheck && !animCheck && (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.K)))
         {
             //Debug.Log(1);
-            animCheck = true;
+            //animCheck = true;
             SwitchHadOn = true;
-            StartCoroutine(OpenAnim());
-        }
+            //StartCoroutine(Anim());
+            foreach (GameObject door in doors)
+            {
+                GimmickDoor dor = door.GetComponent<GimmickDoor>();
+                dor.DoorOpenOrClose(col);
+            }
+        }*/
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,0.6f,0.6f,1f);
     }
     private void OnMouseExit()
@@ -70,7 +100,7 @@ public class GimmickDSwitch : MonoBehaviour
 
 
 
-    IEnumerator OpenAnim()
+    IEnumerator Anim()
     {
         yield return new WaitForSeconds(0.20f);
         SwitchHadOn = false;
@@ -79,9 +109,8 @@ public class GimmickDSwitch : MonoBehaviour
         foreach (GameObject door in doors)
         {
             GimmickDoor dor = door.GetComponent<GimmickDoor>();
-            dor.DoorOpenOrClose(col);
+            StartCoroutine(dor.DoorOpenClose(col));
         }
-        Debug.Log("open");
     }
     IEnumerator CloseAnim()
     {

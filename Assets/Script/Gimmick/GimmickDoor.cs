@@ -9,7 +9,8 @@ public class GimmickDoor : MonoBehaviour
 
     int animCount = 0;
     //ドアが空いているか
-    bool IsOpen = false;
+    [Tooltip("開いていたらチェック")]
+    public bool IsOpen = false;
 
     GimmickDSwitch Switchcolor;
     public enum DoorColorType
@@ -19,14 +20,22 @@ public class GimmickDoor : MonoBehaviour
     public DoorColorType Color;
     string col;
 
-    float speed = 0.001f;
-    public Vector3 pos;
+    public float speed = 1f;
+    Vector3 pos;
 
+    public bool moving = false;
     private void Start()
     {
         col = Color.ToString();
     }
-
+    private void Update()
+    {
+        if(moving)
+        {
+            Debug.Log("idoutyu");
+            Move();
+        }
+    }
     public IEnumerator DoorOpenClose(string color)
     {
         if (col == color)
@@ -79,6 +88,7 @@ public class GimmickDoor : MonoBehaviour
         
     }
 
+
     public void DoorOpenOrClose(string color)
     {
         if (col == color)
@@ -89,29 +99,13 @@ public class GimmickDoor : MonoBehaviour
                 {
                     pos = transform.position;
                     pos.x += 0.75f;
-                    //transform.position = new Vector3(transform.position.x + 0.01f, transform.position.y, transform.position.z);
-                    
                 }
                 else
                 {
                     pos = transform.position;
                     pos.y += 0.75f;
-                    //transform.position = new Vector3(transform.position.x, transform.position.y + 0.01f, transform.position.z);
-                 
                 }
-                while(transform.position != pos)
-                {
-                    transform.position = Vector3.MoveTowards(transform.position, pos, speed * Time.deltaTime);
-                }
-
-                if (transform.position == pos)
-                {
-                    if (clearPoint != null)
-                    {
-                        clearPoint.SetActive(true);
-                        IsOpen = true;//開いた
-                    }
-                }
+                moving = true;
             }
             else if (IsOpen)
             {
@@ -119,33 +113,38 @@ public class GimmickDoor : MonoBehaviour
                 {
                     pos = transform.position;
                     pos.x -= 0.75f;
-                    //transform.position = new Vector3(transform.position.x + 0.01f, transform.position.y, transform.position.z);
-                    //transform.position = Vector3.MoveTowards(transform.position, pos, speed * Time.deltaTime);
                 }
                 else
                 {
                     pos = transform.position;
                     pos.y -= 0.75f;
-                    //transform.position = new Vector3(transform.position.x, transform.position.y + 0.01f, transform.position.z);
-                    //transform.position = Vector3.MoveTowards(transform.position, pos, speed * Time.deltaTime);
                 }
-
-                while (transform.position != pos)
-                {
-                    transform.position = Vector3.MoveTowards(transform.position, pos, speed * Time.deltaTime);
-                }
-
-                if (transform.position == pos)
-                {
-                    if (clearPoint != null)
-                    {
-                        clearPoint.SetActive(false);
-                        IsOpen = false;//閉まった
-                    }
-                }
+                moving = true;
             }
         }
     }
-    
 
+
+    void Move()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, pos, speed * Time.deltaTime);
+        if (transform.position == pos)
+        {
+            int i = 0;
+            if (clearPoint == null) return;
+
+            if(!IsOpen && i == 0)
+            {
+                clearPoint.SetActive(true);
+                IsOpen = true;//開いた
+                i = 1;
+            }
+            if(IsOpen && i == 0)
+            {
+                clearPoint.SetActive(false);
+                IsOpen = false;//閉まった
+            }
+            moving = false;
+        }
+    }
 }
