@@ -55,7 +55,7 @@ public class GimmickDSwitch : MonoBehaviour
     {
         //Debug.Log(2);
         //K�̓e�X�g�p
-        if (doors == null) return;
+        if (doors.Length == 0) return;
         if (!doors[doors.Length - 1].GetComponent<GimmickDoor>().moving)
         {
             if (PlayerPositonCheck() && Input.GetMouseButtonDown(0))

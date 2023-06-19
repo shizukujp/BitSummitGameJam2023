@@ -10,7 +10,7 @@ public class Jadge : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         //if (Player.instance.ismove) return;
-        if(other.gameObject.CompareTag("OBJ"))
+        if(other.gameObject.CompareTag("OBJ") || other.gameObject.CompareTag("switch"))
         {
             if (South && !Player.instance.South)
             {
@@ -25,13 +25,11 @@ public class Jadge : MonoBehaviour
             if ((East && !Player.instance.East && Player.instance.player.transform.localScale.x == 1.25) || (West && Player.instance.player.transform.localScale.x == -1.25 && !Player.instance.West))
             {
                 Player.instance.East = true;
-                Debug.Log("tate");
                 return;
             }
             if ((West && !Player.instance.West && Player.instance.player.transform.localScale.x == 1.25) || (East && Player.instance.player.transform.localScale.x == -1.25 && !Player.instance.East))
             {
                 Player.instance.West = true;
-                Debug.Log("tate");
                 return;
             }
         }

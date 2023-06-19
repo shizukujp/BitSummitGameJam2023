@@ -12,6 +12,7 @@ TagManager:
   - OBJ
   - switch
   - Door
+  - Clock
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static Unity.VisualScripting.Metadata;
@@ -67,8 +68,9 @@ public class Player : MonoBehaviour
             Debug.Log(transform.localScale.x);
         }
             //プレイヤーのターンじゃない場合は動かないようにする
-            if (isPlayerTurn && !MotionCheck)
+        if (isPlayerTurn && !MotionCheck)
         {
+            if (EventSystem.current.IsPointerOverGameObject()) return;
             if (Input.GetMouseButtonDown(0) && Second == false)  //左クリックでif分起動
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -78,7 +80,6 @@ public class Player : MonoBehaviour
                 //Debug.DrawRay(ray.origin, ray.direction * 30, Color.red, 20f);
                 if (hit2d)
                 {
-                    //Debug.Log(hit2d.transform.position);
                     CurrentY = player.transform.position.y;
                     CurrentX = player.transform.position.x;
                     clickedGameObject = hit2d.transform.gameObject;
@@ -89,7 +90,7 @@ public class Player : MonoBehaviour
                     {
                         clickedGameObject = null;
                         //First = Second = false;
-                    }else if((clickedGameObject.CompareTag("Effect") || clickedGameObject.CompareTag("switch")) && Vector2.Distance(transform.position, clickedGameObject.transform.position) == 1)
+                    }else if(clickedGameObject.CompareTag("switch") && Vector2.Distance(transform.position, clickedGameObject.transform.position) <= 1)
                     {
                         if (clickedGameObject.transform.position.x - transform.position.x > 0 && pos.x > 0)
                         {
@@ -101,6 +102,23 @@ public class Player : MonoBehaviour
                         }
                         transform.localScale = pos;
                         Motion();
+                        clickedGameObject = null;
+                    }
+                    else if((clickedGameObject.CompareTag("Effect") || clickedGameObject.CompareTag("Clock")) && Vector2.Distance(transform.position, clickedGameObject.transform.position) <= 1)
+                    {
+                        if (clickedGameObject.transform.position.x - transform.position.x > 0 && pos.x > 0)
+                        {
+                            pos.x *= -1;
+                        }
+                        if (clickedGameObject.transform.position.x - transform.position.x < 0 && pos.x < 0)
+                        {
+                            pos.x *= -1;
+                        }
+                        transform.localScale = pos;
+                        Motion();
+                        if(clickedGameObject.CompareTag("Clock")) GetComponent<PocketWatch>().enabled = true;
+
+                        clickedGameObject.SetActive(false);
                         clickedGameObject = null;
                     }
                     else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) > 2f || !clickedGameObject.CompareTag("Tile") || (RLfirst && ((clickedGameObject.transform.position.x - player.transform.position.x == 2) || (clickedGameObject.transform.position.x - player.transform.position.x == -2))))
