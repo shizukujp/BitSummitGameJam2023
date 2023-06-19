@@ -24,7 +24,8 @@ public class Player : MonoBehaviour
     }
     Animator animator;
     bool MotionCheck = false;
-    bool RLfirst = false;
+    //先に縦に移動するかどうか
+    public bool RLfirst = false;
     public GameObject player;   //①移動させたいオブジェクト
     public int speed = 5;       //移動スピード
     public int playerwalkcount = 0;    //プレイヤー歩数のカウンター
@@ -41,11 +42,14 @@ public class Player : MonoBehaviour
 
     public GameObject[] enemys;
 
+    public bool Comp = true;//移動完了したかどうか
     bool Can = true;
     //ターン関連
     public static bool isPlayerTurn;
 
     Vector2 pos;
+
+    public bool South, North, West, East;
 
     void Start()
     {
@@ -58,9 +62,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        //プレイヤーのターンじゃない場合は動かないようにする
-        if (isPlayerTurn && !MotionCheck)
+        if(Input.GetMouseButtonDown(1))
+        {
+            Debug.Log(transform.localScale.x);
+        }
+            //プレイヤーのターンじゃない場合は動かないようにする
+            if (isPlayerTurn && !MotionCheck)
         {
             if (Input.GetMouseButtonDown(0) && Second == false)  //左クリックでif分起動
             {
@@ -104,11 +111,12 @@ public class Player : MonoBehaviour
                     }
                     else
                     {
+                        Comp = false;
                         First = Second = true;
                         currentPos = player.transform.position;
                         ismove = true;
                         animator.SetBool("isRunning", true);
-                        
+                        South = North = West = East = false;
                         //移動する場所のマスを変更する
                         clickPos = clickedGameObject.transform.position;
                         if (clickedGameObject.transform.position.x - transform.position.x > 0 && pos.x > 0)
@@ -182,6 +190,7 @@ public class Player : MonoBehaviour
 
                     RoundController.instance.SetTurn(RoundController.instance.GetTurn() + 1);
                     Debug.Log("移動完了");
+                    Comp = true;
                     PocketWatch.SameTime = false;
                     isPlayerTurn = false;
                     ismove = false;
@@ -204,6 +213,7 @@ public class Player : MonoBehaviour
                         else
                         {
                             RoundController.instance.MasRiset();
+                            South = North = West = East = false;
                             //isPlayerTurn = true;
                         }
                     }
@@ -265,6 +275,8 @@ public class Player : MonoBehaviour
 
                     RoundController.instance.SetTurn(RoundController.instance.GetTurn() + 1);
                     Debug.Log("移動完了");
+                    
+                    Comp = true;
                     RLfirst = false;
                     PocketWatch.SameTime = false;
                     isPlayerTurn = false;
@@ -288,6 +300,7 @@ public class Player : MonoBehaviour
                         else
                         {
                             RoundController.instance.MasRiset();
+                            South = North = West = East = false;
                             //isPlayerTurn = true;
                         }
                     }
@@ -313,7 +326,7 @@ public class Player : MonoBehaviour
         animator.SetBool("IsMotion", false);
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    /*void OnTriggerStay2D(Collider2D other)
     {
         if (ismove) return;
         if (other.gameObject.CompareTag("OBJ") && !RLfirst)
@@ -322,5 +335,5 @@ public class Player : MonoBehaviour
             
             RLfirst = true;
         }
-    }
+    }*/
 }

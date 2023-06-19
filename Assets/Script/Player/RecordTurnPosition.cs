@@ -273,12 +273,17 @@ public class RecordTurnPosition : MonoBehaviour
             if (enemy.FLeft && pos.x < 0) pos.x *= -1;
             enemy.transform.localScale = pos;
         }
+        Player.instance.South = false;
+        Player.instance.North = false;
+        Player.instance.West = false;
+        Player.instance.East = false;
         foreach (GameObject tiles in Tiles)
         {
             ColorChange change = tiles.GetComponent<ColorChange>();
             change.RisetColor();
         }
         Player.isPlayerTurn = true;
+        
     }
 
 

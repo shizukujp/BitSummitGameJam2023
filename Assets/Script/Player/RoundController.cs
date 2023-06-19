@@ -203,15 +203,14 @@ public class RoundController : MonoBehaviour
         Debug.Log(enemyturnend);
         Debug.Log(recordTurnPositon.EnemyCount());
     }
-        public void MasRiset()
+
+    public void MasRiset()
     {
-        int i = 0;
         recordTurnPositon.Tiles = GameObject.FindGameObjectsWithTag("Tile");
         foreach (GameObject tiles in recordTurnPositon.Tiles)
         {
-            ColorChange change = recordTurnPositon.Tiles[i].GetComponent<ColorChange>();
+            ColorChange change = tiles.GetComponent<ColorChange>();
             change.RisetColor();
-            i++;
         }
     }
     public void EnemyTurn()
