@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GimmickDSwitch : MonoBehaviour
 {
-    //‘S‘ÌƒXƒCƒbƒ`ƒRƒ“ƒgƒ[ƒ‹
+    //ï¿½Sï¿½ÌƒXï¿½Cï¿½bï¿½`ï¿½Rï¿½ï¿½ï¿½gï¿½ï¿½ï¿½[ï¿½ï¿½
     static bool SwitchHadOn = false;
     //door
     public GimmickDoor door;
@@ -40,17 +40,16 @@ public class GimmickDSwitch : MonoBehaviour
 
 
 
-    //ƒ}ƒEƒX‚Ì“®‚«
+    //ï¿½}ï¿½Eï¿½Xï¿½Ì“ï¿½ï¿½ï¿½
     private void OnMouseOver()
     {
         //Debug.Log(2);
-        //K‚ÍƒeƒXƒg—p
+        //Kï¿½Íƒeï¿½Xï¿½gï¿½p
         if (PlayerOverCheck && !animCheck && (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.K)))
         {
             //Debug.Log(1);
             animCheck = true;
             SwitchHadOn = true;
-            Player.instance.Motion();
             StartCoroutine(OpenAnim());
 
         }
@@ -84,14 +83,10 @@ public class GimmickDSwitch : MonoBehaviour
 
 
 
-    //“à•”ÀsŠÖ”
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sï¿½Öï¿½
     void PlayerPositonCheck()
     {
-        if (Mathf.Abs(player.transform.position.x - gameObject.transform.position.x) <= 1.5f && Mathf.Abs(player.transform.position.y - gameObject.transform.position.y) <= 0.5f)
-        {
-            PlayerOverCheck = true;
-        }
-        else if (Mathf.Abs(player.transform.position.x - gameObject.transform.position.x) <= 0.5f && Mathf.Abs(player.transform.position.y - gameObject.transform.position.y) <= 1.5f)
+        if (Vector2.Distance(player.transform.position, transform.position) == 1)
         {
             PlayerOverCheck = true;
         }

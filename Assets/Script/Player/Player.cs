@@ -58,11 +58,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            Debug.Log(RLfirst);
-            Debug.Log(Can);
-        }
 
         //プレイヤーのターンじゃない場合は動かないようにする
         if (isPlayerTurn && !MotionCheck)
@@ -87,12 +82,21 @@ public class Player : MonoBehaviour
                     {
                         clickedGameObject = null;
                         //First = Second = false;
-                    }else if(clickedGameObject.CompareTag("Effect"))
+                    }else if((clickedGameObject.CompareTag("Effect") || clickedGameObject.CompareTag("switch")) && Vector2.Distance(transform.position, clickedGameObject.transform.position) == 1)
                     {
+                        if (clickedGameObject.transform.position.x - transform.position.x > 0 && pos.x > 0)
+                        {
+                            pos.x *= -1;
+                        }
+                        if (clickedGameObject.transform.position.x - transform.position.x < 0 && pos.x < 0)
+                        {
+                            pos.x *= -1;
+                        }
+                        transform.localScale = pos;
                         Motion();
                         clickedGameObject = null;
                     }
-                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) / 1f > 2f || !clickedGameObject.CompareTag("Tile") || (RLfirst && ((clickedGameObject.transform.position.x - player.transform.position.x == 2) || (clickedGameObject.transform.position.x - player.transform.position.x == -2))))
+                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) > 2f || !clickedGameObject.CompareTag("Tile") || (RLfirst && ((clickedGameObject.transform.position.x - player.transform.position.x == 2) || (clickedGameObject.transform.position.x - player.transform.position.x == -2))))
                     {
                         Debug.Log("移動できません");
                         clickedGameObject = null;
