@@ -11,6 +11,7 @@ TagManager:
   - Effect
   - OBJ
   - switch
+  - Door
   layers:
   - Default
   - TransparentFX
