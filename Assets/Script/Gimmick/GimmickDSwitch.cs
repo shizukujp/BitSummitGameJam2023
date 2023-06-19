@@ -4,14 +4,14 @@ using UnityEngine;
 public class GimmickDSwitch : MonoBehaviour
 {
     //�S�̃X�C�b�`�R���g���[��
-    static bool SwitchHadOn = false;
+    //static bool SwitchHadOn = false;
     //door
     public GimmickDoor door;
 
     GameObject player;
     //animation
     Animator animator;
-    int SwitchMode;
+    int SwitchMode = 0;
 
     bool PlayerOverCheck, animCheck = false;
 
@@ -32,9 +32,10 @@ public class GimmickDSwitch : MonoBehaviour
         player = GameObject.Find("Player");
         doors = GameObject.FindGameObjectsWithTag("Door");
         col = color.ToString();
+        animator.SetInteger("SwitchMode", SwitchMode);
     }
 
-    private void Update()
+    /*private void Update()
     {
         PlayerPositonCheck();
         if (SwitchHadOn && SwitchMode == 1 && animCheck)
@@ -44,9 +45,8 @@ public class GimmickDSwitch : MonoBehaviour
             StartCoroutine(CloseAnim());
         }
         //Animator reset in new frame
-        animator.SetInteger("SwitchMode", SwitchMode);
-
-    }
+    }*/
+       
 
 
 
@@ -57,19 +57,19 @@ public class GimmickDSwitch : MonoBehaviour
         //K�̓e�X�g�p
         if (!doors[doors.Length - 1].GetComponent<GimmickDoor>().moving)
         {
-            if (PlayerOverCheck && Input.GetMouseButton(0))
+            if (PlayerPositonCheck() && Input.GetMouseButton(0))
             {
                 int i = 1;
                 if (SwitchMode != 1 && i == 1)
                 {
                     SwitchMode = 1;
+                    animator.SetInteger("SwitchMode", SwitchMode);
                     i = 0;
-                    Debug.Log("orosu");
                 }
                 if(SwitchMode == 1 && i == 1)
                 {
                     SwitchMode = 2;
-                    Debug.Log("ageru");
+                    animator.SetInteger("SwitchMode", SwitchMode);
                 }
                 foreach (GameObject door in doors)
                 {
@@ -78,19 +78,6 @@ public class GimmickDSwitch : MonoBehaviour
                 }
             }
         }
-        
-        /*if (PlayerOverCheck && !animCheck && (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.K)))
-        {
-            //Debug.Log(1);
-            //animCheck = true;
-            SwitchHadOn = true;
-            //StartCoroutine(Anim());
-            foreach (GameObject door in doors)
-            {
-                GimmickDoor dor = door.GetComponent<GimmickDoor>();
-                dor.DoorOpenOrClose(col);
-            }
-        }*/
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,0.6f,0.6f,1f);
     }
     private void OnMouseExit()
@@ -100,7 +87,7 @@ public class GimmickDSwitch : MonoBehaviour
 
 
 
-    IEnumerator Anim()
+    /*IEnumerator Anim()
     {
         yield return new WaitForSeconds(0.20f);
         SwitchHadOn = false;
@@ -124,22 +111,22 @@ public class GimmickDSwitch : MonoBehaviour
             dor.DoorOpenOrClose(col);
         }
         Debug.Log("close");
-    }
+    }*/
 
 
 
 
 
     //�������s�֐�
-    void PlayerPositonCheck()
+    bool PlayerPositonCheck()
     {
         if (Vector2.Distance(player.transform.position, transform.position) == 1)
         {
-            PlayerOverCheck = true;
+            return true;
         }
         else 
         {
-            PlayerOverCheck = false;
+            return false;
         }
     }
 }
