@@ -32,7 +32,7 @@ public class GimmickDoor : MonoBehaviour
     {
         if(moving)
         {
-            Debug.Log("idoutyu");
+            //Debug.Log("idoutyu");
             Move();
         }
     }

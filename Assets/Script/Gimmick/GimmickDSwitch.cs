@@ -13,7 +13,7 @@ public class GimmickDSwitch : MonoBehaviour
     Animator animator;
     int SwitchMode = 0;
 
-    bool PlayerOverCheck, animCheck = false;
+    //bool PlayerOverCheck, animCheck = false;
 
     GameObject[] doors;
 
@@ -57,19 +57,21 @@ public class GimmickDSwitch : MonoBehaviour
         //K�̓e�X�g�p
         if (!doors[doors.Length - 1].GetComponent<GimmickDoor>().moving)
         {
-            if (PlayerPositonCheck() && Input.GetMouseButton(0))
+            if (PlayerPositonCheck() && Input.GetMouseButtonDown(0))
             {
                 int i = 1;
                 if (SwitchMode != 1 && i == 1)
                 {
                     SwitchMode = 1;
                     animator.SetInteger("SwitchMode", SwitchMode);
+                    Debug.Log("open");
                     i = 0;
                 }
                 if(SwitchMode == 1 && i == 1)
                 {
                     SwitchMode = 2;
                     animator.SetInteger("SwitchMode", SwitchMode);
+                    Debug.Log("close");
                 }
                 foreach (GameObject door in doors)
                 {
