@@ -15,15 +15,22 @@ public class GimmickDSwitch : MonoBehaviour
 
     bool PlayerOverCheck, animCheck = false;
 
+    GameObject[] doors;
 
-
-
-
+    //色を指定
+    public enum SwitchColorType
+    {
+        red, blue, purple, yellow
+    }
+    public SwitchColorType color;
+    string col;
     private void Start()
     {
         //set animator
         animator = GetComponent<Animator>();
         player = GameObject.Find("Player");
+        doors = GameObject.FindGameObjectsWithTag("Door");
+        col = color.ToString();
     }
 
     private void Update()
@@ -68,7 +75,12 @@ public class GimmickDSwitch : MonoBehaviour
         SwitchHadOn = false;
         SwitchMode = 1;
         yield return new WaitForSeconds(0.30f);
-        StartCoroutine(door.DoorOpen());
+        foreach (GameObject door in doors)
+        {
+            GimmickDoor dor = door.GetComponent<GimmickDoor>();
+            StartCoroutine(dor.DoorOpenClose(col));
+        }
+        Debug.Log("open");
     }
     IEnumerator CloseAnim()
     {
@@ -76,7 +88,12 @@ public class GimmickDSwitch : MonoBehaviour
         SwitchMode = 2;
         yield return new WaitForSeconds(0.30f);
         SwitchMode = 0;
-        StartCoroutine(door.DoorClose());
+        foreach (GameObject door in doors)
+        {
+            GimmickDoor dor = door.GetComponent<GimmickDoor>();
+            StartCoroutine(dor.DoorOpenClose(col));
+        }
+        Debug.Log("close");
     }
 
 
