@@ -12,7 +12,7 @@ public class RoundController : MonoBehaviour
     //シーンの交換について
     Scene scenePreb;
 
-    int playerturn = 1, /*playerturnpreb = 1, */round = 1, enemyturn = 1,
+    int playerturn = 0, /*playerturnpreb = 1, */round = 1, enemyturn = 0,
         enemyturnend = 0, saveturn = -1;
     RecordTurnPosition recordTurnPositon;
 
@@ -71,10 +71,10 @@ public class RoundController : MonoBehaviour
          //もしシーンが変わったら
         if (SceneManager.GetActiveScene() != scenePreb)
         {
-            playerturn = 1;
+            playerturn = 0;
             //playerturnpreb = 1;
             round = 1;
-            enemyturn = 1;
+            enemyturn = 0;
             recordTurnPositon.SetTurnPosition(0);
 
             //シーンが変わったらプレイヤーオブジェクトを代入
@@ -135,16 +135,15 @@ public class RoundController : MonoBehaviour
         {
             recordTurnPositon.ScanEnemy();
             recordTurnPositon.SetTurnPosition(0);
-
         }
         //敵のアニメーションを待機モーションにする
         EnemyMotionRiset();
 
 
         //ターンを最初のターンに戻す
-        playerturn = 1;
+        playerturn = 0;
         //playerturnpreb = 1;
-        enemyturn = 1;
+        enemyturn = 0;
 
         //懐中時計の設定
         if (pocketWatch.GetPocketWatchCheck()) pocketWatch.ResetPocketWatchCheck();
@@ -193,6 +192,7 @@ public class RoundController : MonoBehaviour
             Debug.Log(recordTurnPositon.EnemyCount());
             if (recordTurnPositon.EnemyCount() != enemyturnend) return;
             //敵の動きがすべて終わった後に実行する関数
+            Debug.Log(enemyturn);
             if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn);
             if (enemyturn < 12) Player.isPlayerTurn = true;
             if (playerWatchSave) playerWatchSave = false;

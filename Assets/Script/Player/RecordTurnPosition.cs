@@ -116,7 +116,10 @@ public class RecordTurnPosition : MonoBehaviour
                     }
                 }
             }
-            roundPosition[turn,i] = player.transform.position;
+            if (player != null)
+            {
+                roundPosition[turn, i] = player.transform.position;
+            }
         }
     }
 }
