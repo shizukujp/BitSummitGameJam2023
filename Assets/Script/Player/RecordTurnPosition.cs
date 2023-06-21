@@ -96,7 +96,6 @@ public class RecordTurnPosition : MonoBehaviour
         
     }
 
-
     //ターン毎に位置を保存する
     public void SetTurnPosition(int turn)
     {
