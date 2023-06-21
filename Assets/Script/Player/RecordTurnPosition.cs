@@ -19,7 +19,7 @@ public class RecordTurnPosition : MonoBehaviour
         
         player = GameObject.Find("Player");
         Enemys = GameObject.FindGameObjectsWithTag("Enemy");
-        SetTurnPosition(0);
+        SetTurnPosition(0, Enemys);
     }
     private void Start()
     {
@@ -38,22 +38,22 @@ public class RecordTurnPosition : MonoBehaviour
     public int EnemyCount()
     {
         Enemys = GameObject.FindGameObjectsWithTag("Enemy");
-       
+
         return Enemys.Length;
     }
     //敵は何人いるかを再スキャンする
     public void ScanEnemy()
     {
-        enemy = GameObject.FindGameObjectsWithTag("Enemy");
+        //enemy = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     //関数で保存した位置を呼び出して代入する。
-    public void GetTurnPositionToScene(int turn)
+    public void GetTurnPositionToScene(int turn, GameObject[] recordEnemys)
     {
         if (turn < 13)
         {
             var i = 0;
-            foreach (GameObject em in enemy)
+            foreach (GameObject em in recordEnemys)
             {
                 if (em != null)
                 {
@@ -67,7 +67,7 @@ public class RecordTurnPosition : MonoBehaviour
             }
         }
         
-        foreach (GameObject enemys in GameObject.FindGameObjectsWithTag("Enemy"))
+        foreach (GameObject enemys in recordEnemys)
         {
             Vector2 pos = enemys.transform.localScale;
 
@@ -96,12 +96,12 @@ public class RecordTurnPosition : MonoBehaviour
             change.RisetColor();
         }
         Player.isPlayerTurn = true;
-        
     }
 
     //ターン毎に位置を保存する
-    public void SetTurnPosition(int turn)
+    public void SetTurnPosition(int turn, GameObject[] recordEnemys)
     {
+        enemy = recordEnemys;
         player = GameObject.Find("Player");
         //Debug.Log("SetTurn : "+turn);
 

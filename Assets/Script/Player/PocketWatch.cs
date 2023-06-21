@@ -6,6 +6,7 @@ public class PocketWatch : MonoBehaviour
     public Image pocketWatch;
     int pocketWatchCheackLoad = 0;
     bool pocketWatchCheck = false;
+    GameObject[] recordEnemy;
 
     int pocketWatchRemainingCount = 3;
 
@@ -19,7 +20,7 @@ public class PocketWatch : MonoBehaviour
             //記録した場所に移動
             if (Input.GetKeyDown(KeyCode.E) && pocketWatchCheck && pocketWatchCheackLoad == 0 && !SameTime && pocketWatchRemainingCount != 0)
             {
-                RoundController.instance.UsePocketWatchToLoad();
+                RoundController.instance.UsePocketWatchToLoad(recordEnemy);
                 pocketWatchRemainingCount--;
 
                 if (pocketWatchRemainingCount != 0)
@@ -31,9 +32,10 @@ public class PocketWatch : MonoBehaviour
             //場所を記録
             if (Input.GetKeyDown(KeyCode.E) && !pocketWatchCheck && pocketWatchRemainingCount != 0)
             {
+                recordEnemy = GameObject.FindGameObjectsWithTag("Enemy");
                 SameTime = true;
                 pocketWatchCheck = true;
-                RoundController.instance.UsePocketWatchToSave();
+                RoundController.instance.UsePocketWatchToSave(recordEnemy);
                 //get saving turn to show
                 RoundController.instance.GetSaveTurn();
                 pocketWatchCheackLoad = 0;
