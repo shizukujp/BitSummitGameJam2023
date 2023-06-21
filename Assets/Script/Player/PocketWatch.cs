@@ -7,6 +7,8 @@ public class PocketWatch : MonoBehaviour
     int pocketWatchCheackLoad = 0;
     bool pocketWatchCheck = false;
 
+    int pocketWatchRemainingCount = 3;
+
     public static bool SameTime = false;
     private void Update()
     {
@@ -15,26 +17,35 @@ public class PocketWatch : MonoBehaviour
         if (Player.isPlayerTurn)
         {
             //記録した場所に移動
-            if (Input.GetKeyDown(KeyCode.E) && pocketWatchCheck && pocketWatchCheackLoad == 0 && !SameTime)
+            if (Input.GetKeyDown(KeyCode.E) && pocketWatchCheck && pocketWatchCheackLoad == 0 && !SameTime && pocketWatchRemainingCount != 0)
             {
-                pocketWatchCheackLoad++;
                 RoundController.instance.UsePocketWatchToLoad();
-            }
+                pocketWatchRemainingCount--;
+
+                if (pocketWatchRemainingCount != 0)
+                {
+                    pocketWatchCheackLoad = -1;
+                    pocketWatchCheck = false;
+                }
+            }else
             //場所を記録
-            if (Input.GetKeyDown(KeyCode.E) && !pocketWatchCheck)
+            if (Input.GetKeyDown(KeyCode.E) && !pocketWatchCheck && pocketWatchRemainingCount != 0)
             {
                 SameTime = true;
                 pocketWatchCheck = true;
                 RoundController.instance.UsePocketWatchToSave();
                 //get saving turn to show
                 RoundController.instance.GetSaveTurn();
+                pocketWatchCheackLoad = 0;
+
+                Debug.Log(pocketWatchRemainingCount);
             }
         }
-        if (pocketWatchCheackLoad != 0 && pocketWatchCheck) pocketWatch.gameObject.SetActive(false);
         if (pocketWatchCheackLoad == 0) pocketWatch.gameObject.SetActive(true);
+        if (pocketWatchRemainingCount == 0) pocketWatch.gameObject.SetActive(false);
         //Debug.Log(pocketWatchCheackLoad);
 
-        if (RoundController.instance.GetSaveTurn() != -1 && pocketWatchCheck)
+        if (RoundController.instance.GetSaveTurn() != -1)
         {
             UsingWatch();
         }

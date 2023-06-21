@@ -61,7 +61,10 @@ public class RecordTurnPosition : MonoBehaviour
                     i++;
                 }
             }
-            player.transform.position = roundPosition[turn, i];
+            if(player != null)
+            {
+                player.transform.position = roundPosition[turn, i];
+            }
         }
         
         foreach (GameObject enemys in GameObject.FindGameObjectsWithTag("Enemy"))

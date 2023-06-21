@@ -146,7 +146,7 @@ public class RoundController : MonoBehaviour
         enemyturn = 0;
 
         //懐中時計の設定
-        if (pocketWatch.GetPocketWatchCheck()) pocketWatch.ResetPocketWatchCheck();
+        //if (pocketWatch.GetPocketWatchCheck()) pocketWatch.ResetPocketWatchCheck();
 
         //色修正
         //CanMoveMas.instance.Moveoff();
@@ -172,6 +172,7 @@ public class RoundController : MonoBehaviour
     {
         recordTurnPositon.GetTurnPositionToScene(saveturn);
         saveturn = -1;
+        playerWatchSave = false;
     }
 
     //ターン関係
