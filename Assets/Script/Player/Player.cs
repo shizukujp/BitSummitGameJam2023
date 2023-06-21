@@ -121,7 +121,7 @@ public class Player : MonoBehaviour
                         clickedGameObject.SetActive(false);
                         clickedGameObject = null;
                     }
-                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) > 2f || !clickedGameObject.CompareTag("Tile") || (RLfirst && ((clickedGameObject.transform.position.x - player.transform.position.x == 2) || (clickedGameObject.transform.position.x - player.transform.position.x == -2))))
+                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) > 2f || !clickedGameObject.CompareTag("Tile") || (East && (clickedGameObject.transform.position.x - transform.position.x == 2)) || (West && (clickedGameObject.transform.position.x - transform.position.x == -2)))
                     {
                         Debug.Log("移動できません");
                         clickedGameObject = null;
