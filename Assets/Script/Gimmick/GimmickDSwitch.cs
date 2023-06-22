@@ -6,7 +6,7 @@ public class GimmickDSwitch : MonoBehaviour
     //�S�̃X�C�b�`�R���g���[��
     //static bool SwitchHadOn = false;
     //door
-    public GimmickDoor door;
+    //public GimmickDoor door;
 
     GameObject player;
     //animation
