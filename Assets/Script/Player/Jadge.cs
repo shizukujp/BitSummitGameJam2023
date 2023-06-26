@@ -41,7 +41,7 @@ public class Jadge : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("OBJ"))
+        if (other.gameObject.CompareTag("OBJ") || other.gameObject.CompareTag("switch"))
         {
                 Player.instance.South = false;
             

@@ -35,6 +35,10 @@ public class GimmickDoor : MonoBehaviour
             //Debug.Log("idoutyu");
             Move();
         }
+        if(Input.GetKey(KeyCode.J))
+        {
+            Debug.Log(this.gameObject + ":" + IsOpen);
+        }
     }
     public IEnumerator DoorOpenClose(string color)
     {
@@ -131,17 +135,17 @@ public class GimmickDoor : MonoBehaviour
         if (transform.position == pos)
         {
             int i = 0;
-            if (clearPoint == null) return;
+            
 
             if(!IsOpen && i == 0)
             {
-                clearPoint.SetActive(true);
+                if (clearPoint != null) clearPoint.SetActive(true);
                 IsOpen = true;//開いた
                 i = 1;
             }
             if(IsOpen && i == 0)
             {
-                clearPoint.SetActive(false);
+                if (clearPoint != null) clearPoint.SetActive(false);
                 IsOpen = false;//閉まった
             }
             moving = false;

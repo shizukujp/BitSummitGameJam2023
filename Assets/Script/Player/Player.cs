@@ -63,10 +63,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(1))
-        {
-            Debug.Log(transform.localScale.x);
-        }
             //プレイヤーのターンじゃない場合は動かないようにする
         if (isPlayerTurn && !MotionCheck)
         {
