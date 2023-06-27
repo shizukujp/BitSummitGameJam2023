@@ -15,12 +15,22 @@ public class EffectOff : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && player.transform.position.x == 8 && player.transform.position.y == 5)
+        
+    }
+    private void OnMouseOver()
+    {
+        //Debug.Log("これはアイテムです");
+        if (Input.GetMouseButtonDown(0) && player.transform.position.x == 8 && player.transform.position.y == 5)
         {
             clock.SetActive(true);
-            this.gameObject.SetActive(false);
-            
+            //this.gameObject.SetActive(false);
+
         }
+        GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 1f);
     }
+    /*private void OnMouseExit()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+    }*/
 
 }

@@ -10,6 +10,9 @@ TagManager:
   - FxTemporaire
   - Effect
   - OBJ
+  - switch
+  - Door
+  - Clock
   layers:
   - Default
   - TransparentFX

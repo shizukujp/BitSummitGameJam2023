@@ -3,56 +3,83 @@ using UnityEngine;
 
 public class GimmickDSwitch : MonoBehaviour
 {
-    //ëSëÃÉXÉCÉbÉ`ÉRÉìÉgÉçÅ[Éã
-    static bool SwitchHadOn = false;
+    //ÔøΩSÔøΩÃÉXÔøΩCÔøΩbÔøΩ`ÔøΩRÔøΩÔøΩÔøΩgÔøΩÔøΩÔøΩ[ÔøΩÔøΩ
+    //static bool SwitchHadOn = false;
     //door
-    public GimmickDoor door;
+    //public GimmickDoor door;
 
     GameObject player;
     //animation
     Animator animator;
-    int SwitchMode;
+    int SwitchMode = 0;
 
-    bool PlayerOverCheck, animCheck = false;
+    //bool PlayerOverCheck, animCheck = false;
 
+    GameObject[] doors;
 
-
-
+    //Ëâ≤„ÇíÊåáÂÆö
+    public enum SwitchColorType
+    {
+        red, blue, purple, yellow
+    }
+    public SwitchColorType color;
+    string col;
 
     private void Start()
     {
         //set animator
         animator = GetComponent<Animator>();
         player = GameObject.Find("Player");
+        doors = GameObject.FindGameObjectsWithTag("Door");
+        col = color.ToString();
+        animator.SetInteger("SwitchMode", SwitchMode);
     }
 
-    private void Update()
+    /*private void Update()
     {
         PlayerPositonCheck();
         if (SwitchHadOn && SwitchMode == 1 && animCheck)
         {
             animCheck = false;
+            Debug.Log("false");
             StartCoroutine(CloseAnim());
         }
         //Animator reset in new frame
-        animator.SetInteger("SwitchMode", SwitchMode);
-    }
+    }*/
+       
 
 
 
-    //É}ÉEÉXÇÃìÆÇ´
+    //ÔøΩ}ÔøΩEÔøΩXÔøΩÃìÔøΩÔøΩÔøΩ
     private void OnMouseOver()
     {
         //Debug.Log(2);
-        //KÇÕÉeÉXÉgóp
-        if (PlayerOverCheck && !animCheck && (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.K)))
+        //KÔøΩÕÉeÔøΩXÔøΩgÔøΩp
+        if (doors.Length == 0) return;
+        if (!doors[doors.Length - 1].GetComponent<GimmickDoor>().moving)
         {
-            //Debug.Log(1);
-            animCheck = true;
-            SwitchHadOn = true;
-            Player.instance.Motion();
-            StartCoroutine(OpenAnim());
-
+            if (PlayerPositonCheck() && Input.GetMouseButtonDown(0))
+            {
+                int i = 1;
+                if (SwitchMode != 1 && i == 1)
+                {
+                    SwitchMode = 1;
+                    animator.SetInteger("SwitchMode", SwitchMode);
+                    Debug.Log("open");
+                    i = 0;
+                }
+                if(SwitchMode == 1 && i == 1)
+                {
+                    SwitchMode = 2;
+                    animator.SetInteger("SwitchMode", SwitchMode);
+                    Debug.Log("close");
+                }
+                foreach (GameObject door in doors)
+                {
+                    GimmickDoor dor = door.GetComponent<GimmickDoor>();
+                    dor.DoorOpenOrClose(col);
+                }
+            }
         }
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,0.6f,0.6f,1f);
     }
@@ -63,13 +90,17 @@ public class GimmickDSwitch : MonoBehaviour
 
 
 
-    IEnumerator OpenAnim()
+    /*IEnumerator Anim()
     {
         yield return new WaitForSeconds(0.20f);
         SwitchHadOn = false;
         SwitchMode = 1;
         yield return new WaitForSeconds(0.30f);
-        StartCoroutine(door.DoorOpen());
+        foreach (GameObject door in doors)
+        {
+            GimmickDoor dor = door.GetComponent<GimmickDoor>();
+            StartCoroutine(dor.DoorOpenClose(col));
+        }
     }
     IEnumerator CloseAnim()
     {
@@ -77,27 +108,28 @@ public class GimmickDSwitch : MonoBehaviour
         SwitchMode = 2;
         yield return new WaitForSeconds(0.30f);
         SwitchMode = 0;
-        StartCoroutine(door.DoorClose());
-    }
-
-
-
-
-
-    //ì‡ïîé¿çsä÷êî
-    void PlayerPositonCheck()
-    {
-        if (Mathf.Abs(player.transform.position.x - gameObject.transform.position.x) <= 1.5f && Mathf.Abs(player.transform.position.y - gameObject.transform.position.y) <= 0.5f)
+        foreach (GameObject door in doors)
         {
-            PlayerOverCheck = true;
+            GimmickDoor dor = door.GetComponent<GimmickDoor>();
+            dor.DoorOpenOrClose(col);
         }
-        else if (Mathf.Abs(player.transform.position.x - gameObject.transform.position.x) <= 0.5f && Mathf.Abs(player.transform.position.y - gameObject.transform.position.y) <= 1.5f)
+        Debug.Log("close");
+    }*/
+
+
+
+
+
+    //ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩsÔøΩ÷êÔøΩ
+    bool PlayerPositonCheck()
+    {
+        if (Vector2.Distance(player.transform.position, transform.position) == 1)
         {
-            PlayerOverCheck = true;
+            return true;
         }
         else 
         {
-            PlayerOverCheck = false;
+            return false;
         }
     }
 }

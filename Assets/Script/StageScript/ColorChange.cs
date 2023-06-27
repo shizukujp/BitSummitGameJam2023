@@ -54,7 +54,7 @@ public class ColorChange : MonoBehaviour
     void Update()
     {
         //プレイヤーが動いている時
-        if(Player.instance.ismove && !RoundController.OnOff_Player)
+        /*if(Player.instance.ismove && !RoundController.OnOff_Player)
         {
             /*if (Vector2.Distance(player.transform.position, transform.position) < 0.5f)
             {
@@ -70,8 +70,12 @@ public class ColorChange : MonoBehaviour
                 }
                 GetComponent<SpriteRenderer>().color = new Color(0.157f, 0.157f, 0.157f, 0.475f);
             }
-            else */if (Vector2.Distance(Player.instance.currentPos, transform.position) <= 2f && Player.instance.clickPos != transform.position)
+            else if (Vector2.Distance(Player.instance.currentPos, transform.position) <= 2f && Player.instance.clickPos != transform.position)
             {
+                /*if (transform.position.x - player.transform.position.x == 2 && Player.instance.East) return;
+                if (transform.position.x - player.transform.position.x == -2 && Player.instance.West) return;
+                if (transform.position.y - player.transform.position.y == 2 && Player.instance.North) return;
+                if (transform.position.y - player.transform.position.y == -2 && Player.instance.South) return;
                 if (!ColorChangeOn) return;
                 if (isDanger())
                 {
@@ -81,7 +85,7 @@ public class ColorChange : MonoBehaviour
                 }
                 GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);
             }
-        }
+        }*/
         //敵が動いている時
         if(Player.instance.enemys.Length != 0)
         {
@@ -417,6 +421,10 @@ public class ColorChange : MonoBehaviour
     {
         if (RoundController.OnOff_Player) return false;
         if (Vector2.Distance(player.transform.position, transform.position) > 2f) return false;
+        if (transform.position.x - player.transform.position.x == 2 && Player.instance.East) return false;
+        if (transform.position.x - player.transform.position.x == -2 && Player.instance.West) return false;
+        if (transform.position.y - player.transform.position.y == 2 && Player.instance.North) return false;
+        if (transform.position.y - player.transform.position.y == -2 && Player.instance.South) return false;
         if (!ColorChangeOn) return false;
         return true;
     }

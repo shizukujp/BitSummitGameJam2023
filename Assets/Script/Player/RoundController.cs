@@ -12,7 +12,7 @@ public class RoundController : MonoBehaviour
     //シーンの交換について
     Scene scenePreb;
 
-    int playerturn = 1, /*playerturnpreb = 1, */round = 1, enemyturn = 1,
+    int playerturn = 0, /*playerturnpreb = 1, */round = 1, enemyturn = 0,
         enemyturnend = 0, saveturn = -1;
     RecordTurnPosition recordTurnPositon;
 
@@ -71,14 +71,17 @@ public class RoundController : MonoBehaviour
          //もしシーンが変わったら
         if (SceneManager.GetActiveScene() != scenePreb)
         {
-            playerturn = 1;
+            playerturn = 0;
             //playerturnpreb = 1;
             round = 1;
-            enemyturn = 1;
-            recordTurnPositon.SetTurnPosition(0);
+            enemyturn = 0;
+            recordTurnPositon.SetTurnPosition(0, GameObject.FindGameObjectsWithTag("Enemy"));
 
             //シーンが変わったらプレイヤーオブジェクトを代入
             player = GameObject.Find("Player");
+            if(player.GetComponent<PocketWatch>() != null) {
+                pocketWatch = player.GetComponent<PocketWatch>();
+            }
             pocketWatch = player.GetComponent<PocketWatch>();
 
             //移動したシーンを代入
@@ -98,7 +101,7 @@ public class RoundController : MonoBehaviour
         //シーン内に敵がいないときに自動プレイヤーのターンに移行する
         if (recordTurnPositon.EnemyCount() == 0 && !Player.isPlayerTurn)
         {
-            if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn);
+            if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn, GameObject.FindGameObjectsWithTag("Enemy"));
             if (playerWatchSave) playerWatchSave = false;
             if((SceneManager.GetActiveScene().name != "Tutorial"))enemyturn++;
             if (enemyturn < 12) Player.isPlayerTurn = true;
@@ -127,27 +130,26 @@ public class RoundController : MonoBehaviour
         round++;
 
         //敵とプレイヤーの位置を最初の位置に戻す
-        recordTurnPositon.GetTurnPositionToScene(0);
+        recordTurnPositon.GetTurnPositionToScene(0, GameObject.FindGameObjectsWithTag("Enemy"));
 
         //モンスターをラウンドごとに生成する（あれば）
         monsterGenerator = GameObject.Find("MonsterGenerator");
         if (monsterGenerator.GetComponent<MonsterGenerator>().SetRound(round))
         {
             recordTurnPositon.ScanEnemy();
-            recordTurnPositon.SetTurnPosition(0);
-
+            recordTurnPositon.SetTurnPosition(0, GameObject.FindGameObjectsWithTag("Enemy"));
         }
         //敵のアニメーションを待機モーションにする
         EnemyMotionRiset();
 
 
         //ターンを最初のターンに戻す
-        playerturn = 1;
+        playerturn = 0;
         //playerturnpreb = 1;
-        enemyturn = 1;
+        enemyturn = 0;
 
         //懐中時計の設定
-        if (pocketWatch.GetPocketWatchCheck()) pocketWatch.ResetPocketWatchCheck();
+        //if (pocketWatch.GetPocketWatchCheck()) pocketWatch.ResetPocketWatchCheck();
 
         //色修正
         //CanMoveMas.instance.Moveoff();
@@ -163,16 +165,17 @@ public class RoundController : MonoBehaviour
 
     //パブリック関数
     //懐中時計関係
-    public void UsePocketWatchToSave()
+    public void UsePocketWatchToSave(GameObject[] recordEnemys)
     {
         playerWatchSave = true;
-        recordTurnPositon.SetTurnPosition(enemyturn);
+        recordTurnPositon.SetTurnPosition(enemyturn, recordEnemys);
         saveturn = playerturn;
     } 
-    public void UsePocketWatchToLoad()
+    public void UsePocketWatchToLoad(GameObject[] recordEnemys)
     {
-        recordTurnPositon.GetTurnPositionToScene(saveturn);
+        recordTurnPositon.GetTurnPositionToScene(saveturn, recordEnemys);
         saveturn = -1;
+        playerWatchSave = false;
     }
 
     //ターン関係
@@ -193,7 +196,8 @@ public class RoundController : MonoBehaviour
             Debug.Log(recordTurnPositon.EnemyCount());
             if (recordTurnPositon.EnemyCount() != enemyturnend) return;
             //敵の動きがすべて終わった後に実行する関数
-            if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn);
+            Debug.Log(enemyturn);
+            if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn, GameObject.FindGameObjectsWithTag("Enemy"));
             if (enemyturn < 12) Player.isPlayerTurn = true;
             if (playerWatchSave) playerWatchSave = false;
             EnemyMove.IsEnemyMove = false;
@@ -203,15 +207,14 @@ public class RoundController : MonoBehaviour
         Debug.Log(enemyturnend);
         Debug.Log(recordTurnPositon.EnemyCount());
     }
-        public void MasRiset()
+
+    public void MasRiset()
     {
-        int i = 0;
         recordTurnPositon.Tiles = GameObject.FindGameObjectsWithTag("Tile");
         foreach (GameObject tiles in recordTurnPositon.Tiles)
         {
-            ColorChange change = recordTurnPositon.Tiles[i].GetComponent<ColorChange>();
+            ColorChange change = tiles.GetComponent<ColorChange>();
             change.RisetColor();
-            i++;
         }
     }
     public void EnemyTurn()

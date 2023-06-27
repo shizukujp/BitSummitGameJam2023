@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static Unity.VisualScripting.Metadata;
@@ -24,7 +25,8 @@ public class Player : MonoBehaviour
     }
     Animator animator;
     bool MotionCheck = false;
-    bool RLfirst = false;
+    //先に縦に移動するかどうか
+    public bool RLfirst = false;
     public GameObject player;   //①移動させたいオブジェクト
     public int speed = 5;       //移動スピード
     public int playerwalkcount = 0;    //プレイヤー歩数のカウンター
@@ -41,11 +43,14 @@ public class Player : MonoBehaviour
 
     public GameObject[] enemys;
 
+    public bool Comp = true;//移動完了したかどうか
     bool Can = true;
     //ターン関連
     public static bool isPlayerTurn;
 
     Vector2 pos;
+
+    public bool South, North, West, East;
 
     void Start()
     {
@@ -58,15 +63,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            Debug.Log(RLfirst);
-            Debug.Log(Can);
-        }
-
-        //プレイヤーのターンじゃない場合は動かないようにする
+            //プレイヤーのターンじゃない場合は動かないようにする
         if (isPlayerTurn && !MotionCheck)
         {
+            if (EventSystem.current.IsPointerOverGameObject()) return;
             if (Input.GetMouseButtonDown(0) && Second == false)  //左クリックでif分起動
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -76,7 +76,6 @@ public class Player : MonoBehaviour
                 //Debug.DrawRay(ray.origin, ray.direction * 30, Color.red, 20f);
                 if (hit2d)
                 {
-                    //Debug.Log(hit2d.transform.position);
                     CurrentY = player.transform.position.y;
                     CurrentX = player.transform.position.x;
                     clickedGameObject = hit2d.transform.gameObject;
@@ -87,12 +86,38 @@ public class Player : MonoBehaviour
                     {
                         clickedGameObject = null;
                         //First = Second = false;
-                    }else if(clickedGameObject.CompareTag("Effect"))
+                    }else if(clickedGameObject.CompareTag("switch") && Vector2.Distance(transform.position, clickedGameObject.transform.position) <= 1)
                     {
+                        if (clickedGameObject.transform.position.x - transform.position.x > 0 && pos.x > 0)
+                        {
+                            pos.x *= -1;
+                        }
+                        if (clickedGameObject.transform.position.x - transform.position.x < 0 && pos.x < 0)
+                        {
+                            pos.x *= -1;
+                        }
+                        transform.localScale = pos;
                         Motion();
                         clickedGameObject = null;
                     }
-                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) / 1f > 2f || !clickedGameObject.CompareTag("Tile") || (RLfirst && ((clickedGameObject.transform.position.x - player.transform.position.x == 2) || (clickedGameObject.transform.position.x - player.transform.position.x == -2))))
+                    else if((clickedGameObject.CompareTag("Effect") || clickedGameObject.CompareTag("Clock")) && Vector2.Distance(transform.position, clickedGameObject.transform.position) <= 1)
+                    {
+                        if (clickedGameObject.transform.position.x - transform.position.x > 0 && pos.x > 0)
+                        {
+                            pos.x *= -1;
+                        }
+                        if (clickedGameObject.transform.position.x - transform.position.x < 0 && pos.x < 0)
+                        {
+                            pos.x *= -1;
+                        }
+                        transform.localScale = pos;
+                        Motion();
+                        if(clickedGameObject.CompareTag("Clock")) GetComponent<PocketWatch>().enabled = true;
+
+                        clickedGameObject.SetActive(false);
+                        clickedGameObject = null;
+                    }
+                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) > 2f || !clickedGameObject.CompareTag("Tile") || (East && (clickedGameObject.transform.position.x - transform.position.x == 2)) || (West && (clickedGameObject.transform.position.x - transform.position.x == -2)))
                     {
                         Debug.Log("移動できません");
                         clickedGameObject = null;
@@ -100,11 +125,12 @@ public class Player : MonoBehaviour
                     }
                     else
                     {
+                        Comp = false;
                         First = Second = true;
                         currentPos = player.transform.position;
                         ismove = true;
                         animator.SetBool("isRunning", true);
-                        
+                        South = North = West = East = false;
                         //移動する場所のマスを変更する
                         clickPos = clickedGameObject.transform.position;
                         if (clickedGameObject.transform.position.x - transform.position.x > 0 && pos.x > 0)
@@ -178,6 +204,7 @@ public class Player : MonoBehaviour
 
                     RoundController.instance.SetTurn(RoundController.instance.GetTurn() + 1);
                     Debug.Log("移動完了");
+                    Comp = true;
                     PocketWatch.SameTime = false;
                     isPlayerTurn = false;
                     ismove = false;
@@ -200,6 +227,7 @@ public class Player : MonoBehaviour
                         else
                         {
                             RoundController.instance.MasRiset();
+                            South = North = West = East = false;
                             //isPlayerTurn = true;
                         }
                     }
@@ -261,6 +289,8 @@ public class Player : MonoBehaviour
 
                     RoundController.instance.SetTurn(RoundController.instance.GetTurn() + 1);
                     Debug.Log("移動完了");
+                    
+                    Comp = true;
                     RLfirst = false;
                     PocketWatch.SameTime = false;
                     isPlayerTurn = false;
@@ -284,6 +314,7 @@ public class Player : MonoBehaviour
                         else
                         {
                             RoundController.instance.MasRiset();
+                            South = North = West = East = false;
                             //isPlayerTurn = true;
                         }
                     }
@@ -309,7 +340,7 @@ public class Player : MonoBehaviour
         animator.SetBool("IsMotion", false);
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    /*void OnTriggerStay2D(Collider2D other)
     {
         if (ismove) return;
         if (other.gameObject.CompareTag("OBJ") && !RLfirst)
@@ -318,5 +349,5 @@ public class Player : MonoBehaviour
             
             RLfirst = true;
         }
-    }
+    }*/
 }

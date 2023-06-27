@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5512858837901469927}
   - component: {fileID: 5512858837901469925}
   m_Layer: 0
-  m_Name: LightBlueDoor
+  m_Name: GimmickDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

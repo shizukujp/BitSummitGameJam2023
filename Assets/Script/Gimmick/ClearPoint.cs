@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ClearPoint : MonoBehaviour
 {
-    [Header("ˆÚ“®‚µ‚½‚¢ƒV[ƒ“‚ğ‚±‚±‚É‘‚¢‚Ä‚­‚¾‚³‚¢B")]
+    [Header("SceneName")]
     public string NextSceneName = "";
 
     GameObject player;
@@ -23,7 +23,7 @@ public class ClearPoint : MonoBehaviour
             }
             else
             {
-                Debug.Log("ƒV[ƒ“ƒl[ƒ€‚ğ’Ç‰Á‚µ‚Ä‚­‚¾‚³‚¢B");
+                Debug.Log("ï¿½Vï¿½[ï¿½ï¿½ï¿½lï¿½[ï¿½ï¿½ï¿½ï¿½Ç‰ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½B");
             }
         }
     }
