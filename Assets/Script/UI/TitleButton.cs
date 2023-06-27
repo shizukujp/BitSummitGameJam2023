@@ -5,13 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class TitleButton : MonoBehaviour
 {
-    
+    public void Sound()
+    {
+
+    }
+
     public void OpenOption()
     {
         
     }
     
-    public void OnClickBackButton()
+    public void ExitGame()
     {
         Application.Quit();
     }
