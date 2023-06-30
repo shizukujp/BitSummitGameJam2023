@@ -79,10 +79,9 @@ public class RoundController : MonoBehaviour
 
             //シーンが変わったらプレイヤーオブジェクトを代入
             player = GameObject.Find("Player");
-            if(player.GetComponent<PocketWatch>() != null) {
+            if(player != null) {
                 pocketWatch = player.GetComponent<PocketWatch>();
             }
-            pocketWatch = player.GetComponent<PocketWatch>();
 
             //移動したシーンを代入
             scenePreb = SceneManager.GetActiveScene();

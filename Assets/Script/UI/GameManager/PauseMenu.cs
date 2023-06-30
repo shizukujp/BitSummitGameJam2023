@@ -33,7 +33,6 @@ public class PauseMenu : MonoBehaviour
     {
         while (MovingUIAnimPos < 50)
         {
-            Debug.Log(1);
             MovingUIAnimPos++;
             SetMovingUIPos(MovingUIAnimPos);
             yield return new WaitForSecondsRealtime(0.01f);
@@ -46,7 +45,6 @@ public class PauseMenu : MonoBehaviour
     {
         while (MovingUIAnimPos > 0)
         {
-            Debug.Log(2);
             MovingUIAnimPos--;
             SetMovingUIPos(MovingUIAnimPos);
             yield return new WaitForSecondsRealtime(0.01f);
