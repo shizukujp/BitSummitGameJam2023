@@ -55,7 +55,7 @@ public class Massage : MonoBehaviour
     /// テキストを消すメソッド
     public void Clean()
     {
-        text.text = "";
+        if(text != null) { text.text = ""; } else { Debug.Log("テキストオブジェクトは入れてません"); }
     }
 
     //*******************************************************************

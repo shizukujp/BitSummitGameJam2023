@@ -17,10 +17,10 @@ public class RoundController : MonoBehaviour
     RecordTurnPosition recordTurnPositon;
 
     bool playerWatchSave = false;
-
+/*
     public GameObject countText;
     public GameObject TurnText;
-
+*/
     public static bool OnOff_Enemy = false;
     public static bool OnOff_Player = false;
 
