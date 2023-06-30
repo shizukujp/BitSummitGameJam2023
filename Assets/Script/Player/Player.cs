@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
     public bool ismove = false;
 
     public GameObject[] enemys;
+    GameObject[] Doors;
 
     public bool Comp = true;//移動完了したかどうか
     bool Can = true;
@@ -58,6 +59,7 @@ public class Player : MonoBehaviour
         animator = player.GetComponent<Animator>();
         pos = transform.localScale;//(1.25, 1.25, 1.25)
         enemys = GameObject.FindGameObjectsWithTag("Enemy");
+        Doors = GameObject.FindGameObjectsWithTag("Door");
     }
 
     // Update is called once per frame
@@ -86,7 +88,8 @@ public class Player : MonoBehaviour
                     {
                         clickedGameObject = null;
                         //First = Second = false;
-                    }else if(clickedGameObject.CompareTag("switch") && Vector2.Distance(transform.position, clickedGameObject.transform.position) <= 1)
+                    }
+                    else if (clickedGameObject.CompareTag("switch") && Vector2.Distance(transform.position, clickedGameObject.transform.position) <= 1)
                     {
                         if (clickedGameObject.transform.position.x - transform.position.x > 0 && pos.x > 0)
                         {
@@ -100,7 +103,7 @@ public class Player : MonoBehaviour
                         Motion();
                         clickedGameObject = null;
                     }
-                    else if((clickedGameObject.CompareTag("Effect") || clickedGameObject.CompareTag("Clock")) && Vector2.Distance(transform.position, clickedGameObject.transform.position) <= 1)
+                    else if ((clickedGameObject.CompareTag("Effect") || clickedGameObject.CompareTag("Clock")) && Vector2.Distance(transform.position, clickedGameObject.transform.position) <= 1)
                     {
                         if (clickedGameObject.transform.position.x - transform.position.x > 0 && pos.x > 0)
                         {
@@ -112,16 +115,15 @@ public class Player : MonoBehaviour
                         }
                         transform.localScale = pos;
                         Motion();
-                        if(clickedGameObject.CompareTag("Clock")) GetComponent<PocketWatch>().enabled = true;
+                        if (clickedGameObject.CompareTag("Clock")) GetComponent<PocketWatch>().enabled = true;
 
                         clickedGameObject.SetActive(false);
                         clickedGameObject = null;
                     }
-                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) > 2f || !clickedGameObject.CompareTag("Tile") || (East && (clickedGameObject.transform.position.x - transform.position.x == 2)) || (West && (clickedGameObject.transform.position.x - transform.position.x == -2)))
+                    else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) > 2f || OntheDoor(clickedGameObject) || !clickedGameObject.CompareTag("Tile") || (East && (clickedGameObject.transform.position.x - transform.position.x == 2)) || (West && (clickedGameObject.transform.position.x - transform.position.x == -2)))
                     {
                         Debug.Log("移動できません");
                         clickedGameObject = null;
-                      
                     }
                     else
                     {
@@ -350,4 +352,12 @@ public class Player : MonoBehaviour
             RLfirst = true;
         }
     }*/
+    bool OntheDoor(GameObject obj)
+    {
+        foreach(GameObject door in Doors)
+        {
+            if (obj.transform.position.x == door.transform.position.x && obj.transform.position.y == door.transform.position.y) return true;
+        }
+        return false;
+    }
 }
