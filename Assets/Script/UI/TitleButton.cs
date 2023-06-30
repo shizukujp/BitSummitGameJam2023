@@ -16,7 +16,7 @@ public class TitleButton : MonoBehaviour
         if (!Settings.activeSelf)
         {
             Settings.SetActive(true);
-            Settings.GetComponent<SoundSettings>().OpenSoundSettingsCheck(true);
+            Settings.GetComponent<SoundSettings>().OpenSoundSettingsCheck();
         }
     }
     

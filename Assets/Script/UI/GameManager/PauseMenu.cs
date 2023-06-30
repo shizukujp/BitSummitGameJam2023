@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    
+    public GameObject SoundSettings;
 
 
 
@@ -21,11 +20,15 @@ public class PauseMenu : MonoBehaviour
     }
     public void BackToHome()
     {
-        Debug.Log(3);
+        SceneManager.LoadScene("Title");
     }
     public void Setting()
     {
-        Debug.Log(4);
+        if (!SoundSettings.activeSelf)
+        {
+            SoundSettings.GetComponent<SoundSettings>().OpenSoundSettingsCheck();
+            SoundSettings.SetActive(true);
+        }
     }
     public void Graph()
     {

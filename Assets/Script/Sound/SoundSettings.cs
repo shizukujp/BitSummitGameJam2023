@@ -6,6 +6,7 @@ public class SoundSettings : MonoBehaviour
     public GameObject SoundSettingsobj;
     public Slider BGM, SE;
 
+    //サウンド設定を初めて開く時
     bool firstCheck;
 
     private void Update()
@@ -17,6 +18,7 @@ public class SoundSettings : MonoBehaviour
                 firstCheck = false;
                 BGM.value = SoundManager.Instance.BgmVolume;
                 SE.value = SoundManager.Instance.SeVolume;
+                Time.timeScale = 0f;
             }
             else
             {
@@ -32,12 +34,13 @@ public class SoundSettings : MonoBehaviour
     }
 
 
-    public void OpenSoundSettingsCheck(bool ossc)
+    public void OpenSoundSettingsCheck()
     {
-        firstCheck = ossc;
+        firstCheck = true;
     }
     public void CloseSoundSettings()
     {
         SoundSettingsobj.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
