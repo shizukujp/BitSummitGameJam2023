@@ -14,22 +14,37 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
-        GameObject soundManager = CheckOtherSoundManager();
-        bool checkResult = soundManager != null && soundManager != gameObject;
-
-        if (checkResult)
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else
         {
             Destroy(gameObject);
         }
 
-        DontDestroyOnLoad(gameObject);
-        Instance = gameObject.GetComponent<SoundManager>() ;
-    }
 
-    GameObject CheckOtherSoundManager()
-    {
-        return GameObject.FindGameObjectWithTag("SoundManager");
+        //シーンを変えるごとに設定をリセットする
+        //GameObject soundManager = CheckOtherSoundManager();
+        //bool checkResult = soundManager != null && soundManager != gameObject;
+
+        //if (checkResult)
+        //{
+        //    Destroy(soundManager);
+        //}
+
+        //DontDestroyOnLoad(gameObject);
+        //Instance = gameObject.GetComponent<SoundManager>() ;
+
+        //Instance = this;
     }
+    //GameObject CheckOtherSoundManager()
+    //{
+    //    return GameObject.FindGameObjectWithTag("SoundManager");
+    //}
+
+
     public float BgmVolume
     {
         get
