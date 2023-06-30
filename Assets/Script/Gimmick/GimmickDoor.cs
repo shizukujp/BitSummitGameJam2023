@@ -102,12 +102,12 @@ public class GimmickDoor : MonoBehaviour
                 if (isHorizontal)
                 {
                     pos = transform.position;
-                    pos.x += 0.75f;
+                    pos.x += 1f;
                 }
                 else
                 {
                     pos = transform.position;
-                    pos.y += 0.75f;
+                    pos.y += 1f;
                 }
                 moving = true;
             }
@@ -116,12 +116,12 @@ public class GimmickDoor : MonoBehaviour
                 if (isHorizontal)
                 {
                     pos = transform.position;
-                    pos.x -= 0.75f;
+                    pos.x -= 1f;
                 }
                 else
                 {
                     pos = transform.position;
-                    pos.y -= 0.75f;
+                    pos.y -= 1f;
                 }
                 moving = true;
             }
