@@ -34,10 +34,10 @@ public class Jadge : MonoBehaviour
             }
         }
         if (Player.instance.ismove) return;
-        if ((Player.instance.East || Player.instance.West) && !Player.instance.RLfirst)
+        /*if ((Player.instance.East || Player.instance.West) && Player.instance.RLfirst)
         {
-            Player.instance.RLfirst = true;
-        }
+            Player.instance.RLfirst = false;
+        }*/
     }
     private void OnTriggerExit2D(Collider2D other)
     {
