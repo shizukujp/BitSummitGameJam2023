@@ -52,6 +52,14 @@ public class RoundController : MonoBehaviour
         if (GameObject.Find("MonsterGenerator") != null) monsterGenerator = GameObject.Find("MonsterGenerator");
     }
 
+    private void Start()
+    {
+        var GUIFade = GUIOption.Instance.GetGUIOptionFade();
+        if (GUIFade.GetFadingInAndOut() && GUIFade.GetFaded())
+        {
+            GUIFade.FadeOut(1);
+        }
+    }
 
     //実行用関数
     private void Update()

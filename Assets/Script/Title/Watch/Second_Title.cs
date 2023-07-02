@@ -10,8 +10,8 @@ public class Second_Title : MonoBehaviour
     [SerializeField, Tooltip("‰ñ“]²")]
     private Vector3 RotateAxis = Vector3.up;
 
-    [SerializeField, Tooltip("‘¬“xŒW”")]
-    private float SpeedFactor = 0.1f;
+    [Tooltip("‘¬“xŒW”")]
+    public float SpeedFactor = 0.1f;
 
     void Update()
     {
