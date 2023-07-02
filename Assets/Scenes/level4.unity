@@ -6558,15 +6558,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6768842667893864861, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_Color.b
-      value: 0.5660378
+      value: 0.9433962
       objectReference: {fileID: 0}
     - target: {fileID: 6768842667893864861, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_Color.g
-      value: 0.5660378
+      value: 0.9433962
       objectReference: {fileID: 0}
     - target: {fileID: 6768842667893864861, guid: adfed11546c3f429a964c176a8163350, type: 3}
       propertyPath: m_Color.r
-      value: 0.5660378
+      value: 0.9433962
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adfed11546c3f429a964c176a8163350, type: 3}
@@ -16685,7 +16685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6799200897271388725, guid: 71af7d1d80856425c9c531958e0e1814, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6799200897271388725, guid: 71af7d1d80856425c9c531958e0e1814, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37433,6 +37433,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6768842667893864861, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5660378
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768842667893864861, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5660378
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768842667893864861, guid: adfed11546c3f429a964c176a8163350, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5660378
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adfed11546c3f429a964c176a8163350, type: 3}
 --- !u!4 &1728071622 stripped
@@ -37497,7 +37509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7206759016416592851, guid: bc2c6edc75f09124788353ebe4c3a215, type: 3}
       propertyPath: NextSceneName
-      value: level6
+      value: Title
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc2c6edc75f09124788353ebe4c3a215, type: 3}
@@ -45720,7 +45732,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c39c02f367df82847bd112f54912cacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pocketWatch: {fileID: 0}
 --- !u!1 &1843090506208070274
 GameObject:
   m_ObjectHideFlags: 0

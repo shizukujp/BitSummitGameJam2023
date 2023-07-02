@@ -1435,6 +1435,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 832188683831921143, guid: ac407fc39b168fc498c0c0b9b379f6fc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 832188683831921146, guid: ac407fc39b168fc498c0c0b9b379f6fc, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1491,6 +1495,10 @@ PrefabInstance:
     - target: {fileID: 5553142401071149177, guid: bceaa23663b1ca842a866f0f83144cd5, type: 3}
       propertyPath: m_Name
       value: SoundSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553142401071149177, guid: bceaa23663b1ca842a866f0f83144cd5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5553142401071149178, guid: bceaa23663b1ca842a866f0f83144cd5, type: 3}
       propertyPath: m_Pivot.x
@@ -1575,6 +1583,22 @@ PrefabInstance:
     - target: {fileID: 5553142401071149178, guid: bceaa23663b1ca842a866f0f83144cd5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553142401380245972, guid: bceaa23663b1ca842a866f0f83144cd5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553142401630566493, guid: bceaa23663b1ca842a866f0f83144cd5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553142402787571689, guid: bceaa23663b1ca842a866f0f83144cd5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553142402971480307, guid: bceaa23663b1ca842a866f0f83144cd5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bceaa23663b1ca842a866f0f83144cd5, type: 3}

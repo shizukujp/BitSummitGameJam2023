@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PocketWatch : MonoBehaviour
 {
-    public Image pocketWatch;
+    Image pocketWatch;
     int pocketWatchCheackLoad = 0;
     bool pocketWatchCheck = false;
     GameObject[] recordEnemy;
@@ -77,5 +77,10 @@ public class PocketWatch : MonoBehaviour
     void UsingWatch()
     {
         pocketWatch.color = new Color(1f, 1f, 1f, 1f);
+    }
+
+    public void SetPocketWatch(Image image)
+    {
+        pocketWatch = image;
     }
 }

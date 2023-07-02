@@ -5420,6 +5420,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1988088216}
     m_Modifications:
     - target: {fileID: 7191854412206235795, guid: 36d585c6f25eff149adc391f75a3b9d8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191854412206235795, guid: 36d585c6f25eff149adc391f75a3b9d8, type: 3}
       propertyPath: pocketWatch
       value: 
       objectReference: {fileID: 377823352}

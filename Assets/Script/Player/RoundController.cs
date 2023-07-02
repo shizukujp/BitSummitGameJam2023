@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class RoundController : MonoBehaviour
 {
     public static RoundController instance;
 
-
+    public Image pocketWatchimg;
     //シーンの交換について
     Scene scenePreb;
 
@@ -44,6 +45,7 @@ public class RoundController : MonoBehaviour
         //プレイヤーオブジェクトを代入
         player = GameObject.Find("Player");
         pocketWatch = player.GetComponent<PocketWatch>();
+        pocketWatch.SetPocketWatch(pocketWatchimg);
 
         scenePreb = SceneManager.GetActiveScene();
         recordTurnPositon = GetComponent<RecordTurnPosition>();
@@ -81,6 +83,7 @@ public class RoundController : MonoBehaviour
             player = GameObject.Find("Player");
             if(player != null) {
                 pocketWatch = player.GetComponent<PocketWatch>();
+                pocketWatch.SetPocketWatch(pocketWatchimg);
             }
 
             //移動したシーンを代入
@@ -115,7 +118,7 @@ public class RoundController : MonoBehaviour
         
 
             //Debug.Log(enemyturn);
-        if (enemyturn > 12)
+        if (enemyturn >= 12)
         {
             GameReset();
         }
