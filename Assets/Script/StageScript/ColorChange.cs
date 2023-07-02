@@ -25,7 +25,7 @@ public class ColorChange : MonoBehaviour
 
     void Start()
     {
-        player = Player.instance.player;
+        player = GameObject.FindWithTag("Player");
         //CanPlayerMove();
         /*if (Vector2.Distance(player.transform.position, transform.position) == 0)
         {

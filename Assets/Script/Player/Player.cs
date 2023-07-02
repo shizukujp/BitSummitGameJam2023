@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     Animator animator;
     bool MotionCheck = false;
     //先に縦に移動するかどうか
-    public bool RLfirst = false;
+    public bool RLfirst = true;
     public GameObject player;   //①移動させたいオブジェクト
     public int speed = 5;       //移動スピード
     public int playerwalkcount = 0;    //プレイヤー歩数のカウンター
@@ -127,6 +127,13 @@ public class Player : MonoBehaviour
                     }
                     else
                     {
+                        if((transform.position.y - clickedGameObject.transform.position.y == 1 && South) || (transform.position.y - clickedGameObject.transform.position.y == -1 && North))
+                        {
+                            RLfirst = true;
+                        }else if((transform.position.x - clickedGameObject.transform.position.x == 1 && West) || (transform.position.x - clickedGameObject.transform.position.x == -1 && East))
+                        {
+                            RLfirst = false;
+                        }
                         Comp = false;
                         First = Second = true;
                         currentPos = player.transform.position;
@@ -152,7 +159,7 @@ public class Player : MonoBehaviour
             }
         }
         //プレイヤーの移動＋歩数・ターンカウント
-        if (clickedGameObject && !RLfirst)
+        if (clickedGameObject && RLfirst)
         {
             //RL = new Vector2(clickedGameObject.transform.position.x, player.transform.position.y);
             if (clickedGameObject.transform.position.x != player.transform.position.x && First)
@@ -237,7 +244,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        else if(clickedGameObject)
+        else if(clickedGameObject && !RLfirst)
         {
             if (clickedGameObject.transform.position.y != player.transform.position.y && First)
             {
@@ -293,7 +300,7 @@ public class Player : MonoBehaviour
                     Debug.Log("移動完了");
                     
                     Comp = true;
-                    RLfirst = false;
+                    RLfirst = true;
                     PocketWatch.SameTime = false;
                     isPlayerTurn = false;
                     ismove = false;
