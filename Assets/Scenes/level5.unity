@@ -2542,7 +2542,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 832188683831921143, guid: ac407fc39b168fc498c0c0b9b379f6fc, type: 3}
       propertyPath: m_Name
-      value: SoundManager (1)
+      value: SoundManager
       objectReference: {fileID: 0}
     - target: {fileID: 832188683831921146, guid: ac407fc39b168fc498c0c0b9b379f6fc, type: 3}
       propertyPath: m_RootOrder
@@ -2882,7 +2882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 110941379}
   m_Layer: 0
-  m_Name: BlueDoor (1)
+  m_Name: BlueDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7084,7 +7084,7 @@ GameObject:
   m_Component:
   - component: {fileID: 279767786}
   m_Layer: 0
-  m_Name: Desks (1)
+  m_Name: Desks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9297,7 +9297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 390128173}
   m_Layer: 0
-  m_Name: Floor (1)
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12632,7 +12632,7 @@ GameObject:
   - component: {fileID: 517711126}
   - component: {fileID: 517711125}
   m_Layer: 0
-  m_Name: Environment (1)
+  m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14277,7 +14277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2524101642572524794, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
       propertyPath: m_Name
-      value: GameManager (1)
+      value: GameManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
@@ -18953,7 +18953,7 @@ GameObject:
   - component: {fileID: 732831364}
   - component: {fileID: 732831363}
   m_Layer: 0
-  m_Name: Grid (1)
+  m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23226,7 +23226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 925171847}
   m_Layer: 0
-  m_Name: CameraPosition (1)
+  m_Name: CameraPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25386,7 +25386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1033755812}
   m_Layer: 0
-  m_Name: YellowDoor (1)
+  m_Name: YellowDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33852,7 +33852,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1422445367}
   m_Layer: 0
-  m_Name: RedDoor (1)
+  m_Name: RedDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36836,7 +36836,7 @@ GameObject:
   - component: {fileID: 1549709626}
   - component: {fileID: 1549709625}
   m_Layer: 0
-  m_Name: map1 (1)
+  m_Name: map1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39772,7 +39772,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c39c02f367df82847bd112f54912cacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pocketWatch: {fileID: 0}
 --- !u!114 &1668347885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41494,7 +41493,7 @@ GameObject:
   - component: {fileID: 1735949604}
   - component: {fileID: 1735949603}
   m_Layer: 0
-  m_Name: Directional Light (1)
+  m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49216,7 +49215,7 @@ GameObject:
   - component: {fileID: 2052330041}
   - component: {fileID: 2052330040}
   m_Layer: 0
-  m_Name: EventSystem (1)
+  m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50453,7 +50452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2122187967}
   m_Layer: 0
-  m_Name: Wall (1)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
