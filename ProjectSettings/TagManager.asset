@@ -15,6 +15,7 @@ TagManager:
   - Clock
   - SoundManager
   - DoorTile
+  - Doors
   layers:
   - Default
   - TransparentFX

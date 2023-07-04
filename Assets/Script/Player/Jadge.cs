@@ -10,7 +10,7 @@ public class Jadge : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         //if (Player.instance.ismove) return;
-        if(other.gameObject.CompareTag("OBJ") || other.gameObject.CompareTag("switch"))
+        if(other.gameObject.CompareTag("OBJ") || other.gameObject.CompareTag("switch") || other.gameObject.CompareTag("Door"))
         {
             if (South && !Player.instance.South)
             {
@@ -41,7 +41,7 @@ public class Jadge : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("OBJ") || other.gameObject.CompareTag("switch"))
+        if (other.gameObject.CompareTag("OBJ") || other.gameObject.CompareTag("switch") || other.gameObject.CompareTag("Door"))
         {
                 Player.instance.South = false;
             
