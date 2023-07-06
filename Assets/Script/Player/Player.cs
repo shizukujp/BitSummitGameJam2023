@@ -130,7 +130,7 @@ public class Player : MonoBehaviour
                         if((transform.position.y - clickedGameObject.transform.position.y == 1 && South) || (transform.position.y - clickedGameObject.transform.position.y == -1 && North))
                         {
                             RLfirst = true;
-                        }else if((transform.position.x - clickedGameObject.transform.position.x == 1 && West) || (transform.position.x - clickedGameObject.transform.position.x == -1 && East))
+                        }else if(Mathf.Abs(transform.position.x - clickedGameObject.transform.position.x) == 1 && (East || West))
                         {
                             RLfirst = false;
                         }
