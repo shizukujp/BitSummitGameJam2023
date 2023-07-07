@@ -14,6 +14,8 @@ public class ColorChange : MonoBehaviour
     //public GameObject[] Enemy;
     public static ColorChange instance;
     //
+
+    [SerializeField] public bool _isDanger;
     public bool ColorChangeOn = true;
     public void Awake()
     {
@@ -86,13 +88,16 @@ public class ColorChange : MonoBehaviour
                 GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);
             }
         }*/
+        
+        
+        _isDanger = isDanger();
         //敵が動いている時
         if(Player.instance.enemys.Length != 0)
         {
             if (!ColorChangeOn) return;
             if (EnemyMove.instance.isEneMove && !RoundController.OnOff_Enemy)
             {
-                if (!isDanger())
+                if (_isDanger)
                 {
                     CanPlayerMove();
                     return;
@@ -141,6 +146,7 @@ public class ColorChange : MonoBehaviour
     }*/
     void OnMouseOver()
     {
+        _isDanger = isDanger();
         if (!ColorChangeOn) return;
         if (!Player.isPlayerTurn) return;
         if (Player.instance.ismove) return;
@@ -148,7 +154,7 @@ public class ColorChange : MonoBehaviour
         
         if (CanPlayerMoveColor())
         {
-            if (isDanger())
+            if (_isDanger)
             {
                 //さらに危険な色
                 if (EnemyMove.Deathcount == 0)
@@ -162,7 +168,7 @@ public class ColorChange : MonoBehaviour
         }
         else//それ以外
         {
-            if (isDanger())
+            if (_isDanger)
             {
                 //危険な色
                 if (EnemyMove.Deathcount == 0)
@@ -180,6 +186,7 @@ public class ColorChange : MonoBehaviour
     //マウスカーソルを離したとき
     void OnMouseExit()
     {
+        _isDanger = isDanger();
         if (!Player.isPlayerTurn) return;
         if (Player.instance.ismove) return;
         if (!ColorChangeOn) return;
@@ -191,7 +198,7 @@ public class ColorChange : MonoBehaviour
         }*/
         else if (CanPlayerMoveColor())
         {
-            if(isDanger())
+            if(_isDanger)
             {
                 if (EnemyMove.Deathcount == 0)
                 {
@@ -205,7 +212,7 @@ public class ColorChange : MonoBehaviour
         }
         else
         {
-            if (isDanger() && EnemyMove.Deathcount == 0)
+            if (_isDanger && EnemyMove.Deathcount == 0)
             {
                 //危険な色
                 GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
@@ -221,6 +228,7 @@ public class ColorChange : MonoBehaviour
     //プレイヤーが移動可能なマスを表示する
     public void CanPlayerMove()
     {
+        _isDanger = isDanger();
         /*if (Vector2.Distance(player.transform.position, transform.position) == 0)
         {
             if(isDanger())
@@ -234,7 +242,7 @@ public class ColorChange : MonoBehaviour
         else */if (Vector2.Distance(player.transform.position, transform.position) <= 2f)
         {
             //Debug.Log("移動可能です");
-            if (isDanger())
+            if (_isDanger)
             {
                 //危険な色
                 GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
@@ -431,11 +439,12 @@ public class ColorChange : MonoBehaviour
 
     public void RisetColor()
     {
+        _isDanger = isDanger();
         if(!ColorChangeOn) return;
-        if (isDanger() && CanPlayerMoveColor())
+        if (_isDanger && CanPlayerMoveColor())
         {
             GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
-        }else if(isDanger())
+        }else if(_isDanger)
         {
             this.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
         }else if(CanPlayerMoveColor())

@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
-    private Transform[] allTiles;
-    private Transform[] attackTiles;
+    private GameObject[] allTiles;
+    private GameObject[] attackTiles;
 
     private Animator anim;
 
@@ -20,10 +20,14 @@ public class Boss : MonoBehaviour
 
     public bool isTurn = false;
 
-    private void Awake() {
-        if(instance == null){
+    private void Awake()
+    {
+        if (instance == null)
+        {
             instance = this;
-        }else{
+        }
+        else
+        {
 
         }
     }
@@ -31,12 +35,10 @@ public class Boss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        allTiles = new Transform[GameObject.Find("map1").transform.childCount];
-        var i = 0;
-        foreach(Transform tile in GameObject.Find("map1").transform)
+        allTiles = new GameObject[GameObject.Find("map1").transform.childCount];
+        for (int i = 0; i < GameObject.Find("map1").transform.childCount; i++)
         {
-            allTiles[i] = tile;
-            i++;
+            allTiles[i] = GameObject.Find("map1").transform.GetChild(i).gameObject;
         }
 
         anim = GetComponent<Animator>();
@@ -47,31 +49,46 @@ public class Boss : MonoBehaviour
     {
         anim.SetTrigger("preFinish");
         anim.SetTrigger("isClamDown");
-        if(state == 0 && isTurn){
+        if (state == 0 && isTurn)
+        {
             anim.SetBool("isPre", false);
             anim.SetBool("isAttack", false);
             state = 1;
-        }else if(state == 1 && isTurn){
+        }
+        else if (state == 1 && isTurn)
+        {
             anim.SetBool("isPre", true);
             anim.SetBool("isAttack", false);
             StartCoroutine(preAttack());
-        }else if(state == 2 && isTurn){
+        }
+        else if (state == 2 && isTurn)
+        {
             anim.SetBool("isPre", false);
             anim.SetBool("isAttack", true);
             StartCoroutine(attack());
+        }
+        if (state == 1 && attackTiles != null)
+        {
+            foreach (GameObject tile in attackTiles)
+            {
+                ColorChange.instance._isDanger = true;
+            }
+        }
+        if (state == 2 && attackTiles != null)
+        {
+            foreach (GameObject tile in attackTiles)
+            {
+                tile.GetComponent<SpriteRenderer>().color = new Color(0.943f, 0.943f, 0.943f, 0.475f);
+            }
         }
     }
 
     IEnumerator preAttack()
     {
-        attackTiles = new Transform[attackTileCount];
-        for(int i = 0; i < attackTileCount; i++)
+        attackTiles = new GameObject[attackTileCount];
+        for (int i = 0; i < attackTileCount; i++)
         {
             attackTiles[i] = allTiles[Random.Range(0, allTiles.Length)];
-        }
-        foreach(Transform tile in attackTiles)
-        {
-            tile.GetComponent<SpriteRenderer>().color = new Color(0.157f, 0.157f, 0.157f, 0.475f);
         }
         isTurn = false;
         state = 2;
@@ -80,10 +97,6 @@ public class Boss : MonoBehaviour
 
     IEnumerator attack()
     {
-        foreach(Transform tile in attackTiles)
-        {
-            tile.GetComponent<SpriteRenderer>().color = new Color(0.943f, 0.943f, 0.943f, 0.475f);
-        }        
         isTurn = false;
         state = 0;
         yield return new WaitForSeconds(1f);
