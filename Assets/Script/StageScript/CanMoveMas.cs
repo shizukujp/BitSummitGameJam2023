@@ -8,6 +8,8 @@ public class CanMoveMas : MonoBehaviour
 
     public static CanMoveMas instance;
 
+    [SerializeField] private bool canMove = false;
+
     public void Awake()
     {
         if (instance == null)
@@ -39,10 +41,12 @@ public class CanMoveMas : MonoBehaviour
             else */if (Vector2.Distance(player.transform.position, child.transform.position) <= 2f)
             {
                 //Debug.Log("移動可能です");
+                canMove = true;
                 child.GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);
             }
             else
             {
+                canMove = false;
                 child.GetComponent<SpriteRenderer>().color = new Color(0.943f, 0.943f, 0.943f, 0.475f);
             }
         }
@@ -56,7 +60,13 @@ public class CanMoveMas : MonoBehaviour
         // 子オブジェクトを全て取得する
         foreach (Transform child in parentTransform)
         {
+            canMove = false;
             child.GetComponent<SpriteRenderer>().color = new Color(0.943f, 0.943f, 0.943f, 0.475f);
         }
+    }
+
+    public bool GetCanMove()
+    {
+        return canMove;
     }
 }
