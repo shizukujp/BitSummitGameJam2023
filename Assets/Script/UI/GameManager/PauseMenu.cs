@@ -6,7 +6,7 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject SoundSettings, Graphobj, Settingobj, BackToHomeobj, OpenPauseMenuobj, ClosePauseMenuobj;
-    //                   W50,H50    X370,Y-45   X370,Y-95   X370,Y-145      X370,Y-195      X370,Y-192,W60,H70
+    //W50,H50    X370,Y-45   X370,Y-95   X370,Y-145      X370,Y-195      X370,Y-192,W60,H70
 
     //Menu Check
     bool OpeningMenu, CloseingMenu;

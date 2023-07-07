@@ -8,11 +8,26 @@ public class Boss : MonoBehaviour
     private Transform[] allTiles;
     private Transform[] attackTiles;
 
+    private Animator anim;
+
     [SerializeField] private int attackTileCount = 5;
     [SerializeField] private float attackTime = 3f;
 
-    [SerializeField] private int state = 0;
+    [SerializeField] public int state = 0;
     //0:待机，1：预备攻击，2：攻击，3：冷却
+
+    public static Boss instance;
+
+    public bool isTurn = false;
+
+    private void Awake() {
+        if(instance == null){
+            instance = this;
+        }else{
+
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,18 +38,31 @@ public class Boss : MonoBehaviour
             allTiles[i] = tile;
             i++;
         }
+
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(state == 0)
-        {
-            
+        anim.SetTrigger("preFinish");
+        anim.SetTrigger("isClamDown");
+        if(state == 0 && isTurn){
+            anim.SetBool("isPre", false);
+            anim.SetBool("isAttack", false);
+            state = 1;
+        }else if(state == 1 && isTurn){
+            anim.SetBool("isPre", true);
+            anim.SetBool("isAttack", false);
+            StartCoroutine(preAttack());
+        }else if(state == 2 && isTurn){
+            anim.SetBool("isPre", false);
+            anim.SetBool("isAttack", true);
+            StartCoroutine(attack());
         }
     }
 
-    void preAttack()
+    IEnumerator preAttack()
     {
         attackTiles = new Transform[attackTileCount];
         for(int i = 0; i < attackTileCount; i++)
@@ -45,13 +73,19 @@ public class Boss : MonoBehaviour
         {
             tile.GetComponent<SpriteRenderer>().color = new Color(0.157f, 0.157f, 0.157f, 0.475f);
         }
+        isTurn = false;
+        state = 2;
+        yield return new WaitForSeconds(1f);
     }
 
-    void attack()
+    IEnumerator attack()
     {
         foreach(Transform tile in attackTiles)
         {
             tile.GetComponent<SpriteRenderer>().color = new Color(0.943f, 0.943f, 0.943f, 0.475f);
-        }
+        }        
+        isTurn = false;
+        state = 0;
+        yield return new WaitForSeconds(1f);
     }
 }

@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
     public bool ismove = false;
 
     public GameObject[] enemys;
+    [SerializeField] private GameObject boss;
     GameObject[] Doors;
 
     public bool Comp = true;//移動完了したかどうか
@@ -228,10 +229,17 @@ public class Player : MonoBehaviour
                     else
                     {
                         enemys = GameObject.FindGameObjectsWithTag("Enemy");
-                        if (enemys.Length != 0)
+                        boss = GameObject.Find("BOSS");
+                        if (enemys.Length != 0 || boss != null)
                         {
-                            EnemyMove.IsEnemyMove = true;
-                            RoundController.instance.EnemyTurn();
+                            if(enemys.Length != 0){
+                                EnemyMove.IsEnemyMove = true;
+                                RoundController.instance.EnemyTurn();
+                            }
+                            if(boss != null){
+                                boss.GetComponent<Boss>().isTurn = true;
+                                RoundController.instance.BossTurn();
+                            }
                         }
                         else
                         {

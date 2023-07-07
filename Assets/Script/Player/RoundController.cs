@@ -239,6 +239,12 @@ public class RoundController : MonoBehaviour
             }
         }
     }
+    public void BossTurn(){
+        if (GameObject.Find("Boss"))
+        {
+            Boss boss = GameObject.Find("Boss").GetComponent<Boss>();
+        }
+    }
     public void EnemyMotionRiset()
     {
         if (!GameObject.FindGameObjectWithTag("Enemy")) return;
