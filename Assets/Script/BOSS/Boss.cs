@@ -35,12 +35,12 @@ public class Boss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        allTiles = new GameObject[GameObject.Find("map1").transform.childCount];
+        /*allTiles = new GameObject[GameObject.Find("map1").transform.childCount];
         for (int i = 0; i < GameObject.Find("map1").transform.childCount; i++)
         {
             allTiles[i] = GameObject.Find("map1").transform.GetChild(i).gameObject;
-        }
-
+        }*/
+        allTiles = GameObject.FindGameObjectsWithTag("Tile");
         anim = GetComponent<Animator>();
     }
 
@@ -88,7 +88,7 @@ public class Boss : MonoBehaviour
         attackTiles = new GameObject[attackTileCount];
         for (int i = 0; i < attackTileCount; i++)
         {
-            attackTiles[i] = allTiles[Random.Range(0, allTiles.Length)];
+            attackTiles[i] = allTiles[Random.Range(0, allTiles.Length-1)];
         }
         isTurn = false;
         state = 2;

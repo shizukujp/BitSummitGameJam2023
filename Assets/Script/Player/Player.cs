@@ -160,7 +160,7 @@ public class Player : MonoBehaviour
             }
         }
         //プレイヤーの移動＋歩数・ターンカウント
-        if (clickedGameObject && RLfirst)
+        if (clickedGameObject && RLfirst)//横に移動→縦に移動
         {
             //RL = new Vector2(clickedGameObject.transform.position.x, player.transform.position.y);
             if (clickedGameObject.transform.position.x != player.transform.position.x && First)
@@ -221,7 +221,7 @@ public class Player : MonoBehaviour
                     Can = true;
                     animator.SetBool("isRunning", false);
                     //CanMoveMas.instance.CanMove();
-                    clickedGameObject = null;
+                    
                     if (EnemyMove.Deathcount == 1)
                     {
                         EnemyMove.Deathcount = 2;
@@ -240,6 +240,8 @@ public class Player : MonoBehaviour
                                 boss.GetComponent<Boss>().isTurn = true;
                                 RoundController.instance.BossTurn();
                             }
+                            RoundController.instance.MasRiset();
+                            South = North = West = East = false;
                         }
                         else
                         {
@@ -248,11 +250,12 @@ public class Player : MonoBehaviour
                             //isPlayerTurn = true;
                         }
                     }
+                    clickedGameObject = null;
 
                 }
             }
         }
-        else if(clickedGameObject && !RLfirst)
+        else if(clickedGameObject && !RLfirst)//縦に移動→横に移動
         {
             if (clickedGameObject.transform.position.y != player.transform.position.y && First)
             {
@@ -323,10 +326,19 @@ public class Player : MonoBehaviour
                     else
                     {
                         enemys = GameObject.FindGameObjectsWithTag("Enemy");
-                        if (enemys.Length != 0)
+                        boss = GameObject.Find("BOSS");
+                        if (enemys.Length != 0 || boss != null)
                         {
-                            EnemyMove.IsEnemyMove = true;
-                            RoundController.instance.EnemyTurn();
+                            if (enemys.Length != 0)
+                            {
+                                EnemyMove.IsEnemyMove = true;
+                                RoundController.instance.EnemyTurn();
+                            }
+                            if (boss != null)
+                            {
+                                boss.GetComponent<Boss>().isTurn = true;
+                                RoundController.instance.BossTurn();
+                            }
                         }
                         else
                         {
