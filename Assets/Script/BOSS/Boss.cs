@@ -10,6 +10,8 @@ public class Boss : MonoBehaviour
 
     private Animator anim;
 
+    [SerializeField] private GameObject attackTile;
+
     [SerializeField] private int attackTileCount = 5;
     [SerializeField] private float attackTime = 3f;
 
@@ -60,22 +62,20 @@ public class Boss : MonoBehaviour
             anim.SetBool("isPre", true);
             anim.SetBool("isAttack", false);
             StartCoroutine(preAttack());
+            foreach(GameObject tile in attackTiles)
+            {
+                tile.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
+                if(ColorChange.instance.CanPlayerMoveColor()){
+                    tile.GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
+
+                }
+            }
         }
         else if (state == 2 && isTurn)
         {
             anim.SetBool("isPre", false);
             anim.SetBool("isAttack", true);
             StartCoroutine(attack());
-        }
-        if (state == 1 && attackTiles != null)
-        {
-            foreach (GameObject tile in attackTiles)
-            {
-                ColorChange.instance._isDanger = true;
-            }
-        }
-        if (state == 2 && attackTiles != null)
-        {
             foreach (GameObject tile in attackTiles)
             {
                 tile.GetComponent<SpriteRenderer>().color = new Color(0.943f, 0.943f, 0.943f, 0.475f);
@@ -99,6 +99,15 @@ public class Boss : MonoBehaviour
     {
         isTurn = false;
         state = 0;
+        foreach (GameObject tile in attackTiles)
+        {
+            Instantiate(attackTile, tile.transform.position, Quaternion.identity);
+            if (Player.instance.transform.position == tile.transform.position)
+            {
+                EnemyMove.Deathcount = 2;
+                RoundController.instance.MasRiset();
+            }
+        }
         yield return new WaitForSeconds(1f);
     }
 }

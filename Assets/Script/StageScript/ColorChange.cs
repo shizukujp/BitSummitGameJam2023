@@ -425,7 +425,7 @@ public class ColorChange : MonoBehaviour
     }
 
 
-    bool CanPlayerMoveColor()
+    public bool CanPlayerMoveColor()
     {
         if (RoundController.OnOff_Player) return false;
         if (Vector2.Distance(player.transform.position, transform.position) > 2f) return false;
