@@ -21,7 +21,8 @@ public class Boss : MonoBehaviour
     public static Boss instance;
 
     public bool isTurn = false;
-
+    public bool playerTurn = true;
+    GameObject player;
     private void Awake()
     {
         if (instance == null)
@@ -34,23 +35,23 @@ public class Boss : MonoBehaviour
         }
     }
 
+    bool one, two, three;
+  
     // Start is called before the first frame update
     void Start()
     {
-        /*allTiles = new GameObject[GameObject.Find("map1").transform.childCount];
-        for (int i = 0; i < GameObject.Find("map1").transform.childCount; i++)
-        {
-            allTiles[i] = GameObject.Find("map1").transform.GetChild(i).gameObject;
-        }*/
         allTiles = GameObject.FindGameObjectsWithTag("Tile");
         anim = GetComponent<Animator>();
+        anim.SetTrigger("preFinish");
+        anim.SetTrigger("isClamDown");
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        anim.SetTrigger("preFinish");
-        anim.SetTrigger("isClamDown");
+        //anim.SetTrigger("preFinish");
+        //anim.SetTrigger("isClamDown");
         if (state == 0 && isTurn)
         {
             anim.SetBool("isPre", false);
@@ -82,13 +83,16 @@ public class Boss : MonoBehaviour
         foreach (GameObject tile in attackTiles)
         {
             tile.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
-            if (ColorChange.instance.CanPlayerMoveColor())
+            /*if (ColorChange.instance.CanPlayerMoveColor())
             {
                 tile.GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
-            }
+            }*/
+            tile.GetComponent<ColorChange>().isAttack = true;
         }
         state = 2;
-        yield return new WaitForSeconds(1f);
+        //yield return new WaitForSeconds(1f);
+
+        StartCoroutine(movetime());
     }
 
     IEnumerator attack()
@@ -105,5 +109,13 @@ public class Boss : MonoBehaviour
             }
         }
         yield return new WaitForSeconds(1f);
+
+        //StartCoroutine(movetime());
+    }
+
+    IEnumerator movetime()
+    {
+        yield return new WaitForSeconds(attackTime);
+        playerTurn = true;
     }
 }

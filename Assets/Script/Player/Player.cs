@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
 
     public bool South, North, West, East;
 
+    bool one = true;
     void Start()
     {
         isPlayerTurn = true;
@@ -66,7 +67,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            //プレイヤーのターンじゃない場合は動かないようにする
+        //ボスがいたら一度だけボスを取得する
+        if ((boss = GameObject.Find("BOSS")) && one) { boss = GameObject.Find("BOSS"); one = false; }
+        if (!one && !boss.GetComponent<Boss>().playerTurn) return;
+
+        //プレイヤーのターンじゃない場合は動かないようにする
         if (isPlayerTurn && !MotionCheck)
         {
             if (EventSystem.current.IsPointerOverGameObject()) return;
@@ -238,6 +243,7 @@ public class Player : MonoBehaviour
                             }
                             if(boss != null){
                                 boss.GetComponent<Boss>().isTurn = true;
+                                boss.GetComponent<Boss>().playerTurn = false;
                                 RoundController.instance.BossTurn();
                             }
                             RoundController.instance.MasRiset();
@@ -337,6 +343,7 @@ public class Player : MonoBehaviour
                             if (boss != null)
                             {
                                 boss.GetComponent<Boss>().isTurn = true;
+                                boss.GetComponent<Boss>().playerTurn = false;
                                 RoundController.instance.BossTurn();
                             }
                         }
