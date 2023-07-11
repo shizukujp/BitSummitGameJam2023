@@ -57,30 +57,17 @@ public class Boss : MonoBehaviour
             anim.SetBool("isAttack", false);
             state = 1;
         }
-        else if (state == 1 && isTurn)
+        if (state == 1)
         {
             anim.SetBool("isPre", true);
             anim.SetBool("isAttack", false);
             StartCoroutine(preAttack());
-            foreach(GameObject tile in attackTiles)
-            {
-                tile.GetComponent<ColorChange>().isAttack = true;
-                tile.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
-                /*if(ColorChange.instance.CanPlayerMoveColor()){
-                    tile.GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
-
-                }*/
-            }
         }
-        else if (state == 2 && isTurn)
+        if (state == 2 && isTurn)
         {
             anim.SetBool("isPre", false);
             anim.SetBool("isAttack", true);
             StartCoroutine(attack());
-            foreach (GameObject tile in attackTiles)
-            {
-                tile.GetComponent<SpriteRenderer>().color = new Color(0.943f, 0.943f, 0.943f, 0.475f);
-            }
         }
     }
 
@@ -89,9 +76,17 @@ public class Boss : MonoBehaviour
         attackTiles = new GameObject[attackTileCount];
         for (int i = 0; i < attackTileCount; i++)
         {
-            attackTiles[i] = allTiles[Random.Range(0, allTiles.Length-1)];
+            attackTiles[i] = allTiles[Random.Range(0, allTiles.Length - 1)];
         }
         isTurn = false;
+        foreach (GameObject tile in attackTiles)
+        {
+            tile.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
+            if (ColorChange.instance.CanPlayerMoveColor())
+            {
+                tile.GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
+            }
+        }
         state = 2;
         yield return new WaitForSeconds(1f);
     }
