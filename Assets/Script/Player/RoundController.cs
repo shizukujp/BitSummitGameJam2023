@@ -224,6 +224,7 @@ public class RoundController : MonoBehaviour
         foreach (GameObject tiles in recordTurnPositon.Tiles)
         {
             ColorChange change = tiles.GetComponent<ColorChange>();
+            change.isAttack = false;
             change.RisetColor();
         }
     }
