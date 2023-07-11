@@ -66,10 +66,10 @@ public class Boss : MonoBehaviour
             {
                 tile.GetComponent<ColorChange>().isAttack = true;
                 tile.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
-                if(ColorChange.instance.CanPlayerMoveColor()){
+                /*if(ColorChange.instance.CanPlayerMoveColor()){
                     tile.GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
 
-                }
+                }*/
             }
         }
         else if (state == 2 && isTurn)
