@@ -6665,9 +6665,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackTile: {fileID: 2303179592291562195, guid: c4165fc0994fa7947bb1185237683250, type: 3}
   attackTileCount: 5
-  attackTime: 3
+  attackTime: 2
   state: 0
   isTurn: 0
+  playerTurn: 1
 --- !u!95 &882016990
 Animator:
   serializedVersion: 4

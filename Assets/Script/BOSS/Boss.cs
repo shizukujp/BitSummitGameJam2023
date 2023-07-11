@@ -50,8 +50,8 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //anim.SetTrigger("preFinish");
-        //anim.SetTrigger("isClamDown");
+        anim.SetTrigger("preFinish");
+        anim.SetTrigger("isClamDown");
         if (state == 0 && isTurn)
         {
             anim.SetBool("isPre", false);
@@ -93,6 +93,7 @@ public class Boss : MonoBehaviour
         //yield return new WaitForSeconds(1f);
 
         StartCoroutine(movetime());
+        yield return 0;
     }
 
     IEnumerator attack()
@@ -110,7 +111,7 @@ public class Boss : MonoBehaviour
         }
         yield return new WaitForSeconds(1f);
 
-        //StartCoroutine(movetime());
+        StartCoroutine(movetime());
     }
 
     IEnumerator movetime()
