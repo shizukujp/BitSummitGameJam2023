@@ -6663,6 +6663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832489a5f7c88e5448625a99ab8569e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackTile: {fileID: 2303179592291562195, guid: c4165fc0994fa7947bb1185237683250, type: 3}
   attackTileCount: 5
   attackTime: 3
   state: 0
