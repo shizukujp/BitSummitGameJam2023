@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class ColorChange : MonoBehaviour
 {
-    //public Material MyColor;//一番薄い色
-    //public Material MyColor2;//2番目に濃い色
-    //public Material MyColor3;//一番濃い色
-
-    // Start is called before the first frame update
+    public bool isAttack;
     public bool A = true;
     GameObject player;
     //public GameObject[] Enemy;
@@ -28,23 +24,11 @@ public class ColorChange : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        //CanPlayerMove();
-        /*if (Vector2.Distance(player.transform.position, transform.position) == 0)
-        {
-            GetComponent<SpriteRenderer>().color = new Color(0.157f, 0.157f, 0.157f, 0.475f);
-        }else */
+
         if(CanPlayerMoveColor())
         {
             GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);
         }
-        /*if (0 <= (Enemy.transform.position.y - transform.position.y) && (Enemy.transform.position.y - transform.position.y) <= 3)
-        {
-            if(1 >= (Enemy.transform.position.x - transform.position.x) && (Enemy.transform.position.x - transform.position.x) >= -1)
-            {
-                this.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
-            }
-            //Dangermat.color = new Color(255, 167, 167, 121);
-        }*/
         if(isDanger())
         {
             this.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
@@ -55,41 +39,6 @@ public class ColorChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //プレイヤーが動いている時
-        /*if(Player.instance.ismove && !RoundController.OnOff_Player)
-        {
-            /*if (Vector2.Distance(player.transform.position, transform.position) < 0.5f)
-            {
-                if(isDanger())
-                {
-                    //最も危険
-                    if (EnemyMove.Deathcount == 0)
-                    {
-                        GetComponent<SpriteRenderer>().color = new Color(1f, 0.1f, 0.1f, 0.475f);
-                        return;
-                    }
-                        
-                }
-                GetComponent<SpriteRenderer>().color = new Color(0.157f, 0.157f, 0.157f, 0.475f);
-            }
-            else if (Vector2.Distance(Player.instance.currentPos, transform.position) <= 2f && Player.instance.clickPos != transform.position)
-            {
-                /*if (transform.position.x - player.transform.position.x == 2 && Player.instance.East) return;
-                if (transform.position.x - player.transform.position.x == -2 && Player.instance.West) return;
-                if (transform.position.y - player.transform.position.y == 2 && Player.instance.North) return;
-                if (transform.position.y - player.transform.position.y == -2 && Player.instance.South) return;
-                if (!ColorChangeOn) return;
-                if (isDanger())
-                {
-                    //危険な色
-                    GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
-                    return;
-                }
-                GetComponent<SpriteRenderer>().color = new Color(0.566f, 0.556f, 0.556f, 0.475f);
-            }
-        }*/
-        
-        
         _isDanger = isDanger();
         //敵が動いている時
         if(Player.instance.enemys.Length != 0)
@@ -97,18 +46,12 @@ public class ColorChange : MonoBehaviour
             if (!ColorChangeOn) return;
             if (EnemyMove.instance.isEneMove && !RoundController.OnOff_Enemy)
             {
-                if (_isDanger)
+                if (_isDanger || isAttack)
                 {
                     CanPlayerMove();
                     return;
                 }
-                /*if (Vector2.Distance(player.transform.position, transform.position) < 0.5f)
-                {
-                    //最も危険
-                    GetComponent<SpriteRenderer>().color = new Color(1f, 0.1f, 0.1f, 0.475f);
-                    return;
-                }
-                else */
+
                 if (CanPlayerMoveColor())
                 {
                     GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
@@ -154,7 +97,7 @@ public class ColorChange : MonoBehaviour
         
         if (CanPlayerMoveColor())
         {
-            if (_isDanger)
+            if (_isDanger || isAttack)
             {
                 //さらに危険な色
                 if (EnemyMove.Deathcount == 0)
@@ -168,7 +111,7 @@ public class ColorChange : MonoBehaviour
         }
         else//それ以外
         {
-            if (_isDanger)
+            if (_isDanger || isAttack)
             {
                 //危険な色
                 if (EnemyMove.Deathcount == 0)
@@ -198,7 +141,7 @@ public class ColorChange : MonoBehaviour
         }*/
         else if (CanPlayerMoveColor())
         {
-            if(_isDanger)
+            if(_isDanger || isAttack)
             {
                 if (EnemyMove.Deathcount == 0)
                 {
@@ -212,7 +155,7 @@ public class ColorChange : MonoBehaviour
         }
         else
         {
-            if (_isDanger && EnemyMove.Deathcount == 0)
+            if ((_isDanger || isAttack) && EnemyMove.Deathcount == 0)
             {
                 //危険な色
                 GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
@@ -242,7 +185,7 @@ public class ColorChange : MonoBehaviour
         else */if (Vector2.Distance(player.transform.position, transform.position) <= 2f)
         {
             //Debug.Log("移動可能です");
-            if (_isDanger)
+            if (_isDanger || isAttack)
             {
                 //危険な色
                 GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
@@ -441,10 +384,10 @@ public class ColorChange : MonoBehaviour
     {
         _isDanger = isDanger();
         if(!ColorChangeOn) return;
-        if (_isDanger && CanPlayerMoveColor())
+        if ((_isDanger || isAttack) && CanPlayerMoveColor())
         {
             GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
-        }else if(_isDanger)
+        }else if(_isDanger || isAttack)
         {
             this.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
         }else if(CanPlayerMoveColor())

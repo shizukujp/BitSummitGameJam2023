@@ -64,6 +64,7 @@ public class Boss : MonoBehaviour
             StartCoroutine(preAttack());
             foreach(GameObject tile in attackTiles)
             {
+                tile.GetComponent<ColorChange>().isAttack = true;
                 tile.GetComponent<SpriteRenderer>().color = new Color(1f, 0.667f, 0.667f, 0.475f);
                 if(ColorChange.instance.CanPlayerMoveColor()){
                     tile.GetComponent<SpriteRenderer>().color = new Color(1f, 0.2f, 0.2f, 0.475f);
