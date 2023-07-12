@@ -46,7 +46,7 @@ public class ColorChange : MonoBehaviour
             if (!ColorChangeOn) return;
             if (EnemyMove.instance.isEneMove && !RoundController.OnOff_Enemy)
             {
-                if (_isDanger || isAttack)
+                if (!_isDanger)
                 {
                     CanPlayerMove();
                     return;
@@ -172,17 +172,7 @@ public class ColorChange : MonoBehaviour
     public void CanPlayerMove()
     {
         _isDanger = isDanger();
-        /*if (Vector2.Distance(player.transform.position, transform.position) == 0)
-        {
-            if(isDanger())
-            {
-                //さらに危険な色
-                GetComponent<SpriteRenderer>().color = new Color(1f, 0.1f, 0.1f, 0.475f);
-                return;
-            }
-            GetComponent<SpriteRenderer>().color = new Color(0.157f, 0.157f, 0.157f, 0.475f);
-        }
-        else */if (Vector2.Distance(player.transform.position, transform.position) <= 2f)
+        if (Vector2.Distance(player.transform.position, transform.position) <= 2f)
         {
             //Debug.Log("移動可能です");
             if (_isDanger || isAttack)
