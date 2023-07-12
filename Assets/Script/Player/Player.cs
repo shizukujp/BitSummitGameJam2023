@@ -392,6 +392,11 @@ public class Player : MonoBehaviour
         {
             if (obj.transform.position.x == door.transform.position.x && obj.transform.position.y == door.transform.position.y) return true;
         }
+        foreach (GameObject door in Doors)
+        {
+            Vector2 diff = (transform.position + obj.transform.position) / 2;
+            if (diff.x == door.transform.position.x && diff.y == door.transform.position.y) return true;
+        }
         return false;
     }
 }
