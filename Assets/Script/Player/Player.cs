@@ -147,7 +147,7 @@ public class Player : MonoBehaviour
                             var messageTitle = MessageManager.instance.getTitle();
                             var messageText = MessageManager.instance.getMessage();
                             GameObject.Find("GameManager/PlayerUI/MessagePanel").SetActive(true);
-                            GameObject.Find("GameManager/PlayerUI/MessagePanel").GetComponentInChildren<Text>().text = messageTitle + "\n" + messageText;
+                            GameObject.Find("GameManager/PlayerUI/MessagePanel").GetComponentInChildren<TextMeshProUGUI>().text = messageTitle + "\n" + messageText;
                             MessageManager.instance.indexplus();
                         }
                         clickedGameObject.SetActive(false);
