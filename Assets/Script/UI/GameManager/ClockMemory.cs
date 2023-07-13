@@ -19,7 +19,7 @@ public class ClockMemory : MonoBehaviour
 
 	//���[�v�A�j���[�V�����֘A
 	bool MoveClockAnimPlaying = false;
-	int Roundpreb = 0;
+	public int Roundpreb = 0;
 	float m_time = 10f;
 
 	bool PlayerTurnpreb = true;
