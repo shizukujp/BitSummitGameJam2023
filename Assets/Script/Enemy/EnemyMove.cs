@@ -369,6 +369,7 @@ public class EnemyMove : MonoBehaviour
         RoundController.instance.MasRiset();
         animator.SetBool("isDiscover", true);
     }
+    
     /*void Death2()
     {
         Deathcount = 1;

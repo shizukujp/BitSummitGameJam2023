@@ -12,6 +12,9 @@ public class GimmickDoor : MonoBehaviour
     [Tooltip("開いていたらチェック")]
     public bool IsOpen = false;
 
+    [Header("最初に動く方向にチェック")]
+    public bool Right, Left;
+
     GimmickDSwitch Switchcolor;
     public enum DoorColorType
     {
@@ -99,29 +102,83 @@ public class GimmickDoor : MonoBehaviour
         {
             if (!IsOpen)//ドアが空いていなかったら
             {
-                if (isHorizontal)
+                if(Right)
                 {
-                    pos = transform.position;
-                    pos.x += 1f;
-                }
-                else
+                    if (isHorizontal)
+                    {
+                        pos = transform.position;
+                        pos.x += 1f;
+                    }
+                    else
+                    {
+                        pos = transform.position;
+                        pos.y += 1f;
+                    }
+                }else if(Left)
                 {
-                    pos = transform.position;
-                    pos.y += 1f;
+                    if (isHorizontal)
+                    {
+                        pos = transform.position;
+                        pos.x -= 1f;
+                    }
+                    else
+                    {
+                        pos = transform.position;
+                        pos.y -= 1f;
+                    }
+                }else
+                {
+                    if (isHorizontal)
+                    {
+                        pos = transform.position;
+                        pos.x += 1f;
+                    }
+                    else
+                    {
+                        pos = transform.position;
+                        pos.y += 1f;
+                    }
                 }
                 moving = true;
             }
             else if (IsOpen)
             {
-                if (isHorizontal)
+                if(Right)
                 {
-                    pos = transform.position;
-                    pos.x -= 1f;
-                }
-                else
+                    if (isHorizontal)
+                    {
+                        pos = transform.position;
+                        pos.x -= 1f;
+                    }
+                    else
+                    {
+                        pos = transform.position;
+                        pos.y -= 1f;
+                    }
+                }else if(Left)
                 {
-                    pos = transform.position;
-                    pos.y -= 1f;
+                    if (isHorizontal)
+                    {
+                        pos = transform.position;
+                        pos.x += 1f;
+                    }
+                    else
+                    {
+                        pos = transform.position;
+                        pos.y += 1f;
+                    }
+                }else
+                {
+                    if (isHorizontal)
+                    {
+                        pos = transform.position;
+                        pos.x -= 1f;
+                    }
+                    else
+                    {
+                        pos = transform.position;
+                        pos.y -= 1f;
+                    }
                 }
                 moving = true;
             }

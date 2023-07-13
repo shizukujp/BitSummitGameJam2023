@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static Unity.VisualScripting.Metadata;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class Player : MonoBehaviour
     public bool ismove = false;
 
     public GameObject[] enemys;
+    [SerializeField] private GameObject boss;
     GameObject[] Doors;
 
     public bool Comp = true;//移動完了したかどうか
@@ -53,6 +55,7 @@ public class Player : MonoBehaviour
 
     public bool South, North, West, East;
 
+    bool one = true;
     void Start()
     {
         isPlayerTurn = true;
@@ -65,7 +68,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            //プレイヤーのターンじゃない場合は動かないようにする
+        //ボスがいたら一度だけボスを取得する
+        if ((boss = GameObject.Find("BOSS")) && one) { boss = GameObject.Find("BOSS"); one = false; }
+        if (!one && !boss.GetComponent<Boss>().playerTurn) return;
+
+        //プレイヤーのターンじゃない場合は動かないようにする
         if (isPlayerTurn && !MotionCheck)
         {
             if (EventSystem.current.IsPointerOverGameObject()) return;
@@ -115,8 +122,34 @@ public class Player : MonoBehaviour
                         }
                         transform.localScale = pos;
                         Motion();
-                        if (clickedGameObject.CompareTag("Clock")) GetComponent<PocketWatch>().enabled = true;
+                        if (clickedGameObject.CompareTag("Clock"))
+                        {
+                            GetComponent<PocketWatch>().enabled = true;
+                        }
 
+                        clickedGameObject.SetActive(false);
+                        clickedGameObject = null;
+                    }
+                    else if ((clickedGameObject.CompareTag("Effect") || clickedGameObject.CompareTag("Message")) && Vector2.Distance(transform.position, clickedGameObject.transform.position) <= 1)
+                    {
+                        if (clickedGameObject.transform.position.x - transform.position.x > 0 && pos.x > 0)
+                        {
+                            pos.x *= -1;
+                        }
+                        if (clickedGameObject.transform.position.x - transform.position.x < 0 && pos.x < 0)
+                        {
+                            pos.x *= -1;
+                        }
+                        transform.localScale = pos;
+                        Motion();
+                        if (clickedGameObject.CompareTag("Message"))
+                        {
+                            var messageTitle = MessageManager.instance.getTitle();
+                            var messageText = MessageManager.instance.getMessage();
+                            GameObject.Find("GameManager/PlayerUI/MessagePanel").SetActive(true);
+                            GameObject.Find("GameManager/PlayerUI/MessagePanel").GetComponentInChildren<Text>().text = messageTitle + "\n" + messageText;
+                            MessageManager.instance.indexplus();
+                        }
                         clickedGameObject.SetActive(false);
                         clickedGameObject = null;
                     }
@@ -130,7 +163,7 @@ public class Player : MonoBehaviour
                         if((transform.position.y - clickedGameObject.transform.position.y == 1 && South) || (transform.position.y - clickedGameObject.transform.position.y == -1 && North))
                         {
                             RLfirst = true;
-                        }else if((transform.position.x - clickedGameObject.transform.position.x == 1 && West) || (transform.position.x - clickedGameObject.transform.position.x == -1 && East))
+                        }else if(Mathf.Abs(transform.position.x - clickedGameObject.transform.position.x) == 1 && (East || West))
                         {
                             RLfirst = false;
                         }
@@ -159,7 +192,7 @@ public class Player : MonoBehaviour
             }
         }
         //プレイヤーの移動＋歩数・ターンカウント
-        if (clickedGameObject && RLfirst)
+        if (clickedGameObject && RLfirst)//横に移動→縦に移動
         {
             //RL = new Vector2(clickedGameObject.transform.position.x, player.transform.position.y);
             if (clickedGameObject.transform.position.x != player.transform.position.x && First)
@@ -220,7 +253,7 @@ public class Player : MonoBehaviour
                     Can = true;
                     animator.SetBool("isRunning", false);
                     //CanMoveMas.instance.CanMove();
-                    clickedGameObject = null;
+                    
                     if (EnemyMove.Deathcount == 1)
                     {
                         EnemyMove.Deathcount = 2;
@@ -228,10 +261,20 @@ public class Player : MonoBehaviour
                     else
                     {
                         enemys = GameObject.FindGameObjectsWithTag("Enemy");
-                        if (enemys.Length != 0)
+                        boss = GameObject.Find("BOSS");
+                        if (enemys.Length != 0 || boss != null)
                         {
-                            EnemyMove.IsEnemyMove = true;
-                            RoundController.instance.EnemyTurn();
+                            if(enemys.Length != 0){
+                                EnemyMove.IsEnemyMove = true;
+                                RoundController.instance.EnemyTurn();
+                            }
+                            if(boss != null){
+                                boss.GetComponent<Boss>().isTurn = true;
+                                boss.GetComponent<Boss>().playerTurn = false;
+                                RoundController.instance.BossTurn();
+                            }
+                            RoundController.instance.MasRiset();
+                            South = North = West = East = false;
                         }
                         else
                         {
@@ -240,11 +283,12 @@ public class Player : MonoBehaviour
                             //isPlayerTurn = true;
                         }
                     }
+                    clickedGameObject = null;
 
                 }
             }
         }
-        else if(clickedGameObject && !RLfirst)
+        else if(clickedGameObject && !RLfirst)//縦に移動→横に移動
         {
             if (clickedGameObject.transform.position.y != player.transform.position.y && First)
             {
@@ -315,10 +359,20 @@ public class Player : MonoBehaviour
                     else
                     {
                         enemys = GameObject.FindGameObjectsWithTag("Enemy");
-                        if (enemys.Length != 0)
+                        boss = GameObject.Find("BOSS");
+                        if (enemys.Length != 0 || boss != null)
                         {
-                            EnemyMove.IsEnemyMove = true;
-                            RoundController.instance.EnemyTurn();
+                            if (enemys.Length != 0)
+                            {
+                                EnemyMove.IsEnemyMove = true;
+                                RoundController.instance.EnemyTurn();
+                            }
+                            if (boss != null)
+                            {
+                                boss.GetComponent<Boss>().isTurn = true;
+                                boss.GetComponent<Boss>().playerTurn = false;
+                                RoundController.instance.BossTurn();
+                            }
                         }
                         else
                         {
@@ -364,6 +418,11 @@ public class Player : MonoBehaviour
         foreach(GameObject door in Doors)
         {
             if (obj.transform.position.x == door.transform.position.x && obj.transform.position.y == door.transform.position.y) return true;
+        }
+        foreach (GameObject door in Doors)
+        {
+            Vector2 diff = (transform.position + obj.transform.position) / 2;
+            if (diff.x == door.transform.position.x && diff.y == door.transform.position.y) return true;
         }
         return false;
     }
