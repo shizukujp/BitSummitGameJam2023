@@ -480,6 +480,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 832188683831921144, guid: ac407fc39b168fc498c0c0b9b379f6fc, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 832188683831921145, guid: ac407fc39b168fc498c0c0b9b379f6fc, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 832188683831921146, guid: ac407fc39b168fc498c0c0b9b379f6fc, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -524,5 +532,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 832188683831921147, guid: ac407fc39b168fc498c0c0b9b379f6fc, type: 3}
+      propertyPath: bjm
+      value: 
+      objectReference: {fileID: 8300000, guid: 68c079e3c88914f16be36f8abf29653a, type: 3}
+    - target: {fileID: 832188683831921147, guid: ac407fc39b168fc498c0c0b9b379f6fc, type: 3}
+      propertyPath: click
+      value: 
+      objectReference: {fileID: 8300000, guid: 004fd0fde2b3044fdabfe8b0bc699896, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac407fc39b168fc498c0c0b9b379f6fc, type: 3}
