@@ -29,6 +29,7 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
         bgmAudioSource.Play();
+        bgmAudioSource.volume = 0.2f;
         //�V�[����ς��邲�Ƃɐݒ�����Z�b�g����
         //GameObject soundManager = CheckOtherSoundManager();
         //bool checkResult = soundManager != null && soundManager != gameObject;
