@@ -9,7 +9,7 @@ public class TitleStart : MonoBehaviour
     public float TimerSpeed = 5;
     public Second_Title[] second_Titles = new Second_Title[3];
     Coroutine StartGameCorotine;
-   
+
     public void GameStart()
     {
 
@@ -38,7 +38,7 @@ public class TitleStart : MonoBehaviour
         }
         else
         {
-            Debug.Log("ƒQ[ƒ€ƒV[ƒ“‚ÌƒV[ƒ“ƒl[ƒ€‚ğ’Ç‰Á‚µ‚Ä‚­‚¾‚³‚¢B");
+            Debug.Log("ï¿½Qï¿½[ï¿½ï¿½ï¿½Vï¿½[ï¿½ï¿½ï¿½ÌƒVï¿½[ï¿½ï¿½ï¿½lï¿½[ï¿½ï¿½ï¿½ï¿½Ç‰ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½B");
         }
     }
 }

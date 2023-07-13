@@ -15,7 +15,7 @@ public class SoundManager : MonoBehaviour
     AudioSource bgmAudioSource2;
     [SerializeField]
     AudioSource seAudioSource;
-
+    bool swap = false;
     public AudioClip click;
     void Start()
     {
@@ -23,13 +23,16 @@ public class SoundManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(this);
+            bgmAudioSource.Play();
+            bgmAudioSource.volume = 0.2f;
+            bgmAudioSource2.volume = 0f;
         }
         else
         {
             Destroy(gameObject);
         }
-        bgmAudioSource.Play();
-        bgmAudioSource.volume = 0.2f;
+
+        
         //�V�[����ς��邲�Ƃɐݒ�����Z�b�g����
         //GameObject soundManager = CheckOtherSoundManager();
         //bool checkResult = soundManager != null && soundManager != gameObject;
@@ -53,10 +56,6 @@ public class SoundManager : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             PlaySe(click);
-            if(SceneManager.GetActiveScene().name == "Title")
-            {
-                SwapBGM(bgmAudioSource, bgmAudioSource2);
-            }
         }
     }
 
@@ -64,11 +63,16 @@ public class SoundManager : MonoBehaviour
     {
         get
         {
-            return bgmAudioSource.volume;
+            if (!swap)
+            {
+                return bgmAudioSource.volume;
+            }
+            return bgmAudioSource2.volume;
         }
         set
         {
-            bgmAudioSource.volume = Mathf.Clamp01(value);
+            if(!swap)bgmAudioSource.volume = Mathf.Clamp01(value);
+            if(swap)bgmAudioSource2.volume = Mathf.Clamp01(value);
         }
     }
 
@@ -105,10 +109,15 @@ public class SoundManager : MonoBehaviour
 
         seAudioSource.PlayOneShot(clip);
     }
+    public void Swap()
+    {
+        SwapBGM(bgmAudioSource, bgmAudioSource2);
+    }
     public void SwapBGM(AudioSource bgm1, AudioSource bgm2)
     {
         var fadeOutSource = bgm1;    // 再生中のAudioSourceを取得する
         var fadeInSource = bgm2; // 再生していないAudioSourceを取得する
+        swap = true;
         CrossFadeBGM(fadeInSource, fadeOutSource, 1.0f).Forget();
     }
 
