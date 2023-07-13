@@ -1,9 +1,12 @@
 using UnityEngine.UI;
 using UnityEngine;
+using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class PocketWatch : MonoBehaviour
 {
+    public float FadeWaitTime;
+
     Image pocketWatch;
     int pocketWatchCheackLoad = 0;
     bool pocketWatchCheck = false;
@@ -22,7 +25,12 @@ public class PocketWatch : MonoBehaviour
             //記録した場所に移動
             if (Input.GetKeyDown(KeyCode.E) && pocketWatchCheck && pocketWatchCheackLoad == 0 && !SameTime && pocketWatchRemainingCount != 0)
             {
-                RoundController.instance.UsePocketWatchToLoad(recordEnemy);
+                Player.instance.NotInWatch = false;
+                if (GameObject.Find("GUIOption"))
+                {
+                    GameObject.Find("GUIOption").GetComponent<WatchTransient>().PocketWatchTransientAnim();
+                }
+                StartCoroutine(ChangeWatch());
                 pocketWatchRemainingCount--;
 
                 if (pocketWatchRemainingCount != 0)
@@ -94,5 +102,14 @@ public class PocketWatch : MonoBehaviour
             if (transform.position == pos.transform.position) return true;
         }
         return false;
+    }
+
+    IEnumerator ChangeWatch()
+    {
+        yield return new WaitForSeconds(FadeWaitTime);
+
+        RoundController.instance.UsePocketWatchToLoad(recordEnemy);
+
+        Player.instance.NotInWatch = true;
     }
 }

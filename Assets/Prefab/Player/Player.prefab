@@ -112,7 +112,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3320440031510647701}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 1
@@ -236,6 +236,7 @@ MonoBehaviour:
   enemys: []
   boss: {fileID: 0}
   Comp: 1
+  NotInWatch: 1
   South: 0
   North: 0
   West: 0
@@ -252,3 +253,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c39c02f367df82847bd112f54912cacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FadeWaitTime: 1.5

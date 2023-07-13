@@ -239,13 +239,14 @@ GameObject:
   - component: {fileID: 2012766289}
   - component: {fileID: 2012766291}
   - component: {fileID: 2012766290}
+  - component: {fileID: 389579237}
   m_Layer: 5
   m_Name: RoundClock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2012766289
 RectTransform:
   m_ObjectHideFlags: 0
@@ -307,6 +308,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &389579237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012766288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f4f624a98ba8b545a4e279438ddc1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetObject: {fileID: 1606738014}
+  Hour: {fileID: 1197177285}
+  Min: {fileID: 810375417}
 --- !u!1 &2900663866943971757
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,7 +544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pocketWatchobj: {fileID: 3788870543435049604}
-  watchobj: {fileID: 0}
+  watchobj: {fileID: 2012766288}
   PWTAintrofade: 1
   PWTAfading: 3
   PWTAafterfading: 1

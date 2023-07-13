@@ -50,6 +50,7 @@ public class Player : MonoBehaviour
     bool Can = true;
     //ターン関連
     public static bool isPlayerTurn;
+    public bool NotInWatch = true;
 
     Vector2 pos;
 
@@ -73,7 +74,7 @@ public class Player : MonoBehaviour
         if (!one && !boss.GetComponent<Boss>().playerTurn) return;
 
         //プレイヤーのターンじゃない場合は動かないようにする
-        if (isPlayerTurn && !MotionCheck)
+        if (isPlayerTurn && !MotionCheck && NotInWatch)
         {
             if (EventSystem.current.IsPointerOverGameObject()) return;
             if (Input.GetMouseButtonDown(0) && Second == false)  //左クリックでif分起動
