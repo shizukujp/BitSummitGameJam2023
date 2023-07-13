@@ -968,6 +968,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3320440031510647727, guid: 36d585c6f25eff149adc391f75a3b9d8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36d585c6f25eff149adc391f75a3b9d8, type: 3}
 --- !u!1 &114377713
@@ -4449,7 +4453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443622956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4683,7 +4687,7 @@ Transform:
   - {fileID: 114377714}
   - {fileID: 1982310024}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &488409197 stripped
 Transform:
@@ -6832,7 +6836,7 @@ GameObject:
   - component: {fileID: 895286517}
   - component: {fileID: 895286516}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Clock
   m_TagString: Clock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6939,6 +6943,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 377823350, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2524101642572524772, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -9497,7 +9505,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: -27.663, y: 23.799, z: 0}
 --- !u!1001 &1277342100
 PrefabInstance:
@@ -11978,7 +11986,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1597134467
 PrefabInstance:
@@ -15537,11 +15545,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 112524993783474510, guid: 80fdd41ee9ae4b249aa5cd948884278b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 112524993783474510, guid: 80fdd41ee9ae4b249aa5cd948884278b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 112524993783474510, guid: 80fdd41ee9ae4b249aa5cd948884278b, type: 3}
       propertyPath: m_LocalPosition.z

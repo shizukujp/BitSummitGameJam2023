@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ClockMemory : MonoBehaviour
 {
@@ -11,12 +12,12 @@ public class ClockMemory : MonoBehaviour
 	private const float k_maxLength = 1f;
 	private const string k_propName = "_MainTex";
 
-	//‰æ‘œŠÖ˜A
+	//ï¿½æ‘œï¿½Ö˜A
 	private Material m_material;
 	Image Changingimg;
 
 
-	//ƒ‹[ƒvƒAƒjƒ[ƒVƒ‡ƒ“ŠÖ˜A
+	//ï¿½ï¿½ï¿½[ï¿½vï¿½Aï¿½jï¿½ï¿½ï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½Ö˜A
 	bool MoveClockAnimPlaying = false;
 	int Roundpreb = 0;
 	float m_time = 10f;
@@ -37,20 +38,34 @@ public class ClockMemory : MonoBehaviour
 	}
     private void Update()
 	{
-        //ƒ`ƒFƒbƒN‚·‚é‰ñ”‚ğŒ¸‚ç‚·‚±‚Æ‚ÅƒVƒXƒeƒ€‚Ö‚Ì•‰‰×‚ğŒyŒ¸‚·‚é
+		//ï¿½`ï¿½Fï¿½bï¿½Nï¿½ï¿½ï¿½ï¿½ñ”‚ï¿½ï¿½ï¿½ï¿½ç‚·ï¿½ï¿½ï¿½Æ‚ÅƒVï¿½Xï¿½eï¿½ï¿½ï¿½Ö‚Ì•ï¿½ï¿½×‚ï¿½ï¿½yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		if (SceneManager.GetActiveScene().name != "level0" && GetComponent<Image>().color != new Color(1, 1, 1, 1)) GetComponent<Image>().color = new Color(1, 1, 1, 1);
         if (Player.isPlayerTurn != PlayerTurnpreb)
         {
             PlayerTurnpreb = Player.isPlayerTurn;
             if (PlayerTurnpreb)
             {
-                TurnCheck(new Color(1, 1f, 1f));
+				if (SceneManager.GetActiveScene().name == "level0")
+				{
+					GetComponent<Image>().color = new Color(1, 1, 1, 0);
+				}else
+				{
+                    TurnCheck(new Color(1, 1f, 1f));
+                }
             }
             else
             {
-				TurnCheck(new Color(1, 0.3f, 0.3f));
+                if (SceneManager.GetActiveScene().name == "level0")
+                {
+                    GetComponent<Image>().color = new Color(1, 1, 1, 0);
+                }
+                else
+                {
+                    TurnCheck(new Color(1, 0.3f, 0.3f));
+                }
 			}
         }
-        //ƒ^[ƒ“‚²‚Æ‚É•Ï‚í‚é
+        //ï¿½^ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚É•Ï‚ï¿½ï¿½
         if (RoundController.instance.GetETurn() != Roundpreb && RoundController.instance.GetETurn() != 12)
 		{
 			Roundpreb = RoundController.instance.GetETurn();
@@ -69,11 +84,11 @@ public class ClockMemory : MonoBehaviour
     }
 
 
-	//ŠO•”ŠÖ”
+	//ï¿½Oï¿½ï¿½ï¿½Öï¿½
 
 
 
-	//“à•”ŠÖ”
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Öï¿½
 	//repeat animation
 	IEnumerator MoveClockAnim()
 	{
@@ -108,13 +123,13 @@ public class ClockMemory : MonoBehaviour
 
 	void RoundChaned()
 	{
-		//ƒ‰ƒEƒ“ƒh‚ÌF•ÏX
+		//ï¿½ï¿½ï¿½Eï¿½ï¿½ï¿½hï¿½ÌFï¿½ÏX
 		//Roundpreb = RoundController.instance.GetETurn();
 		Changingimg.sprite = clockSprite[(Roundpreb + 1 > 12 ? 12 : Roundpreb + 1)];
 	}
 
 
-    //’N‚Ìƒ^[ƒ“‚ğ•\¦‚·‚éƒƒ\ƒbƒh
+    //ï¿½Nï¿½Ìƒ^ï¿½[ï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½éƒï¿½\ï¿½bï¿½h
     void TurnCheck(Color color)
     {
         Changingimg.color = color;
@@ -124,7 +139,7 @@ public class ClockMemory : MonoBehaviour
     //repeat to left
     void RepeatMove(float rptSpeed,float mTime)
     {
-		// x‚Æy‚Ì’l‚ª0 ` 1‚ÅƒŠƒs[ƒg‚·‚é‚æ‚¤‚É‚·‚é
+		// xï¿½ï¿½yï¿½Ì’lï¿½ï¿½0 ï¿½` 1ï¿½Åƒï¿½ï¿½sï¿½[ï¿½gï¿½ï¿½ï¿½ï¿½æ‚¤ï¿½É‚ï¿½ï¿½ï¿½
 		var x = Mathf.Repeat(mTime * rptSpeed, k_maxLength);
 		var y = Mathf.Repeat(0f, k_maxLength);
 		var offset = new Vector2(x, y);
@@ -133,10 +148,10 @@ public class ClockMemory : MonoBehaviour
 
 
 
-	//Á‚·‚É‚à“x‚É–ß‚·
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½xï¿½É–ß‚ï¿½
     private void OnDestroy()
 	{
-		// ƒQ[ƒ€‚ğ‚â‚ß‚½Œã‚Éƒ}ƒeƒŠƒAƒ‹‚ÌOffset‚ğ–ß‚µ‚Ä‚¨‚­
+		// ï¿½Qï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß‚ï¿½ï¿½ï¿½Éƒ}ï¿½eï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½Offsetï¿½ï¿½ß‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½
 		if (m_material)
 		{
 			m_material.SetTextureOffset(k_propName, Vector2.zero);

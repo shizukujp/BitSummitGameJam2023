@@ -1,5 +1,6 @@
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PocketWatch : MonoBehaviour
 {
@@ -11,10 +12,11 @@ public class PocketWatch : MonoBehaviour
     int pocketWatchRemainingCount = 3;
 
     public static bool SameTime = false;
+
     private void Update()
     {
         //check playerturn and use watch
-
+        
         if (Player.isPlayerTurn)
         {
             //記録した場所に移動

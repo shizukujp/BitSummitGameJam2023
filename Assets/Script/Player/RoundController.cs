@@ -29,6 +29,8 @@ public class RoundController : MonoBehaviour
     GameObject player, monsterGenerator;
     PocketWatch pocketWatch;
 
+    public GameObject clockmemory;
+
     private void Awake()
     {
         
@@ -58,6 +60,11 @@ public class RoundController : MonoBehaviour
         if (GUIFade.GetFadingInAndOut() && GUIFade.GetFaded())
         {
             GUIFade.FadeOut(1);
+        }
+        clockmemory = GameObject.Find("ClockMemory");
+        if(SceneManager.GetActiveScene().name == "level0")
+        {
+            clockmemory.GetComponent<Image>().color = new Color(1, 1, 1, 0);
         }
     }
 
@@ -140,7 +147,7 @@ public class RoundController : MonoBehaviour
         round++;
 
         //敵とプレイヤーの位置を最初の位置に戻す
-        recordTurnPositon.GetTurnPositionToScene(0, GameObject.FindGameObjectsWithTag("Enemy"));
+        if(SceneManager.GetActiveScene().name != "level0")recordTurnPositon.GetTurnPositionToScene(0, GameObject.FindGameObjectsWithTag("Enemy"));
 
         //モンスターをラウンドごとに生成する（あれば）
         monsterGenerator = GameObject.Find("MonsterGenerator");
@@ -256,4 +263,5 @@ public class RoundController : MonoBehaviour
             enem.SetBool("IsMove", false);
         }
     }
+
 }

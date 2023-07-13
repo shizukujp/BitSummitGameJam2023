@@ -121,7 +121,10 @@ public class Player : MonoBehaviour
                         }
                         transform.localScale = pos;
                         Motion();
-                        if (clickedGameObject.CompareTag("Clock")) GetComponent<PocketWatch>().enabled = true;
+                        if (clickedGameObject.CompareTag("Clock"))
+                        {
+                            GetComponent<PocketWatch>().enabled = true;
+                        }
 
                         clickedGameObject.SetActive(false);
                         clickedGameObject = null;
