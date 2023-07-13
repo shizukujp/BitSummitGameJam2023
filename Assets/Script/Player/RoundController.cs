@@ -193,7 +193,8 @@ public class RoundController : MonoBehaviour
         playerWatchSave = true;
         recordTurnPositon.SetTurnPosition(enemyturn, recordEnemys);
         
-        saveturn = playerturn;
+        //saveturn = playerturn;
+        saveturn = enemyturn;
     } 
     public void UsePocketWatchToLoad(GameObject[] recordEnemys)
     {
