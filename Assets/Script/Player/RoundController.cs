@@ -66,6 +66,8 @@ public class RoundController : MonoBehaviour
         {
             clockmemory.GetComponent<Image>().color = new Color(1, 1, 1, 0);
         }
+        recordTurnPositon.SetTurnPosition(enemyturn, GameObject.FindGameObjectsWithTag("Enemy"));
+
     }
 
     //実行用関数
@@ -118,9 +120,9 @@ public class RoundController : MonoBehaviour
         //シーン内に敵がいないときに自動プレイヤーのターンに移行する
         if (recordTurnPositon.EnemyCount() == 0 && !Player.isPlayerTurn)
         {
+            if ((SceneManager.GetActiveScene().name != "Tutorial")) enemyturn++;
             if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn, GameObject.FindGameObjectsWithTag("Enemy"));
             if (playerWatchSave) playerWatchSave = false;
-            if((SceneManager.GetActiveScene().name != "Tutorial"))enemyturn++;
             if (enemyturn < 12) Player.isPlayerTurn = true;
         }
 
@@ -186,11 +188,13 @@ public class RoundController : MonoBehaviour
     {
         playerWatchSave = true;
         recordTurnPositon.SetTurnPosition(enemyturn, recordEnemys);
+        
         saveturn = playerturn;
     } 
     public void UsePocketWatchToLoad(GameObject[] recordEnemys)
     {
         recordTurnPositon.GetTurnPositionToScene(saveturn, recordEnemys);
+
         saveturn = -1;
         playerWatchSave = false;
     }
@@ -214,7 +218,7 @@ public class RoundController : MonoBehaviour
             if (recordTurnPositon.EnemyCount() != enemyturnend) return;
             //敵の動きがすべて終わった後に実行する関数
             Debug.Log(enemyturn);
-            if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn, GameObject.FindGameObjectsWithTag("Enemy"));
+            if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn+1, GameObject.FindGameObjectsWithTag("Enemy"));
             if (enemyturn < 12) Player.isPlayerTurn = true;
             if (playerWatchSave) playerWatchSave = false;
             EnemyMove.IsEnemyMove = false;

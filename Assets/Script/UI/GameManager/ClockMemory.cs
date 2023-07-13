@@ -36,10 +36,15 @@ public class ClockMemory : MonoBehaviour
 		Roundpreb = RoundController.instance.GetETurn();
 		RoundChaned();
 	}
+	bool one = true;
     private void Update()
 	{
 		//�`�F�b�N����񐔂����炷���ƂŃV�X�e���ւ̕��ׂ��y������
-		if (SceneManager.GetActiveScene().name != "level0" && GetComponent<Image>().color != new Color(1, 1, 1, 1)) GetComponent<Image>().color = new Color(1, 1, 1, 1);
+		if (SceneManager.GetActiveScene().name != "level0" && GetComponent<Image>().color != new Color(1, 1, 1, 1) && one)
+		{
+			GetComponent<Image>().color = new Color(1, 1, 1, 1);
+			one = false;
+		}
         if (Player.isPlayerTurn != PlayerTurnpreb)
         {
             PlayerTurnpreb = Player.isPlayerTurn;

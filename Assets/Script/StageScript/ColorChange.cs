@@ -41,6 +41,7 @@ public class ColorChange : MonoBehaviour
     {
         _isDanger = isDanger();
         //敵が動いている時
+        //if (Player.instance.enemys.Length != 0) RisetColor();
         if(Player.instance.enemys.Length != 0)
         {
             if (!ColorChangeOn) return;
@@ -172,7 +173,7 @@ public class ColorChange : MonoBehaviour
     public void CanPlayerMove()
     {
         _isDanger = isDanger();
-        if (Vector2.Distance(player.transform.position, transform.position) <= 2f)
+        if (CanPlayerMoveColor()/*Vector2.Distance(player.transform.position, transform.position) <= 2f*/)
         {
             //Debug.Log("移動可能です");
             if (_isDanger || isAttack)
