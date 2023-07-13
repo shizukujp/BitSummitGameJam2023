@@ -40,7 +40,7 @@ public class PocketWatch : MonoBehaviour
                 }
             }else
             //場所を記録
-            if (Input.GetKeyDown(KeyCode.E) && !pocketWatchCheck && pocketWatchRemainingCount != 0)
+            if (Input.GetKeyDown(KeyCode.E) && !pocketWatchCheck && pocketWatchRemainingCount != 0 && !CheckPos())
             {
                 recordEnemy = GameObject.FindGameObjectsWithTag("Enemy");
                 SameTime = true;
@@ -92,6 +92,16 @@ public class PocketWatch : MonoBehaviour
     public void SetPocketWatch(Image image)
     {
         pocketWatch = image;
+    }
+
+    bool CheckPos()
+    {
+        GameObject[] Pos = GameObject.FindGameObjectsWithTag("DontPos");
+        foreach(GameObject pos in Pos)
+        {
+            if (transform.position == pos.transform.position) return true;
+        }
+        return false;
     }
 
     IEnumerator ChangeWatch()

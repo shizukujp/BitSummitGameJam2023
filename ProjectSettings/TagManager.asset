@@ -17,6 +17,7 @@ TagManager:
   - DoorTile
   - Doors
   - Message
+  - DontPos
   layers:
   - Default
   - TransparentFX
