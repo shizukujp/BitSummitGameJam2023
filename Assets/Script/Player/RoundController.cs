@@ -118,7 +118,7 @@ public class RoundController : MonoBehaviour
         //if (Input.GetKey(KeyCode.Escape) && !Player.instance.isPlayerTurn) EnemyTurnEnd();
 
         //シーン内に敵がいないときに自動プレイヤーのターンに移行する
-        if (recordTurnPositon.EnemyCount() == 0 && !Player.isPlayerTurn && !PlayerPosCheck())
+        if (recordTurnPositon.EnemyCount() == 0 && !Player.isPlayerTurn)
         {
             if ((SceneManager.GetActiveScene().name != "Tutorial")) enemyturn++;
             if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn, GameObject.FindGameObjectsWithTag("Enemy"));
@@ -188,9 +188,8 @@ public class RoundController : MonoBehaviour
     {
         playerWatchSave = true;
         recordTurnPositon.SetTurnPosition(enemyturn, recordEnemys);
-
+        
         saveturn = playerturn;
-        //saveturn = enemyturn;
     } 
     public void UsePocketWatchToLoad(GameObject[] recordEnemys)
     {
@@ -268,20 +267,5 @@ public class RoundController : MonoBehaviour
             enem.SetBool("IsMove", false);
         }
     }
-    bool PlayerPosCheck()
-    {
-        GameObject player;
-        GameObject clearPos;
-        if (GameObject.FindWithTag("Player") && GameObject.Find("ClearPoint"))
-        {
-            player = GameObject.FindWithTag("Player");
-            clearPos = GameObject.Find("ClearPoint");
-            if (player.transform.position == clearPos.transform.position)
-            {
-                return true;
-            }
-        }
-        
-        return false;
-    }
+
 }
