@@ -7015,25 +7015,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 377823350, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 1525083930, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7255633}
+    - target: {fileID: 1525083930, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClick
       objectReference: {fileID: 0}
-    - target: {fileID: 1525083928, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1558501304, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
-      propertyPath: m_fontSize
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1558501304, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 452453362152673726, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
+    - target: {fileID: 1525083930, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MessageManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2524101642572524772, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
       propertyPath: m_RootOrder
