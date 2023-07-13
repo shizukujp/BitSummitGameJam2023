@@ -6,6 +6,7 @@ public class MessageManager : MonoBehaviour
 {
     public static MessageManager instance;
     [SerializeField] private int key = 0;
+    [SerializeField] private bool isAlive = false;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,14 @@ public class MessageManager : MonoBehaviour
     }
     
     public string getMessage(){
+        isAlive = true;
         return Log.messages[key];
+    }
+
+    public void OnClick(){
+        if(isAlive){
+            GameObject.Find("GameManager/PlayerUI/MessagePanel").SetActive(false);
+            isAlive = false;
+        }
     }
 }

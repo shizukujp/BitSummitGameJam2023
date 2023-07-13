@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 0
+  isAlive: 0
 --- !u!4 &7255634
 Transform:
   m_ObjectHideFlags: 0
@@ -7017,6 +7018,22 @@ PrefabInstance:
     - target: {fileID: 377823350, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525083928, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558501304, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
+      propertyPath: m_fontSize
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558501304, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 452453362152673726, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2524101642572524772, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
       propertyPath: m_RootOrder
