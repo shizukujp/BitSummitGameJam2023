@@ -7,7 +7,6 @@ public class ClearPoint : MonoBehaviour
     public string NextSceneName = "";
 
     GameObject player;
-
     private void Start()
     {
         player = GameObject.Find("Player");

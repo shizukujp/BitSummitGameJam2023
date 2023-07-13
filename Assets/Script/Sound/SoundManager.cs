@@ -11,7 +11,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     AudioSource seAudioSource;
 
-
+    public AudioClip bjm;
+    public AudioClip click;
     void Start()
     {
         if(Instance == null)
@@ -23,9 +24,9 @@ public class SoundManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        PlayBgm(bjm);
 
-
-        //ƒV[ƒ“‚ğ•Ï‚¦‚é‚²‚Æ‚Éİ’è‚ğƒŠƒZƒbƒg‚·‚é
+        //ï¿½Vï¿½[ï¿½ï¿½ï¿½ï¿½Ï‚ï¿½ï¿½é‚²ï¿½Æ‚Éİ’ï¿½ï¿½ï¿½ï¿½ï¿½Zï¿½bï¿½gï¿½ï¿½ï¿½ï¿½
         //GameObject soundManager = CheckOtherSoundManager();
         //bool checkResult = soundManager != null && soundManager != gameObject;
 
@@ -43,7 +44,13 @@ public class SoundManager : MonoBehaviour
     //{
     //    return GameObject.FindGameObjectWithTag("SoundManager");
     //}
-
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            PlaySe(click);
+        }
+    }
 
     public float BgmVolume
     {
