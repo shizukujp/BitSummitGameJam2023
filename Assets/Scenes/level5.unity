@@ -23238,6 +23238,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2012766288, guid: 52bf627b5240bf54cb1914ef32fae469, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5615095590611979293, guid: 52bf627b5240bf54cb1914ef32fae469, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -66393,6 +66397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c39c02f367df82847bd112f54912cacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FadeWaitTime: 0
 --- !u!114 &1668347885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66415,6 +66420,7 @@ MonoBehaviour:
   enemys: []
   boss: {fileID: 0}
   Comp: 1
+  NotInWatch: 1
   South: 0
   North: 0
   West: 0
