@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 0
+  isAlive: 0
 --- !u!4 &7255634
 Transform:
   m_ObjectHideFlags: 0
@@ -7033,6 +7034,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 1525083930, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -7040,6 +7042,15 @@ PrefabInstance:
     - target: {fileID: 1525083930, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnClick
+=======
+    - target: {fileID: 1558501304, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
+      propertyPath: m_fontSize
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558501304, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 4.5
+>>>>>>> 82e947e60b39bbdb70cda1f1601e146792fdd3c1
       objectReference: {fileID: 0}
     - target: {fileID: 452453362152673726, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag

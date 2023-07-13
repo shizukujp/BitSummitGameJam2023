@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static Unity.VisualScripting.Metadata;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -145,7 +146,8 @@ public class Player : MonoBehaviour
                         {
                             var messageTitle = MessageManager.instance.getTitle();
                             var messageText = MessageManager.instance.getMessage();
-                            Debug.Log(messageTitle + "\n" + messageText);
+                            GameObject.Find("GameManager/PlayerUI/MessagePanel").SetActive(true);
+                            GameObject.Find("GameManager/PlayerUI/MessagePanel").GetComponentInChildren<TextMeshProUGUI>().text = messageTitle + "\n" + messageText;
                             MessageManager.instance.indexplus();
                         }
                         clickedGameObject.SetActive(false);
