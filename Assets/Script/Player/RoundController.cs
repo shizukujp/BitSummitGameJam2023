@@ -146,6 +146,10 @@ public class RoundController : MonoBehaviour
     //内部で動く関数
     void GameReset()
     {
+        if (GameObject.Find("GUIOption"))
+        {
+            GameObject.Find("GUIOption").GetComponent<WatchTransient>().WatchTransientAnim();
+        }
         round++;
 
         //敵とプレイヤーの位置を最初の位置に戻す

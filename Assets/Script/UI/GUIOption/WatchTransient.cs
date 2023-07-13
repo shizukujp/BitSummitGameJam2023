@@ -19,14 +19,6 @@ public class WatchTransient : MonoBehaviour
     {
         FadeOpt = GetComponent<GUIOptionFade>();
     }
-    //test
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            PocketWatchTransientAnim();
-        }
-    }
 
     //ŠO•”ŠÖ”
     public void PocketWatchTransientAnim()

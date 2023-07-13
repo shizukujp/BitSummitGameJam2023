@@ -1014,10 +1014,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3320440031510647727, guid: 36d585c6f25eff149adc391f75a3b9d8, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36d585c6f25eff149adc391f75a3b9d8, type: 3}
 --- !u!1 &114377713
@@ -7019,14 +7015,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7255633}
-    - target: {fileID: 1525083930, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClick
-      objectReference: {fileID: 0}
-    - target: {fileID: 1525083930, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MessageManager, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 2524101642572524772, guid: 7665ddbf9125a1f43b673aa5079b93d8, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -15770,6 +15758,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2012766288, guid: 52bf627b5240bf54cb1914ef32fae469, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5615095590611979293, guid: 52bf627b5240bf54cb1914ef32fae469, type: 3}
       propertyPath: m_Pivot.x
       value: 0
