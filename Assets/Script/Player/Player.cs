@@ -374,6 +374,8 @@ public class Player : MonoBehaviour
                                 boss.GetComponent<Boss>().playerTurn = false;
                                 RoundController.instance.BossTurn();
                             }
+                            RoundController.instance.MasRiset();
+                            South = North = West = East = false;
                         }
                         else
                         {
