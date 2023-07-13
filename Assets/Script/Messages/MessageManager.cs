@@ -5,7 +5,7 @@ using UnityEngine;
 public class MessageManager : MonoBehaviour
 {
     public static MessageManager instance;
-    [SerializeField] private int key = 0;
+    [SerializeField] public int key = 0;
     [SerializeField] private bool isAlive = false;
 
     // Start is called before the first frame update
