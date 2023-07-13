@@ -16,6 +16,7 @@ TagManager:
   - SoundManager
   - DoorTile
   - Doors
+  - Message
   layers:
   - Default
   - TransparentFX

@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Log : MonoBehaviour
+public static class Log
 {
-    string[] titles = new string[15];
-    string[] messages = new string[15];
+    public static string[] titles = new string[15];
+    public static string[] messages = new string[15];
 
-    [SerializeField] private int index = 0;
-
-    private void Awake() {
+    static Log(){
         titles[0] = "時間を記録する懐中時計についての日記の断片";
         titles[1] = "日記を書いたものが研究者であることがわかる簡単な内容の日記の断片";
         titles[2] = "実験施設に関して記した日記の断片";
@@ -41,13 +39,5 @@ public class Log : MonoBehaviour
         messages[12] = "『生命の実験施設で非検体βが暴れ出したらしい。どうせ不安定なあれの管理をしくじったのだろう。記憶の消去が曖昧だからああなるのだ。』\n(次の施設で何が起こったのか の期待感を抱かせ、プレイを続けさせ、プレイヤーの意識を次のステージへ持っていくため)";
         messages[13] = "『私は時間を見守ってきた。この『時間の輪』の中では自殺や自壊を禁止されている。それは作られた当初から研究材料が不足していて、実験の辛さから実験体にされた人間が自殺しないようにするため。でも、そのせいで…。私も死ぬことができない。死ねない……。私はもうこのまま時間の流れの中にいたくない…。だから彼に時間の時計を与えて託すことにしたんだ。』\n「そうか、彼女も時間の流れに囚われているんだ。そのために…僕を……。彼女を救えたら…。」\n(15個目への布石、プレイヤーがボスに同情させ、このまま進んでいいのかと思わせて、再び探索させて日記の断片をコンプリートさせるため)";
         messages[14] = "ボスつまりエマが破壊されずともここを抜け出すことが可能になる方法。\n（これはプレイヤーには見せずに、レインのセリフだけ表示が良い）\n最後の一枚はエマ（ボス）にとっても予想外。\n「これなら彼女をここから連れ出すことができる！」";
-    }
-
-    public string getTitle(){
-        return titles[index];
-    }
-    
-    public string getMessage(){
-        return messages[index];
     }
 }

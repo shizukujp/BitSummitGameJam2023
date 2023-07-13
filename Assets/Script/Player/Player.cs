@@ -129,6 +129,28 @@ public class Player : MonoBehaviour
                         clickedGameObject.SetActive(false);
                         clickedGameObject = null;
                     }
+                    else if ((clickedGameObject.CompareTag("Effect") || clickedGameObject.CompareTag("Message")) && Vector2.Distance(transform.position, clickedGameObject.transform.position) <= 1)
+                    {
+                        if (clickedGameObject.transform.position.x - transform.position.x > 0 && pos.x > 0)
+                        {
+                            pos.x *= -1;
+                        }
+                        if (clickedGameObject.transform.position.x - transform.position.x < 0 && pos.x < 0)
+                        {
+                            pos.x *= -1;
+                        }
+                        transform.localScale = pos;
+                        Motion();
+                        if (clickedGameObject.CompareTag("Message"))
+                        {
+                            var messageTitle = MessageManager.instance.getTitle();
+                            var messageText = MessageManager.instance.getMessage();
+                            Debug.Log(messageTitle + "\n" + messageText);
+                            MessageManager.instance.indexplus();
+                        }
+                        clickedGameObject.SetActive(false);
+                        clickedGameObject = null;
+                    }
                     else if (Vector2.Distance(player.transform.position, clickedGameObject.transform.position) > 2f || OntheDoor(clickedGameObject) || !clickedGameObject.CompareTag("Tile") || (East && (clickedGameObject.transform.position.x - transform.position.x == 2)) || (West && (clickedGameObject.transform.position.x - transform.position.x == -2)) || (North && (clickedGameObject.transform.position.y - transform.position.y == 2)) || (South && (clickedGameObject.transform.position.y - transform.position.y == -2)))
                     {
                         Debug.Log("移動できません");
