@@ -41,6 +41,14 @@ public class RecordTurnPosition : MonoBehaviour
 
         return Enemys.Length;
     }
+    public bool BossCount()
+    {
+        if (GameObject.Find("BOSS"))
+        {
+            return true;
+        }
+        return false;
+    }
     //敵は何人いるかを再スキャンする
     public void ScanEnemy()
     {

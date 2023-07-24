@@ -109,14 +109,16 @@ public class Boss : MonoBehaviour
                 RoundController.instance.MasRiset();
             }
         }
-        yield return new WaitForSeconds(1f);
+        //yield return new WaitForSeconds(1f);
 
         StartCoroutine(movetime());
+        yield return 0;
     }
 
     IEnumerator movetime()
     {
         yield return new WaitForSeconds(attackTime);
+        RoundController.instance.BossTurnEnd();
         playerTurn = true;
     }
 }

@@ -1,28 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndManager : MonoBehaviour
 {
     [SerializeField] private int messageCount;
-
+    public GameObject[] BG;
+    RoundController rc;
     private void Awake() {
-        messageCount = MessageManager.instance.key;
+        messageCount = MessageManager.key;
     }
 
     private void Start() {
-        if(messageCount < 10){
-            GameObject.Find("Canvas/BG1").SetActive(true);
-            GameObject.Find("Canvas/BG2").SetActive(false);
-            GameObject.Find("Canvas/BG3").SetActive(false);
+        if (messageCount < 10){
+            BG[0].SetActive(true);
+            BG[1].SetActive(false);
+            BG[2].SetActive(false);
         }else if (messageCount < 15){
-            GameObject.Find("Canvas/BG1").SetActive(false);
-            GameObject.Find("Canvas/BG2").SetActive(true);
-            GameObject.Find("Canvas/BG3").SetActive(false);
+            BG[0].SetActive(false);
+            BG[1].SetActive(true);
+            BG[2].SetActive(false);
         }else{
-            GameObject.Find("Canvas/BG1").SetActive(false);
-            GameObject.Find("Canvas/BG2").SetActive(false);
-            GameObject.Find("Canvas/BG3").SetActive(true);
+            BG[0].SetActive(false);
+            BG[1].SetActive(false);
+            BG[2].SetActive(true);
+        }
+    }
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Title");
+            MessageManager.key = 0;
+            SoundManager.Instance.RisetBGM();
         }
     }
 }

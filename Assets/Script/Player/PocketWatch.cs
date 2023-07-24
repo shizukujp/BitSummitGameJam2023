@@ -31,7 +31,7 @@ public class PocketWatch : MonoBehaviour
                     GameObject.Find("GUIOption").GetComponent<WatchTransient>().PocketWatchTransientAnim();
                 }
                 StartCoroutine(ChangeWatch());
-                pocketWatchRemainingCount--;
+                //pocketWatchRemainingCount--;
 
                 if (pocketWatchRemainingCount != 0)
                 {
@@ -106,7 +106,7 @@ public class PocketWatch : MonoBehaviour
 
     IEnumerator ChangeWatch()
     {
-        yield return new WaitForSeconds(FadeWaitTime);
+        yield return new WaitForSeconds(/*FadeWaitTime*/0);
 
         RoundController.instance.UsePocketWatchToLoad(recordEnemy);
 

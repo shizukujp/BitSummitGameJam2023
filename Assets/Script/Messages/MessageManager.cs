@@ -5,9 +5,10 @@ using UnityEngine;
 public class MessageManager : MonoBehaviour
 {
     public static MessageManager instance;
-    [SerializeField] public int key = 0;
+    [SerializeField] public static int key = 0;
     [SerializeField] private bool isAlive = false;
 
+    public static bool VisibleText;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,10 +38,19 @@ public class MessageManager : MonoBehaviour
         return Log.messages[key];
     }
 
-    public void OnClick(){
+    public void ClickLog(){
         if(isAlive){
             GameObject.Find("GameManager/PlayerUI/MessagePanel").SetActive(false);
             isAlive = false;
+            VisibleText = false;
         }
+    }
+    public void indexMinas()
+    {
+        for (int i = 0; i < RoundController.PointToScene; i++)
+        {
+            key--;
+        }
+        RoundController.PointToScene = 0;
     }
 }

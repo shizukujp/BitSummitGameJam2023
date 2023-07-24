@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class WatchTransient : MonoBehaviour
 {
-    //éŒ¾‚·‚é
-    //ŠO•”éŒ¾
+    //ï¿½éŒ¾ï¿½ï¿½ï¿½ï¿½
+    //ï¿½Oï¿½ï¿½ï¿½éŒ¾
     public GameObject pocketWatchobj, watchobj;
     public float PWTAintrofade = 2, PWTAfading = 6,PWTAafterfading = 2,
         WTAintrofade = 2, WTAfading = 6, WTAafterfading = 2;
 
 
-    //“à•”éŒ¾
+    //ï¿½ï¿½ï¿½ï¿½ï¿½éŒ¾
     bool isPocketWatchTransientAnim = false, isWatchTransientAnim = false;
     GUIOptionFade FadeOpt;
 
@@ -20,7 +20,7 @@ public class WatchTransient : MonoBehaviour
         FadeOpt = GetComponent<GUIOptionFade>();
     }
 
-    //ŠO•”ŠÖ”
+    //ï¿½Oï¿½ï¿½ï¿½Öï¿½
     public void PocketWatchTransientAnim()
     {
         if (!isPocketWatchTransientAnim)
@@ -40,22 +40,22 @@ public class WatchTransient : MonoBehaviour
     }
 
 
-    //“à•”ŠÖ”
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Öï¿½
     IEnumerator PlayTransientAnim(float fadetime)
     {
-        if (FadeOpt.GetFadingInAndOut())
+        /*if (FadeOpt.GetFadingInAndOut())
         {
             FadeOpt.FadeIn(fadetime);
-        }
+        }*/
         yield return new WaitForSeconds(fadetime);
 
-        if (isPocketWatchTransientAnim) StartCoroutine(PlayingTransientAnim(PWTAfading));
-        if (isWatchTransientAnim) StartCoroutine(PlayingTransientAnim(WTAfading));
+        //if (isPocketWatchTransientAnim) StartCoroutine(PlayingTransientAnim(PWTAfading));
+        //if (isWatchTransientAnim) StartCoroutine(PlayingTransientAnim(WTAfading));
     }
 
     IEnumerator PlayingTransientAnim(float fadetime)
     {
-        //ŒvƒAƒjƒ[ƒVƒ‡ƒ“
+        //ï¿½ï¿½ï¿½vï¿½Aï¿½jï¿½ï¿½ï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½
         if (isPocketWatchTransientAnim) StartCoroutine(PlayPocketWatchAnim(fadetime-0.5f));
         if (isWatchTransientAnim) StartCoroutine(PlayWatchAnim(fadetime- 0.5f));
 
@@ -67,13 +67,13 @@ public class WatchTransient : MonoBehaviour
 
     IEnumerator PlayedTransientAnim(float fadetime)
     {
-        if (FadeOpt.GetFadingInAndOut())
+        /*if (FadeOpt.GetFadingInAndOut())
         {
             FadeOpt.FadeOut(fadetime);
-        }
+        }*/
         yield return new WaitForSeconds(fadetime);
-        if (isPocketWatchTransientAnim) isPocketWatchTransientAnim = false;
-        if (isWatchTransientAnim) isWatchTransientAnim = false;
+        //if (isPocketWatchTransientAnim) isPocketWatchTransientAnim = false;
+        //if (isWatchTransientAnim) isWatchTransientAnim = false;
     }
 
     IEnumerator PlayPocketWatchAnim(float animtime)

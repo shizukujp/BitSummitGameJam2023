@@ -94,6 +94,8 @@ public class ColorChange : MonoBehaviour
         if (!ColorChangeOn) return;
         if (!Player.isPlayerTurn) return;
         if (Player.instance.ismove) return;
+        if (PauseMenu.IsOpen) return;
+        if (MessageManager.VisibleText) return;
             //プレイヤーが移動可能なマスだったら
         
         if (CanPlayerMoveColor())
@@ -134,6 +136,8 @@ public class ColorChange : MonoBehaviour
         if (!Player.isPlayerTurn) return;
         if (Player.instance.ismove) return;
         if (!ColorChangeOn) return;
+        if (PauseMenu.IsOpen) return;
+        if (MessageManager.VisibleText) return;
         //プレイヤーが移動可能な範囲のマスだったら
         /*if (Vector2.Distance(player.transform.position, transform.position) == 0)
         {

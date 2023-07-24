@@ -11,15 +11,16 @@ public class PauseMenu : MonoBehaviour
     //Menu Check
     bool OpeningMenu, CloseingMenu;
 
-    //Œ»İ‚ÌƒAƒjƒ[ƒVƒ‡ƒ“ó‹µ‚ğ‹L˜^‚·‚é
+    //ï¿½ï¿½ï¿½İ‚ÌƒAï¿½jï¿½ï¿½ï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ó‹µ‚ï¿½ï¿½Lï¿½^ï¿½ï¿½ï¿½ï¿½
     int MovingUIAnimPos = 0;
 
-    //ƒRƒ‹[ƒ`ƒ“ƒ`ƒFƒbƒN—p
+    //ï¿½Rï¿½ï¿½ï¿½[ï¿½`ï¿½ï¿½ï¿½`ï¿½Fï¿½bï¿½Nï¿½p
     Coroutine OpenAnim, CloseAnim;
 
     //MovingMenuPosition
     float MovingMenuBasePosX, MovingMenuBasePosY;
 
+    public static bool IsOpen;
     private void Start()
     {
         MovingMenuBasePosX = OpenPauseMenuobj.transform.position.x;
@@ -27,10 +28,11 @@ public class PauseMenu : MonoBehaviour
     }
 
     /// <summary>
-    /// ƒRƒ‹[ƒ`ƒ“ŠÖ˜A
+    /// ï¿½Rï¿½ï¿½ï¿½[ï¿½`ï¿½ï¿½ï¿½Ö˜A
     /// </summary>
     IEnumerator OpenPauseMenu()
     {
+        IsOpen = true;
         while (MovingUIAnimPos < 50)
         {
             MovingUIAnimPos++;
@@ -51,6 +53,7 @@ public class PauseMenu : MonoBehaviour
         }
         SetMovingUIActive(false);
         CloseingMenu = false;
+        IsOpen = false;
     }
     void CheckPauseMenuCoroutine()
     {
@@ -67,7 +70,7 @@ public class PauseMenu : MonoBehaviour
     }
 
 
-    //“à•”ŠÖ”
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Öï¿½
     void OCPauseMenu()
     {
         if (CloseingMenu)
@@ -83,9 +86,9 @@ public class PauseMenu : MonoBehaviour
     }
     void SetMovingUIPos(int Pos)
     {
-        BackToHomeobj.transform.position = new Vector2(MovingMenuBasePosX, MovingMenuBasePosY + Pos);
-        Settingobj.transform.position = new Vector2(MovingMenuBasePosX, MovingMenuBasePosY + (Pos*2));
-        Graphobj.transform.position = new Vector2(MovingMenuBasePosX, MovingMenuBasePosY + (Pos*3));
+        BackToHomeobj.transform.position = new Vector2(MovingMenuBasePosX, MovingMenuBasePosY + Pos*2);
+        Settingobj.transform.position = new Vector2(MovingMenuBasePosX, MovingMenuBasePosY + (Pos*2*2));
+        Graphobj.transform.position = new Vector2(MovingMenuBasePosX, MovingMenuBasePosY + (Pos*3*2));
     }
     void SetMovingUIActive(bool Act)
     {
@@ -104,16 +107,16 @@ public class PauseMenu : MonoBehaviour
     //Button Click event
     public void OpenPausemenu()
     {
-        //¡ƒRƒ‹[ƒ`ƒ“‚ª“®‚¢‚Ä‚¢‚é‚È‚çÁ‚µ‚Ä‚à‚Ç‚É–ß‚·
+        //ï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½[ï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ç‚É–ß‚ï¿½
         CheckPauseMenuCoroutine();
-        //¡‚Ìó‘Ô‚ğXV
+        //ï¿½ï¿½ï¿½Ìï¿½Ô‚ï¿½ï¿½Xï¿½V
         OpeningMenu = true;
-        //ƒƒjƒ…[‚ğŒ©‚¦‚é‚æ‚¤‚É‚·‚é‚ªAƒNƒŠƒbƒN‚Í‚Å‚«‚È‚¢‚æ‚¤‚É
+        //ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ‚¤ï¿½É‚ï¿½ï¿½é‚ªï¿½Aï¿½Nï¿½ï¿½ï¿½bï¿½Nï¿½Í‚Å‚ï¿½ï¿½È‚ï¿½ï¿½æ‚¤ï¿½ï¿½
         SetMovingUIInteractable(false);
         SetMovingUIActive(true);
-        //ŠJ‚­“®‰æ‚ğ—¬‚·
+        //ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ğ—¬‚ï¿½
         OpenAnim = StartCoroutine(OpenPauseMenu());
-        //ŠJ‚­Button‚ğ•Â‚¶‚éButton‚É‚·‚é
+        //ï¿½Jï¿½ï¿½Buttonï¿½ï¿½Â‚ï¿½ï¿½ï¿½Buttonï¿½É‚ï¿½ï¿½ï¿½
         OCPauseMenu();
     }
 
@@ -123,7 +126,7 @@ public class PauseMenu : MonoBehaviour
         CheckPauseMenuCoroutine();
         //check the new situation
         CloseingMenu = true;
-        //ƒNƒŠƒbƒN‚Í‚Å‚«‚È‚¢‚æ‚¤‚É
+        //ï¿½Nï¿½ï¿½ï¿½bï¿½Nï¿½Í‚Å‚ï¿½ï¿½È‚ï¿½ï¿½æ‚¤ï¿½ï¿½
         SetMovingUIInteractable(false);
         //play the close animation
         CloseAnim = StartCoroutine(ClosePauseMenu());
@@ -135,6 +138,8 @@ public class PauseMenu : MonoBehaviour
     public void BackToHome()
     {
         SceneManager.LoadScene("Title");
+        IsOpen = false;
+        SoundManager.Instance.RisetBGM();
     }
     public void Setting()
     {

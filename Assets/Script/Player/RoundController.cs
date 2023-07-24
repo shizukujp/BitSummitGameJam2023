@@ -16,7 +16,7 @@ public class RoundController : MonoBehaviour
     int playerturn = 0, /*playerturnpreb = 1, */round = 1, enemyturn = 0,
         enemyturnend = 0, saveturn = -1;
     RecordTurnPosition recordTurnPositon;
-
+    public static int PointToScene = 0;
     bool playerWatchSave = false;
 /*
     public GameObject countText;
@@ -73,10 +73,28 @@ public class RoundController : MonoBehaviour
     //実行用関数
     private void Update()
     {
-        if(SceneManager.GetActiveScene().name == "Title" ||SceneManager.GetActiveScene().name == "GameOver")
+        //現在のシーンをリロードする
+        if(Input.GetKeyDown(KeyCode.R) && !MessageManager.VisibleText)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            MessageManager.instance.indexMinas();
+            GameReset();
+            round = 1;
+        }
+        if(MessageManager.VisibleText)
+        {
+            if(Input.GetMouseButtonDown(0))
+            {
+                MessageManager.instance.ClickLog();
+            }
+
+        }
+
+        if(SceneManager.GetActiveScene().name == "Title" ||SceneManager.GetActiveScene().name == "End")
         {
             Destroy(gameObject);
         }
+
         if(Input.GetKey(KeyCode.O))
         {
             if(!OnOff_Enemy)OnOff_Enemy = OnOff_Player = true;
@@ -87,9 +105,16 @@ public class RoundController : MonoBehaviour
             if (OnOff_Enemy) OnOff_Enemy = OnOff_Player = false;
             MasRiset();
         }
+        //ボスステージへ飛ぶコマンド
+        if(Input.GetKeyDown(KeyCode.T))
+        {
+            SceneManager.LoadScene("Boss");
+            GameReset();
+        }
          //もしシーンが変わったら
         if (SceneManager.GetActiveScene() != scenePreb)
         {
+            PointToScene = 0;
             playerturn = 0;
             //playerturnpreb = 1;
             round = 1;
@@ -118,7 +143,7 @@ public class RoundController : MonoBehaviour
         //if (Input.GetKey(KeyCode.Escape) && !Player.instance.isPlayerTurn) EnemyTurnEnd();
 
         //シーン内に敵がいないときに自動プレイヤーのターンに移行する
-        if (recordTurnPositon.EnemyCount() == 0 && !Player.isPlayerTurn)
+        if (recordTurnPositon.EnemyCount() == 0 && !Player.isPlayerTurn && !recordTurnPositon.BossCount())
         {
             if ((SceneManager.GetActiveScene().name != "Tutorial")) enemyturn++;
             if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn, GameObject.FindGameObjectsWithTag("Enemy"));
@@ -129,6 +154,7 @@ public class RoundController : MonoBehaviour
         //敵に見つかった次のターンに戻る処理
         if (EnemyMove.Deathcount == 2)
         {
+            round++;
             GameReset();
             EnemyMove.Deathcount = 0;
         }
@@ -137,6 +163,7 @@ public class RoundController : MonoBehaviour
             //Debug.Log(enemyturn);
         if (enemyturn >= 12)
         {
+            round++;
             GameReset();
         }
     }
@@ -150,7 +177,7 @@ public class RoundController : MonoBehaviour
         {
             GameObject.Find("GUIOption").GetComponent<WatchTransient>().WatchTransientAnim();
         }
-        round++;
+        //round++;
 
         //敵とプレイヤーの位置を最初の位置に戻す
         if(SceneManager.GetActiveScene().name != "level0")recordTurnPositon.GetTurnPositionToScene(0, GameObject.FindGameObjectsWithTag("Enemy"));
@@ -261,6 +288,13 @@ public class RoundController : MonoBehaviour
         {
             Boss boss = GameObject.Find("Boss").GetComponent<Boss>();
         }
+    }
+    public void BossTurnEnd()
+    {
+        if (!playerWatchSave) recordTurnPositon.SetTurnPosition(enemyturn, GameObject.FindGameObjectsWithTag("Enemy"));
+        if (playerWatchSave) playerWatchSave = false;
+        if (enemyturn < 12) Player.isPlayerTurn = true;
+        enemyturn++;
     }
     public void EnemyMotionRiset()
     {

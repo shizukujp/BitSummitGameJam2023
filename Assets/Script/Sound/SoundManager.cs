@@ -134,8 +134,17 @@ public class SoundManager : MonoBehaviour
             await UniTask.WaitForEndOfFrame();
             /* ~中断チェックは省略~ */
         }
-
         fadeInSource.volume = 0.3f;
         fadeOutSource.volume = 0;
+        fadeOutSource.Stop();
     }
+
+    public void RisetBGM()
+    {
+        bgmAudioSource2.volume = 0f;
+        bgmAudioSource2.Stop();
+        bgmAudioSource.Play();
+        bgmAudioSource.volume = 0.2f;
+    }
+
 }

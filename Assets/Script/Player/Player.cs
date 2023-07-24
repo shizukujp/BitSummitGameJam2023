@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using static Unity.VisualScripting.Metadata;
+//using static Unity.VisualScripting.Metadata;
 using TMPro;
 
 public class Player : MonoBehaviour
@@ -69,12 +69,16 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            Debug.Log(isPlayerTurn);
+        }
         //ボスがいたら一度だけボスを取得する
         if ((boss = GameObject.Find("BOSS")) && one) { boss = GameObject.Find("BOSS"); one = false; }
         if (!one && !boss.GetComponent<Boss>().playerTurn) return;
 
         //プレイヤーのターンじゃない場合は動かないようにする
-        if (isPlayerTurn && !MotionCheck && NotInWatch)
+        if (isPlayerTurn && !MotionCheck && NotInWatch && !PauseMenu.IsOpen && !MessageManager.VisibleText)
         {
             if (EventSystem.current.IsPointerOverGameObject()) return;
             if (Input.GetMouseButtonDown(0) && Second == false)  //左クリックでif分起動
@@ -150,6 +154,8 @@ public class Player : MonoBehaviour
                             GameObject.Find("GameManager/PlayerUI/MessagePanel").SetActive(true);
                             GameObject.Find("GameManager/PlayerUI/MessagePanel").GetComponentInChildren<Text>().text = messageTitle + "\n" + messageText;
                             MessageManager.instance.indexplus();
+                            MessageManager.VisibleText = true;
+                            RoundController.PointToScene++;
                         }
                         clickedGameObject.SetActive(false);
                         clickedGameObject = null;
